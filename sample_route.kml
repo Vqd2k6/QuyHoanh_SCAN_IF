@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sample Route</name>
+    <Placemark>
+      <name>Nguyen Hue Street</name>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          106.7009,10.7769,0
+          106.7020,10.7750,0
+          106.7035,10.7730,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>
