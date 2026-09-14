@@ -7,12 +7,19 @@ env/
 __pycache__/
 *.py[cod]
 *$py.class
+src/__pycache__/
 
-# Output files
+# Output files & Large Data
 *.xlsx
 *.csv
+*.html
+*.js
+*.json
+*.tmp
+data/output/*
+!data/output/.gitkeep
 
-# OS generated
+# Temporary / OS
 .DS_Store
 Thumbs.db
 
