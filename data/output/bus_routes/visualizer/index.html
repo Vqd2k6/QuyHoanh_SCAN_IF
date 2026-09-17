@@ -945,17 +945,17 @@
         legendContainer.appendChild(item);
       });
 
-      // 2. MIT-2S Special Line in Legend
+      // 2. MIT-2S Special Line in Legend (Red Dashed Tube)
       if (typeof MIT_2S_DATA !== 'undefined') {
         const isMitActive = activeRouteMap.get('mit2s') !== false;
         const isMitSelected = selectedRouteSTT === 'mit2s';
         const mitItem = document.createElement('div');
         mitItem.id = 'legend-item-mit2s';
         mitItem.className = `legend-item ${isMitSelected ? 'selected' : ''} ${!isMitActive ? 'inactive' : ''}`;
-        mitItem.title = `MIT-2S: Tuyến ống nét đứt ô tô (32.23 km)`;
+        mitItem.title = `MIT-2S: Tuyến ống nét đứt đỏ bao ngoài (32.23 km)`;
         mitItem.innerHTML = `
-          <span class="legend-dot" style="background: #0284c7; border: 1.5px dashed #ffffff;"></span>
-          <span class="legend-code" style="color: #0284c7; font-weight: 800;">MIT-2S</span>
+          <span class="legend-dot" style="background: #dc2626; border: 1.5px dashed #dc2626;"></span>
+          <span class="legend-code" style="color: #dc2626; font-weight: 800;">MIT-2S</span>
         `;
         mitItem.addEventListener('click', () => {
           selectRoute('mit2s', true);
@@ -1102,40 +1102,31 @@
         });
       });
 
-      // 2. Render MIT-2S Tubular Dashed Route
+      // 2. Render MIT-2S Red Dashed Outer Envelope Tube (Hình ống nét đứt đỏ bao ngoài)
       if (typeof MIT_2S_DATA !== 'undefined') {
         const isMitActive = activeRouteMap.get('mit2s') !== false;
-        const mitLatLngs = MIT_2S_DATA.coordinates.map(c => [c[1], c[0]]);
+        const polyCoords = MIT_2S_DATA.buffer_coordinates || MIT_2S_DATA.coordinates;
+        const bufferLatLngs = polyCoords.map(c => [c[1], c[0]]);
 
-        // Outer Tube Casing (Dashed Casing)
-        const outerTube = L.polyline(mitLatLngs, {
-          color: '#0284c7',
-          weight: (selectedRouteSTT === 'mit2s') ? 10 : 8,
-          opacity: 0.9,
-          dashArray: '12, 10',
-          lineCap: 'round',
-          lineJoin: 'round'
-        });
-
-        // Inner Hollow Core (White Tube Center - lets other lines peek through)
-        const innerTube = L.polyline(mitLatLngs, {
-          color: '#ffffff',
-          weight: (selectedRouteSTT === 'mit2s') ? 5 : 4,
+        // Outer Tube Envelope Polygon (Red Dashed Border, Transparent Center)
+        const tubePolygon = L.polygon(bufferLatLngs, {
+          color: '#dc2626',      // Viền nét đứt màu đỏ
+          weight: (selectedRouteSTT === 'mit2s') ? 3.5 : 2.5,
           opacity: 0.95,
-          dashArray: '12, 10',
-          lineCap: 'round',
-          lineJoin: 'round'
+          dashArray: '8, 6',     // Nét đứt màu đỏ
+          fillColor: '#dc2626',
+          fillOpacity: 0.04      // Lòng ống trong suốt để thấy rõ các tuyến bên trong
         });
 
         const mitPopupHtml = `
           <div class="popup-card">
             <div class="popup-header">
-              <span class="popup-badge" style="background: #0284c7">MIT-2S</span>
-              <div class="popup-title">Tuyến Khảo Sát Ô Tô MIT-2S</div>
+              <span class="popup-badge" style="background: #dc2626">MIT-2S</span>
+              <div class="popup-title">Tuyến Khảo Sát MIT-2S (Ống Nét Đứt Đỏ)</div>
             </div>
             <div class="popup-row">
               <span class="popup-label">Kiểu hiển thị:</span>
-              <span class="popup-value" style="color: #0284c7; font-weight:700;">Đường ống nét đứt (Tubular)</span>
+              <span class="popup-value" style="color: #dc2626; font-weight:700;">Ống nét đứt đỏ bao ngoài</span>
             </div>
             <div class="popup-row">
               <span class="popup-label">Tọa độ đầu (A):</span>
@@ -1146,38 +1137,28 @@
               <span class="popup-value">10.82791, 106.62479</span>
             </div>
             <div class="popup-row">
-              <span class="popup-label">Cự ly lộ trình ô tô:</span>
+              <span class="popup-label">Cự ly lộ trình:</span>
               <span class="popup-value">${MIT_2S_DATA.listed_length_km} km</span>
             </div>
             <div style="margin-top: 8px; text-align: center;">
-              <a href="../individual/geojson/tuyen_MIT_2S.geojson" download class="btn-download" style="padding: 4px 8px; font-size: 0.72rem; display: inline-flex;">
+              <a href="../individual/geojson/tuyen_MIT_2S.geojson" download class="btn-download" style="padding: 4px 8px; font-size: 0.72rem; display: inline-flex; border-color: #fca5a5; color: #dc2626; background: #fef2f2;">
                 <i class="fa-solid fa-download"></i> Tải GeoJSON MIT-2S
               </a>
             </div>
           </div>
         `;
 
-        outerTube.bindPopup(mitPopupHtml);
-        innerTube.bindPopup(mitPopupHtml);
+        tubePolygon.bindPopup(mitPopupHtml);
 
-        const onMitHover = () => {
-          outerTube.setStyle({ weight: 11, opacity: 1 });
-          innerTube.setStyle({ weight: 6, opacity: 1 });
-        };
-        const onMitOut = () => {
+        tubePolygon.on('mouseover', function () {
+          this.setStyle({ weight: 4.5, opacity: 1, fillOpacity: 0.08 });
+        });
+        tubePolygon.on('mouseout', function () {
           if (selectedRouteSTT !== 'mit2s') {
-            outerTube.setStyle({ weight: 8, opacity: 0.9 });
-            innerTube.setStyle({ weight: 4, opacity: 0.95 });
+            this.setStyle({ weight: 2.5, opacity: 0.95, fillOpacity: 0.04 });
           }
-        };
-
-        outerTube.on('mouseover', onMitHover);
-        innerTube.on('mouseover', onMitHover);
-        outerTube.on('mouseout', onMitOut);
-        innerTube.on('mouseout', onMitOut);
-
-        outerTube.on('click', () => selectRoute('mit2s', false));
-        innerTube.on('click', () => selectRoute('mit2s', false));
+        });
+        tubePolygon.on('click', () => selectRoute('mit2s', false));
 
         // Start / End Markers for MIT-2S
         const mitStops = [];
@@ -1186,26 +1167,26 @@
 
         const mIconA = L.divIcon({
           className: 'bus-stop-icon terminal-marker',
-          html: `<i class="fa-solid fa-flag-checkered" style="color: #0284c7; font-size: 10px;"></i>`,
+          html: `<i class="fa-solid fa-flag-checkered" style="color: #dc2626; font-size: 10px;"></i>`,
           iconSize: [20, 20],
           iconAnchor: [10, 10]
         });
         const markerA = L.marker([p1.lat, p1.lng], { icon: mIconA }).bindPopup(`
           <div class="popup-card">
-            <div class="popup-header"><span class="popup-badge" style="background: #0284c7">Điểm A</span><div class="popup-title">Điểm Đầu MIT-2S</div></div>
+            <div class="popup-header"><span class="popup-badge" style="background: #dc2626">Điểm A</span><div class="popup-title">Điểm Đầu MIT-2S</div></div>
             <div class="popup-row"><span class="popup-label">Tọa độ:</span><span class="popup-value">11.01387, 106.41177</span></div>
           </div>
         `);
 
         const mIconB = L.divIcon({
           className: 'bus-stop-icon terminal-marker',
-          html: `<i class="fa-solid fa-location-dot" style="color: #0284c7; font-size: 10px;"></i>`,
+          html: `<i class="fa-solid fa-location-dot" style="color: #dc2626; font-size: 10px;"></i>`,
           iconSize: [20, 20],
           iconAnchor: [10, 10]
         });
         const markerB = L.marker([p2.lat, p2.lng], { icon: mIconB }).bindPopup(`
           <div class="popup-card">
-            <div class="popup-header"><span class="popup-badge" style="background: #0284c7">Điểm B</span><div class="popup-title">Điểm Cuối MIT-2S</div></div>
+            <div class="popup-header"><span class="popup-badge" style="background: #dc2626">Điểm B</span><div class="popup-title">Điểm Cuối MIT-2S</div></div>
             <div class="popup-row"><span class="popup-label">Tọa độ:</span><span class="popup-value">10.82791, 106.62479</span></div>
           </div>
         `);
@@ -1213,8 +1194,7 @@
         mitStops.push(markerA, markerB);
 
         if (isMitActive) {
-          outerTube.addTo(map);
-          innerTube.addTo(map);
+          tubePolygon.addTo(map);
           if (showBusStops) {
             markerA.addTo(map);
             markerB.addTo(map);
@@ -1222,7 +1202,7 @@
         }
 
         routeLayers.set('mit2s', {
-          polylines: [outerTube, innerTube],
+          polylines: [tubePolygon],
           stops: mitStops
         });
       }
@@ -1238,25 +1218,25 @@
 
       const text = filterText.toLowerCase().trim();
 
-      // Featured Card for MIT-2S
+      // Featured Card for MIT-2S (Red Accent)
       if (typeof MIT_2S_DATA !== 'undefined') {
         const isMitActive = activeRouteMap.get('mit2s') !== false;
         const isMitSelected = selectedRouteSTT === 'mit2s';
-        const matchesMitText = !text || text.includes('mit') || text.includes('2s') || text.includes('khảo sát') || text.includes('ống');
+        const matchesMitText = !text || text.includes('mit') || text.includes('2s') || text.includes('khảo sát') || text.includes('ống') || text.includes('đỏ');
 
         if (matchesMitText) {
           const mitCard = document.createElement('div');
           mitCard.className = `route-card ${isMitSelected ? 'selected' : ''} ${!isMitActive ? 'inactive' : ''}`;
           mitCard.id = `route-card-mit2s`;
-          mitCard.style.border = '1.5px dashed #0284c7';
-          mitCard.style.background = isMitSelected ? '#e0f2fe' : '#f0f9ff';
+          mitCard.style.border = '1.5px dashed #dc2626';
+          mitCard.style.background = isMitSelected ? '#fee2e2' : '#fff5f5';
 
           mitCard.innerHTML = `
-            <input type="checkbox" class="route-check" ${isMitActive ? 'checked' : ''} data-stt="mit2s" />
-            <div class="route-color-bar" style="background: repeating-linear-gradient(0deg, #0284c7, #0284c7 4px, #ffffff 4px, #ffffff 8px);"></div>
-            <div class="route-badge" style="background: #0284c7; color: #ffffff; font-weight: 800;">MIT-2S</div>
+            <input type="checkbox" class="route-check" ${isMitActive ? 'checked' : ''} data-stt="mit2s" style="accent-color: #dc2626;" />
+            <div class="route-color-bar" style="background: repeating-linear-gradient(0deg, #dc2626, #dc2626 4px, #ffffff 4px, #ffffff 8px);"></div>
+            <div class="route-badge" style="background: #dc2626; color: #ffffff; font-weight: 800;">MIT-2S</div>
             <div class="route-info">
-              <div class="route-title" style="color: #0369a1; font-weight: 700;">Tuyến Khảo Sát Ô Tô (Ống Nét Đứt)</div>
+              <div class="route-title" style="color: #991b1b; font-weight: 700;">Ống Nét Đứt Đỏ Bao Ngoài Lộ Trình</div>
               <div class="route-meta-row">
                 <span class="route-meta-item"><i class="fa-solid fa-road"></i> ${MIT_2S_DATA.listed_length_km} km</span>
                 <span class="route-meta-item"><i class="fa-solid fa-car"></i> Đường ô tô</span>
