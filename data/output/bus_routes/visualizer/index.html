@@ -1110,12 +1110,12 @@
 
         // Outer Tube Envelope Polygon (Red Dashed Border, Transparent Center)
         const tubePolygon = L.polygon(bufferLatLngs, {
-          color: '#dc2626',      // Viền nét đứt màu đỏ
-          weight: (selectedRouteSTT === 'mit2s') ? 3.5 : 2.5,
-          opacity: 0.95,
-          dashArray: '8, 6',     // Nét đứt màu đỏ
-          fillColor: '#dc2626',
-          fillOpacity: 0.04      // Lòng ống trong suốt để thấy rõ các tuyến bên trong
+          color: '#ef4444',      // Viền nét đứt màu đỏ tươi mảnh
+          weight: (selectedRouteSTT === 'mit2s') ? 2.2 : 1.4,
+          opacity: 0.85,
+          dashArray: '5, 5',     // Nét đứt mảnh, thoáng
+          fillColor: '#ef4444',
+          fillOpacity: 0.02      // Lòng ống cực kỳ trong suốt để thấy rõ các tuyến bên trong
         });
 
         const mitPopupHtml = `
@@ -1126,7 +1126,7 @@
             </div>
             <div class="popup-row">
               <span class="popup-label">Kiểu hiển thị:</span>
-              <span class="popup-value" style="color: #dc2626; font-weight:700;">Ống nét đứt đỏ bao ngoài</span>
+              <span class="popup-value" style="color: #dc2626; font-weight:700;">Ống nét đứt đỏ bao ngoài (Hành lang 800m)</span>
             </div>
             <div class="popup-row">
               <span class="popup-label">Tọa độ đầu (A):</span>
@@ -1151,11 +1151,11 @@
         tubePolygon.bindPopup(mitPopupHtml);
 
         tubePolygon.on('mouseover', function () {
-          this.setStyle({ weight: 4.5, opacity: 1, fillOpacity: 0.08 });
+          this.setStyle({ weight: 2.2, opacity: 1, fillOpacity: 0.05 });
         });
         tubePolygon.on('mouseout', function () {
           if (selectedRouteSTT !== 'mit2s') {
-            this.setStyle({ weight: 2.5, opacity: 0.95, fillOpacity: 0.04 });
+            this.setStyle({ weight: 1.4, opacity: 0.85, fillOpacity: 0.02 });
           }
         });
         tubePolygon.on('click', () => selectRoute('mit2s', false));
@@ -1374,10 +1374,18 @@
       routeLayers.forEach((l, rStt) => {
         const isSel = (rStt === stt);
         l.polylines.forEach(p => {
-          p.setStyle({
-            weight: isSel ? 6 : 4,
-            opacity: isSel ? 1.0 : 0.68
-          });
+          if (rStt === 'mit2s') {
+            p.setStyle({
+              weight: isSel ? 2.2 : 1.4,
+              opacity: isSel ? 1.0 : 0.85,
+              fillOpacity: isSel ? 0.04 : 0.02
+            });
+          } else {
+            p.setStyle({
+              weight: isSel ? 6 : 4,
+              opacity: isSel ? 1.0 : 0.68
+            });
+          }
         });
       });
 
