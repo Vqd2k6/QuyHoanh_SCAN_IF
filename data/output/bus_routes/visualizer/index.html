@@ -518,7 +518,7 @@
       display: flex;
     }
 
-    /* Bottom-Left Legend Panel (Ô chú thích góc dưới bên trái) */
+    /* Bottom-Left Legend Panel (Ô chú thích 2 cột góc dưới bên trái) */
     #map-legend-card {
       position: absolute;
       bottom: 24px;
@@ -528,8 +528,7 @@
       border: 1px solid var(--border-color);
       border-radius: 10px;
       box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-      width: 240px;
-      max-height: 290px;
+      width: 215px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -541,7 +540,7 @@
     }
 
     .legend-header {
-      padding: 9px 12px;
+      padding: 8px 12px;
       background: #f8fafc;
       border-bottom: 1px solid var(--border-color);
       display: flex;
@@ -552,7 +551,7 @@
     }
 
     .legend-title {
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: #0f172a;
       display: flex;
@@ -579,11 +578,11 @@
 
     .legend-body {
       padding: 6px 8px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 6px;
+      max-height: 340px;
       overflow-y: auto;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
     }
 
     .legend-body::-webkit-scrollbar {
@@ -597,12 +596,13 @@
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 4px 6px;
+      gap: 6px;
+      padding: 3px 5px;
       border-radius: 5px;
-      font-size: 0.72rem;
+      font-size: 0.73rem;
       cursor: pointer;
       transition: all 0.15s;
+      user-select: none;
     }
 
     .legend-item:hover {
@@ -611,33 +611,26 @@
 
     .legend-item.selected {
       background: #e0f2fe;
-      font-weight: 600;
+      font-weight: 700;
+      box-shadow: 0 0 0 1px #0284c7;
     }
 
     .legend-item.inactive {
-      opacity: 0.4;
+      opacity: 0.35;
     }
 
     .legend-dot {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
       flex-shrink: 0;
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
     }
 
     .legend-code {
       font-weight: 700;
       color: #0f172a;
-      min-width: 38px;
-    }
-
-    .legend-name {
-      color: var(--text-muted);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      flex: 1;
+      font-size: 0.74rem;
     }
 
     /* Custom Leaflet Popups (Light Theme) */
@@ -943,14 +936,13 @@
         const isSelected = selectedRouteSTT === r.stt;
 
         const item = document.createElement('div');
-        item.className = `legend-item ${isSelected ? 'selected' : ''} ${!isActive ? 'inactive' : ''}`;
         item.id = `legend-item-${r.stt}`;
-        item.title = `${r.display_code}: ${r.start_point} ➔ ${r.end_point}`;
+        item.className = `legend-item ${isSelected ? 'selected' : ''} ${!isActive ? 'inactive' : ''}`;
+        item.title = `${r.display_code}: ${r.start_point} ➔ ${r.end_point} (${r.listed_length_km} km)`;
 
         item.innerHTML = `
           <span class="legend-dot" style="background: ${r.color}"></span>
           <span class="legend-code">${r.display_code}</span>
-          <span class="legend-name">${r.start_point} - ${r.end_point}</span>
         `;
 
         item.addEventListener('click', () => {
