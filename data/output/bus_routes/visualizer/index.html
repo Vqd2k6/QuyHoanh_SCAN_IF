@@ -991,8 +991,8 @@
 
             const poly = L.polyline(latLngs, {
               color: route.color,
-              weight: (selectedRouteSTT === route.stt) ? 6 : 4,
-              opacity: (selectedRouteSTT === route.stt) ? 1.0 : (isOutbound ? 0.88 : 0.68),
+              weight: (selectedRouteSTT === route.stt) ? 7.5 : 5.5,
+              opacity: (selectedRouteSTT === route.stt) ? 1.0 : (isOutbound ? 0.95 : 0.85),
               dashArray: isOutbound ? null : "6, 6"
             });
 
@@ -1037,11 +1037,11 @@
             poly.bindPopup(popupHtml);
 
             poly.on('mouseover', function () {
-              this.setStyle({ weight: 7, opacity: 1 });
+              this.setStyle({ weight: 8, opacity: 1 });
             });
             poly.on('mouseout', function () {
               if (selectedRouteSTT !== route.stt) {
-                this.setStyle({ weight: 4, opacity: isOutbound ? 0.88 : 0.68 });
+                this.setStyle({ weight: 5.5, opacity: isOutbound ? 0.95 : 0.85 });
               }
             });
             poly.on('click', function () {
@@ -1376,14 +1376,14 @@
         l.polylines.forEach(p => {
           if (rStt === 'mit2s') {
             p.setStyle({
-              weight: isSel ? 2.2 : 1.4,
-              opacity: isSel ? 1.0 : 0.85,
+              weight: isSel ? 2.5 : 1.6,
+              opacity: isSel ? 1.0 : 0.90,
               fillOpacity: isSel ? 0.04 : 0.02
             });
           } else {
             p.setStyle({
-              weight: isSel ? 6 : 4,
-              opacity: isSel ? 1.0 : 0.68
+              weight: isSel ? 7.5 : 5.5,
+              opacity: isSel ? 1.0 : 0.88
             });
           }
         });
