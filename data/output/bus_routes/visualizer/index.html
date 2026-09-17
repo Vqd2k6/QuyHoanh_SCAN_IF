@@ -518,7 +518,7 @@
       display: flex;
     }
 
-    /* Bottom-Left Legend Panel (Ô chú thích 2 cột góc dưới bên trái) */
+    /* Bottom-Left Legend Panel (Ô chú thích 3 cột góc dưới bên trái) */
     #map-legend-card {
       position: absolute;
       bottom: 24px;
@@ -528,7 +528,7 @@
       border: 1px solid var(--border-color);
       border-radius: 10px;
       box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-      width: 215px;
+      width: 295px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -540,7 +540,7 @@
     }
 
     .legend-header {
-      padding: 8px 12px;
+      padding: 7px 12px;
       background: #f8fafc;
       border-bottom: 1px solid var(--border-color);
       display: flex;
@@ -551,7 +551,7 @@
     }
 
     .legend-title {
-      font-size: 0.74rem;
+      font-size: 0.75rem;
       font-weight: 700;
       color: #0f172a;
       display: flex;
@@ -577,27 +577,18 @@
     }
 
     .legend-body {
-      padding: 6px 8px;
+      padding: 8px 10px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 3px 6px;
-      max-height: 340px;
-      overflow-y: auto;
-    }
-
-    .legend-body::-webkit-scrollbar {
-      width: 4px;
-    }
-    .legend-body::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 3px;
+      overflow: visible;
     }
 
     .legend-item {
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 3px 5px;
+      padding: 3px 4px;
       border-radius: 5px;
       font-size: 0.73rem;
       cursor: pointer;
@@ -620,8 +611,8 @@
     }
 
     .legend-dot {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       flex-shrink: 0;
       box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
@@ -630,7 +621,8 @@
     .legend-code {
       font-weight: 700;
       color: #0f172a;
-      font-size: 0.74rem;
+      font-size: 0.73rem;
+      white-space: nowrap;
     }
 
     /* Custom Leaflet Popups (Light Theme) */
@@ -812,10 +804,10 @@
       <i class="fa-solid fa-bars"></i> Danh sách 30 tuyến
     </button>
 
-    <!-- Bottom-Left Legend Card (Ô Chú Thích Màu Sắc Tuyến) -->
+    <!-- Bottom-Left Legend Card (Ô Chú Thích 3 Cột) -->
     <div id="map-legend-card">
       <div class="legend-header" id="legend-toggle-btn" title="Nhấp để thu gọn / mở rộng chú thích">
-        <span class="legend-title"><i class="fa-solid fa-palette"></i> Chú Thích Màu Tuyến</span>
+        <span class="legend-title"><i class="fa-solid fa-palette"></i> Chú Thích</span>
         <button class="btn-toggle-legend"><i class="fa-solid fa-chevron-down"></i></button>
       </div>
       <div class="legend-body" id="legend-list">
