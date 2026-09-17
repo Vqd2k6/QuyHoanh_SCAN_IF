@@ -234,52 +234,96 @@ def delete_parcel_from_excel(excel_path, mathua_to_delete):
         "remaining_parcels": ws1.max_row - 4 if 'ws1' in locals() and ws1.max_row >= 4 else 0
     }
 
+def pick_primary_excel_file(dir_path):
+    """
+    Tìm và ưu tiên file Excel dữ liệu khảo sát gốc trong thư mục (tránh chọn nhầm file báo cáo tổng hợp).
+    Thứ tự ưu tiên:
+    1. File trùng chính xác tên thư mục (ví dụ: KS003/KS003.xlsx, KS002/KS002.xlsx)
+    2. File có tiền tố tên thư mục (ví dụ: KS003_*.xlsx)
+    3. File chuẩn ket_qua.xlsx, ketqua.xlsx, result.xlsx
+    4. Bất kỳ file .xlsx nào KHÔNG bắt đầu bằng các từ khoá báo cáo ('bao_cao', 'baocao', 'report', 'thong_ke', 'tong_hop', 'readme')
+    5. Các file .xlsx còn lại (sắp xếp theo dung lượng file lớn nhất)
+    """
+    if not os.path.exists(dir_path) or not os.path.isdir(dir_path):
+        return None
+        
+    candidates = [f for f in os.listdir(dir_path) if f.endswith(".xlsx") and not f.startswith("~$")]
+    if not candidates:
+        return None
+        
+    dir_name = os.path.basename(os.path.abspath(dir_path))
+    
+    def score_file(filename):
+        f_lower = filename.lower()
+        d_lower = dir_name.lower()
+        full_path = os.path.join(dir_path, filename)
+        file_size = os.path.getsize(full_path) if os.path.exists(full_path) else 0
+        
+        # 1. Trùng chính xác tên folder (ví dụ: KS003.xlsx trong folder KS003)
+        if f_lower == f"{d_lower}.xlsx":
+            return (0, -file_size)
+        # 2. Bắt đầu bằng tên folder và không phải báo cáo
+        if f_lower.startswith(d_lower) and not any(p in f_lower for p in ['bao_cao', 'baocao', 'report', 'thong_ke', 'tong_hop']):
+            return (1, -file_size)
+        # 3. File chuẩn ket_qua.xlsx
+        if f_lower in ["ket_qua.xlsx", "ketqua.xlsx", "result.xlsx", "resuilt.xlsx"]:
+            return (2, -file_size)
+        # 4. File dữ liệu thông thường
+        if not any(f_lower.startswith(p) for p in ['bao_cao', 'baocao', 'report', 'thong_ke', 'tong_hop', 'readme']):
+            return (3, -file_size)
+        # 5. File báo cáo
+        return (4, -file_size)
+        
+    sorted_candidates = sorted(candidates, key=score_file)
+    return sorted_candidates[0]
+
 def find_excel_and_workdir(target_path):
     if os.path.isfile(target_path):
         return os.path.abspath(target_path), os.path.dirname(os.path.abspath(target_path))
     
     target_dir = os.path.abspath(target_path)
     
-    # 1. Nếu có file Excel trực tiếp trong thư mục này
-    direct_candidates = [f for f in os.listdir(target_dir) if f.endswith(".xlsx")]
-    
-    # 2. Quét các thư mục con đợt khảo sát (sub-runs)
+    # 1. Quét các thư mục con đợt khảo sát (sub-runs) nếu truyền vào data/output
     sub_runs = []
     if os.path.exists(target_dir):
         for item in sorted(os.listdir(target_dir), reverse=True):
             sub_path = os.path.join(target_dir, item)
             if os.path.isdir(sub_path):
-                xls_files = [f for f in os.listdir(sub_path) if f.endswith(".xlsx")]
-                if xls_files:
-                    sub_runs.append((item, os.path.join(sub_path, xls_files[0]), sub_path))
+                best_xls = pick_primary_excel_file(sub_path)
+                if best_xls:
+                    sub_runs.append((item, os.path.join(sub_path, best_xls), sub_path))
 
-    # Nếu có danh sách các thư mục đợt khảo sát con
-    if sub_runs:
-        if len(sub_runs) == 1 and not direct_candidates:
-            return sub_runs[0][1], sub_runs[0][2]
-            
+    # 2. Tìm file Excel tốt nhất ngay trong thư mục hiện tại
+    direct_best = pick_primary_excel_file(target_dir)
+
+    # Nếu truyền vào thư mục chứa nhiều đợt khảo sát (như data/output)
+    if sub_runs and len(sub_runs) > 1 and not (direct_best and os.path.basename(target_dir).lower().startswith("ks")):
         print("\n" + "="*70)
         print("📂 DANH SÁCH CÁC ĐỢT KHẢO SÁT ĐÃ LƯU TRONG THƯ MỤC:")
         print("="*70)
         for idx, (dir_name, fpath, sdir) in enumerate(sub_runs, 1):
             file_sz = os.path.getsize(fpath) / 1024
             print(f"  [{idx}] 📁 {dir_name:<30} ({os.path.basename(fpath)} - {file_sz:.1f} KB)")
-        if direct_candidates:
-            print(f"  [0] 📄 Mở file tại thư mục gốc ({direct_candidates[0]})")
+        if direct_best:
+            print(f"  [0] 📄 Mở file tại thư mục gốc ({direct_best})")
             
         try:
             choice = input(f"\n👉 Chọn đợt khảo sát muốn mở [1-{len(sub_runs)}, Nhấn Enter chọn 1 (mới nhất)]: ").strip()
-            if choice == "0" and direct_candidates:
-                return os.path.join(target_dir, direct_candidates[0]), target_dir
+            if choice == "0" and direct_best:
+                return os.path.join(target_dir, direct_best), target_dir
             sel_idx = int(choice) - 1 if choice.isdigit() and 1 <= int(choice) <= len(sub_runs) else 0
             selected = sub_runs[sel_idx]
-            print(f"   -> Đang mở đợt khảo sát: {selected[0]}")
+            print(f"   -> Đang mở đợt khảo sát: {selected[0]} ({os.path.basename(selected[1])})")
             return selected[1], selected[2]
         except Exception:
             return sub_runs[0][1], sub_runs[0][2]
 
-    if direct_candidates:
-        return os.path.join(target_dir, direct_candidates[0]), target_dir
+    # Nếu chính thư mục này có file Excel trực tiếp
+    if direct_best:
+        return os.path.join(target_dir, direct_best), target_dir
+
+    if sub_runs:
+        return sub_runs[0][1], sub_runs[0][2]
 
     # 3. Thử tìm trong data/output
     default_out_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "output")
@@ -311,15 +355,15 @@ def start_viewer_server(folder_or_excel, port=8765):
             c_lat, c_lon = p["center"]
             break
 
-    if not os.path.exists(html_path) or not os.path.exists(data_js_path):
-        print(f"[*] Đang tái tạo bản đồ trực quan từ file Excel '{os.path.basename(excel_path)}' ({len(parcels)} thửa)...")
-        generate_interactive_map(
-            route_coords=[],
-            buffer_coords=[],
-            grid_points=[],
-            output_html=html_path,
-            initial_parcels=parcels
-        )
+    print(f"[*] Đang nạp và đồng bộ giao diện bản đồ trực quan từ file Excel '{os.path.basename(excel_path)}' ({len(parcels)} thửa)...")
+    generate_interactive_map(
+        route_coords=[],
+        buffer_coords=[],
+        grid_points=[],
+        output_html=html_path,
+        initial_parcels=parcels
+    )
+    if not os.path.exists(data_js_path):
         update_live_data(data_js_path, [], [], [], {}, parcels)
 
     class MapViewerRequestHandler(SimpleHTTPRequestHandler):

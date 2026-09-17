@@ -28,6 +28,24 @@ def generate_interactive_map(route_coords, buffer_coords, grid_points, output_ht
             center_lon = sum(p[1] for p in flat_pts) / len(flat_pts)
         else:
             center_lat, center_lon = 10.7769, 106.7009
+    elif initial_parcels:
+        p_lats, p_lons = [], []
+        for p in initial_parcels.values():
+            if isinstance(p, dict):
+                if p.get("center"):
+                    p_lats.append(p["center"][0])
+                    p_lons.append(p["center"][1])
+                elif p.get("latitude") and p.get("longitude"):
+                    p_lats.append(p["latitude"])
+                    p_lons.append(p["longitude"])
+                elif p.get("ranh_coords") and len(p["ranh_coords"]) > 0:
+                    p_lats.append(p["ranh_coords"][0][0])
+                    p_lons.append(p["ranh_coords"][0][1])
+        if p_lats:
+            center_lat = sum(p_lats) / len(p_lats)
+            center_lon = sum(p_lons) / len(p_lons)
+        else:
+            center_lat, center_lon = 10.7769, 106.7009
     else:
         center_lat, center_lon = 10.7769, 106.7009
 
@@ -250,6 +268,360 @@ def generate_interactive_map(route_coords, buffer_coords, grid_points, output_ht
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             padding: 8px;
         }}
+
+        /* PHẦN KÍCH THƯỚC CÁC CẠNH ĐA GIÁC THỬA ĐẤT */
+        .parcel-edges-container {{
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 6px 8px;
+            margin: 6px 0;
+            max-height: 120px;
+            overflow-y: auto;
+        }}
+        .parcel-edges-container::-webkit-scrollbar {{
+            width: 4px;
+        }}
+        .parcel-edges-container::-webkit-scrollbar-thumb {{
+            background: #cbd5e1;
+            border-radius: 4px;
+        }}
+        .edges-grid {{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px 6px;
+        }}
+        .edge-item {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 3px 6px;
+            font-size: 11px;
+            transition: all 0.15s ease;
+        }}
+        .edge-item:hover {{
+            border-color: #0284c7;
+            background: #f0f9ff;
+        }}
+        .edge-tag {{
+            font-weight: 600;
+            color: #475569;
+        }}
+        .edge-val {{
+            font-weight: 700;
+            color: #0284c7;
+            font-family: monospace;
+            font-size: 11px;
+        }}
+        .perimeter-badge {{
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #0369a1;
+            background: #e0f2fe;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #bae6fd;
+        }}
+        .edge-dim-wrapper {{
+            background: transparent !important;
+            border: none !important;
+        }}
+        .edge-dim-tag {{
+            display: inline-block;
+            background: rgba(15, 23, 42, 0.92);
+            color: #38bdf8;
+            font-size: 9.5px;
+            font-weight: 700;
+            padding: 1px 5px;
+            border-radius: 4px;
+            border: 1px solid rgba(56, 189, 248, 0.7);
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }}
+
+        /* BẢNG TRA CỨU & SƠ ĐỒ THỬA ĐẤT BÊN HÔNG (SIDE PANEL INSPECTOR) */
+        .parcel-side-panel {{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            bottom: 16px;
+            width: 400px;
+            max-width: calc(100vw - 32px);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 14px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28), 0 4px 10px rgba(0, 0, 0, 0.05);
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(450px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }}
+        .parcel-side-panel.open {{
+            transform: translateX(0);
+        }}
+        .panel-header {{
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: white;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }}
+        .panel-title-wrap {{
+            display: flex;
+            flex-direction: column;
+        }}
+        .panel-title {{
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }}
+        .panel-subtitle {{
+            font-size: 11.5px;
+            opacity: 0.92;
+            margin-top: 2px;
+        }}
+        .btn-close-panel {{
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }}
+        .btn-close-panel:hover {{
+            background: rgba(255, 255, 255, 0.35);
+        }}
+        .panel-content {{
+            padding: 14px 16px;
+            overflow-y: auto;
+            flex: 1;
+            font-size: 12px;
+            color: #1e293b;
+        }}
+
+        /* SƠ ĐỒ HÌNH THỂ CADASTAL SVG */
+        .parcel-cadastral-box {{
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0 12px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }}
+        .cadastral-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #ea580c;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #fed7aa;
+        }}
+        .cadastral-header-left {{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }}
+        .cadastral-actions {{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }}
+        .btn-cad-tool {{
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s ease;
+            user-select: none;
+        }}
+        .btn-cad-tool:hover {{
+            background: #e2e8f0;
+            color: #0f172a;
+            border-color: #94a3b8;
+        }}
+        .cadastral-tag {{
+            background: #ffedd5;
+            color: #c2410c;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+        }}
+        .cadastral-svg-wrap {{
+            width: 100%;
+            height: 230px;
+            background: #fafafa;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            position: relative;
+            cursor: grab;
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }}
+        .cadastral-svg-wrap.dragging {{
+            cursor: grabbing !important;
+        }}
+        .cadastral-svg-content {{
+            width: 100%;
+            height: 100%;
+            transform-origin: center center;
+            transition: transform 0.05s linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }}
+        .cadastral-hint {{
+            position: absolute;
+            bottom: 6px;
+            left: 8px;
+            font-size: 9.5px;
+            color: #64748b;
+            background: rgba(255, 255, 255, 0.88);
+            padding: 2px 6px;
+            border-radius: 4px;
+            pointer-events: none;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            backdrop-filter: blur(4px);
+        }}
+        .cadastral-zoom-badge {{
+            position: absolute;
+            bottom: 6px;
+            right: 8px;
+            font-size: 9.5px;
+            font-weight: 700;
+            color: #0284c7;
+            background: rgba(255, 255, 255, 0.88);
+            padding: 2px 6px;
+            border-radius: 4px;
+            pointer-events: none;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            backdrop-filter: blur(4px);
+        }}
+
+        /* MODAL PHÓNG TO TOÀN MÀN HÌNH */
+        .cadastral-modal-overlay {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 99999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }}
+        .cadastral-modal-overlay.open {{
+            display: flex;
+        }}
+        .cadastral-modal-box {{
+            background: #ffffff;
+            border-radius: 14px;
+            width: 92vw;
+            max-width: 1000px;
+            height: 88vh;
+            max-height: 850px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            animation: modalFadeIn 0.2s ease-out;
+        }}
+        @keyframes modalFadeIn {{
+            from {{ opacity: 0; transform: scale(0.96); }}
+            to {{ opacity: 1; transform: scale(1); }}
+        }}
+        .cadastral-modal-header {{
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: white;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }}
+        .cadastral-modal-title {{
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+        .cadastral-modal-body {{
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+            background: #f8fafc;
+            gap: 10px;
+        }}
+        .cadastral-modal-svg-wrap {{
+            flex: 1;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: grab;
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }}
+        .cadastral-modal-svg-wrap.dragging {{
+            cursor: grabbing !important;
+        }}
+        .cadastral-modal-svg-content {{
+            width: 100%;
+            height: 100%;
+            transform-origin: center center;
+            transition: transform 0.05s linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }}
+        .cadastral-modal-footer {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            font-size: 12px;
+        }}
     </style>
 </head>
 <body>
@@ -309,6 +681,55 @@ def generate_interactive_map(route_coords, buffer_coords, grid_points, output_ht
         </div>
     </div>
 
+    <!-- Bảng tra cứu chi tiết & Sơ đồ thửa đất bên hông (Side Inspector Panel) -->
+    <div id="parcel-side-panel" class="parcel-side-panel">
+        <div class="panel-header">
+            <div class="panel-title-wrap">
+                <span class="panel-title">🏢 Tra Cứu Quy Hoạch Thửa Đất</span>
+                <span class="panel-subtitle" id="side-panel-sub">Nhấp vào thửa đất để xem</span>
+            </div>
+            <button class="btn-close-panel" onclick="closeSidePanel()" title="Đóng bảng">✕</button>
+        </div>
+        <div class="panel-content" id="side-panel-content">
+            <div style="text-align: center; color: #64748b; padding: 40px 10px;">
+                <div style="font-size: 36px; margin-bottom: 10px;">🗺️</div>
+                <div style="font-weight: 600; font-size: 13px; color: #334155;">Nhấp vào bất kỳ thửa đất màu cam nào trên bản đồ</div>
+                <div style="font-size: 11.5px; margin-top: 6px; line-height: 1.4;">Hệ thống sẽ hiển thị toàn bộ <b>Sơ đồ hình thể, kích thước các cạnh</b> và 4 Sheet quy hoạch chi tiết mà không che mất bản đồ!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal phóng to sơ đồ thửa đất siêu nét (Fullscreen Lightbox) -->
+    <div id="cadastral-modal-overlay" class="cadastral-modal-overlay" onclick="handleModalOverlayClick(event)">
+        <div class="cadastral-modal-box">
+            <div class="cadastral-modal-header">
+                <div class="cadastral-modal-title">
+                    <span>📐 SƠ ĐỒ HÌNH THỂ THỬA ĐẤT CHI TIẾT</span>
+                    <span class="cadastral-tag" id="modal-cad-tag" style="background: rgba(255,255,255,0.25); color: white;">- CẠNH</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <div class="cadastral-actions">
+                        <button class="btn-cad-tool" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.4);" onclick="modalCadZoom(1.3)" title="Phóng to">🔍+ Phóng to</button>
+                        <button class="btn-cad-tool" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.4);" onclick="modalCadZoom(0.75)" title="Thu nhỏ">🔍- Thu nhỏ</button>
+                        <button class="btn-cad-tool" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.4);" onclick="resetModalCadZoom()" title="Khôi phục kích thước">🔄 Khôi phục</button>
+                    </div>
+                    <button class="btn-close-panel" onclick="closeCadastralModal()" title="Đóng modal (Esc)">✕</button>
+                </div>
+            </div>
+            <div class="cadastral-modal-body">
+                <div class="cadastral-modal-svg-wrap" id="modal-cad-svg-wrap">
+                    <div class="cadastral-modal-svg-content" id="modal-cad-svg-content"></div>
+                    <div class="cadastral-hint">🖱️ Cuộn chuột để Phóng to / Thu nhỏ | Giữ & Rê chuột để Di chuyển sơ đồ</div>
+                    <div class="cadastral-zoom-badge" id="modal-cad-zoom-badge">100%</div>
+                </div>
+                <div class="cadastral-modal-footer">
+                    <div id="modal-parcel-info" style="color: #334155; font-weight: 600;">Thửa đất -</div>
+                    <div id="modal-parcel-perimeter" style="color: #ea580c; font-weight: 700;">Chu vi: -</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Tải ban_do_data.js lần đầu -->
     <script src="ban_do_data.js"></script>
     <script>
@@ -345,6 +766,7 @@ def generate_interactive_map(route_coords, buffer_coords, grid_points, output_ht
         let routeLayer = null;
         const parcelsGroup = L.featureGroup().addTo(map);
         const gridPointsGroup = L.featureGroup().addTo(map);
+        const edgeLabelsGroup = L.layerGroup().addTo(map);
 
         L.control.layers({{
             "Bản đồ vệ tinh": satelliteLayer,
@@ -523,13 +945,555 @@ def generate_interactive_map(route_coords, buffer_coords, grid_points, output_ht
             }}
         }}
 
+        function calculatePolygonEdges(coords) {{
+            if (!coords || !Array.isArray(coords) || coords.length < 3) return null;
+            
+            let pts = coords;
+            while (Array.isArray(pts[0]) && Array.isArray(pts[0][0])) {{
+                pts = pts[0];
+            }}
+            
+            let cleanPts = [];
+            for (let i = 0; i < pts.length; i++) {{
+                let p = pts[i];
+                if (!p || !Array.isArray(p) || p.length < 2) continue;
+                let lat = parseFloat(p[0]);
+                let lon = parseFloat(p[1]);
+                if (isNaN(lat) || isNaN(lon)) continue;
+                
+                if (cleanPts.length > 0) {{
+                    let last = cleanPts[cleanPts.length - 1];
+                    let dLat = Math.abs(lat - last[0]);
+                    let dLon = Math.abs(lon - last[1]);
+                    if (dLat < 0.000001 && dLon < 0.000001) {{
+                        continue;
+                    }}
+                }}
+                cleanPts.push([lat, lon]);
+            }}
+            
+            if (cleanPts.length < 3) return null;
+            
+            let first = cleanPts[0];
+            let last = cleanPts[cleanPts.length - 1];
+            if (Math.abs(first[0] - last[0]) < 0.000001 && Math.abs(first[1] - last[1]) < 0.000001) {{
+                cleanPts.pop();
+            }}
+            
+            if (cleanPts.length < 3) return null;
+            
+            let edges = [];
+            let totalPerimeter = 0;
+            const n = cleanPts.length;
+            
+            for (let i = 0; i < n; i++) {{
+                let p1 = cleanPts[i];
+                let p2 = cleanPts[(i + 1) % n];
+                
+                let distMeters = 0;
+                if (typeof L !== 'undefined' && L.latLng) {{
+                    distMeters = L.latLng(p1[0], p1[1]).distanceTo(L.latLng(p2[0], p2[1]));
+                }} else {{
+                    const R = 6378137;
+                    const dLat = (p2[0] - p1[0]) * Math.PI / 180;
+                    const dLon = (p2[1] - p1[1]) * Math.PI / 180;
+                    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                              Math.cos(p1[0] * Math.PI / 180) * Math.cos(p2[0] * Math.PI / 180) *
+                              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+                    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+                    distMeters = R * c;
+                }}
+                
+                totalPerimeter += distMeters;
+                const formatted = distMeters >= 1000 ? (distMeters / 1000).toFixed(2) + ' km' : distMeters.toFixed(2) + ' m';
+                
+                edges.push({{
+                    index: i + 1,
+                    p1: p1,
+                    p2: p2,
+                    midPoint: [(p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2],
+                    length: distMeters,
+                    lengthFormatted: formatted
+                }});
+            }}
+            
+            const perimeterFormatted = totalPerimeter >= 1000 ? (totalPerimeter / 1000).toFixed(2) + ' km' : totalPerimeter.toFixed(2) + ' m';
+            
+            return {{
+                vertexCount: n,
+                cleanPts: cleanPts,
+                edges: edges,
+                perimeter: totalPerimeter,
+                perimeterFormatted: perimeterFormatted
+            }};
+        }}
+
+        function generateRawSvg(cleanPts, edges, svgW, svgH, isModal) {{
+            if (!cleanPts || cleanPts.length < 3) return '';
+            svgW = svgW || (isModal ? 800 : 350);
+            svgH = svgH || (isModal ? 500 : 210);
+            
+            const centerLat = cleanPts.reduce((sum, p) => sum + p[0], 0) / cleanPts.length;
+            const cosLat = Math.cos(centerLat * Math.PI / 180);
+            
+            let localPts = cleanPts.map(p => ({{
+                x: p[1] * cosLat * 111319.5,
+                y: p[0] * 111319.5
+            }}));
+            
+            let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+            localPts.forEach(p => {{
+                if (p.x < minX) minX = p.x;
+                if (p.x > maxX) maxX = p.x;
+                if (p.y < minY) minY = p.y;
+                if (p.y > maxY) maxY = p.y;
+            }});
+            
+            const rangeX = (maxX - minX) || 1;
+            const rangeY = (maxY - minY) || 1;
+            
+            const pad = isModal ? 60 : 36;
+            const availW = svgW - 2 * pad;
+            const availH = svgH - 2 * pad;
+            
+            const scale = Math.min(availW / rangeX, availH / rangeY);
+            const offsetX = pad + (availW - rangeX * scale) / 2;
+            const offsetY = pad + (availH - rangeY * scale) / 2;
+            
+            const svgPts = localPts.map(p => ({{
+                x: offsetX + (p.x - minX) * scale,
+                y: offsetY + (maxY - p.y) * scale
+            }}));
+            
+            const n = svgPts.length;
+            
+            let cx = 0, cy = 0;
+            svgPts.forEach(p => {{ cx += p.x; cy += p.y; }});
+            cx /= n;
+            cy /= n;
+            
+            const pointsStr = svgPts.map(p => `${{p.x.toFixed(1)}},${{p.y.toFixed(1)}}`).join(' ');
+            
+            let edgesSvg = '';
+            let verticesSvg = '';
+            
+            for (let i = 0; i < n; i++) {{
+                const p1 = svgPts[i];
+                const p2 = svgPts[(i + 1) % n];
+                const edgeData = (edges && edges[i]) ? edges[i] : {{}};
+                const lengthText = edgeData.lengthFormatted || '';
+                
+                const mx = (p1.x + p2.x) / 2;
+                const my = (p1.y + p2.y) / 2;
+                
+                const dx = p2.x - p1.x;
+                const dy = p2.y - p1.y;
+                const len = Math.sqrt(dx * dx + dy * dy);
+                
+                if (len > 0) {{
+                    let nx = -dy / len;
+                    let ny = dx / len;
+                    
+                    const vcx = mx - cx;
+                    const vcy = my - cy;
+                    if (nx * vcx + ny * vcy < 0) {{
+                        nx = -nx;
+                        ny = -ny;
+                    }}
+                    
+                    const labelOffset = isModal ? 20 : 14;
+                    const labelX = mx + nx * labelOffset;
+                    const labelY = my + ny * labelOffset;
+                    const fontSize = isModal ? 12 : 9.5;
+                    const badgeH = isModal ? 22 : 16;
+                    const charW = isModal ? 7.8 : 6.5;
+                    const badgeW = Math.max(isModal ? 48 : 38, lengthText.length * charW + 10);
+                    const strokeW = isModal ? 3.5 : 2.5;
+                    
+                    edgesSvg += `
+                        <g class="svg-edge-item" id="svg-edge-${{i+1}}">
+                            <line x1="${{p1.x.toFixed(1)}}" y1="${{p1.y.toFixed(1)}}" x2="${{p2.x.toFixed(1)}}" y2="${{p2.y.toFixed(1)}}" stroke="#ea580c" stroke-width="${{strokeW}}" stroke-linecap="round"/>
+                            <rect x="${{(labelX - badgeW/2).toFixed(1)}}" y="${{(labelY - badgeH/2).toFixed(1)}}" width="${{badgeW}}" height="${{badgeH}}" rx="4" fill="rgba(15, 23, 42, 0.94)" stroke="#38bdf8" stroke-width="1"/>
+                            <text x="${{labelX.toFixed(1)}}" y="${{labelY.toFixed(1)}}" fill="#38bdf8" font-size="${{fontSize}}" font-weight="700" font-family="'Inter', -apple-system, sans-serif" text-anchor="middle" dominant-baseline="central">${{lengthText}}</text>
+                        </g>
+                    `;
+                }}
+                
+                const vRadius = isModal ? 6 : 4.5;
+                const vFontSize = isModal ? 12 : 9;
+                const vTextOffset = isModal ? 10 : 7;
+                
+                verticesSvg += `
+                    <circle cx="${{p1.x.toFixed(1)}}" cy="${{p1.y.toFixed(1)}}" r="${{vRadius}}" fill="#ea580c" stroke="#ffffff" stroke-width="2"/>
+                    <text x="${{p1.x.toFixed(1)}}" y="${{(p1.y - vTextOffset).toFixed(1)}}" fill="#0f172a" font-size="${{vFontSize}}" font-weight="800" text-anchor="middle">${{i + 1}}</text>
+                `;
+            }}
+            
+            const compassSize = isModal ? 18 : 13;
+            const compassPos = isModal ? 32 : 24;
+            const compassSvg = `
+                <g transform="translate(${{svgW - compassPos}}, ${{compassPos}})">
+                    <circle cx="0" cy="0" r="${{compassSize}}" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.15))"/>
+                    <path d="M 0,-${{compassSize * 0.7}} L ${{compassSize * 0.25}},${{compassSize * 0.15}} L 0,0 L -${{compassSize * 0.25}},${{compassSize * 0.15}} Z" fill="#ef4444"/>
+                    <path d="M 0,${{compassSize * 0.7}} L ${{compassSize * 0.25}},0 L 0,0 L -${{compassSize * 0.25}},0 Z" fill="#94a3b8"/>
+                    <text x="0" y="-${{compassSize * 0.85}}" fill="#ef4444" font-size="${{isModal ? 10 : 8}}" font-weight="800" text-anchor="middle">B</text>
+                </g>
+            `;
+            
+            const gridPatternId = isModal ? "cad-grid-modal" : "cad-grid-panel";
+            const gridCellSize = isModal ? 20 : 16;
+            
+            return `
+                <svg width="${{svgW}}" height="${{svgH}}" viewBox="0 0 ${{svgW}} ${{svgH}}" xmlns="http://www.w3.org/2000/svg" style="display: block; max-width: 100%; height: auto;">
+                    <defs>
+                        <pattern id="${{gridPatternId}}" width="${{gridCellSize}}" height="${{gridCellSize}}" patternUnits="userSpaceOnUse">
+                            <path d="M ${{gridCellSize}} 0 L 0 0 0 ${{gridCellSize}}" fill="none" stroke="#e2e8f0" stroke-width="0.75"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="#ffffff" rx="6"/>
+                    <rect width="100%" height="100%" fill="url(#${{gridPatternId}})" rx="6"/>
+                    <polygon points="${{pointsStr}}" fill="#fed7aa" fill-opacity="0.5" stroke="#f97316" stroke-width="1.2" stroke-dasharray="3,3"/>
+                    ${{edgesSvg}}
+                    ${{verticesSvg}}
+                    ${{compassSvg}}
+                </svg>
+            `;
+        }}
+
+        function generateParcelSvg(cleanPts, edges) {{
+            if (!cleanPts || cleanPts.length < 3) return '';
+            const n = cleanPts.length;
+            const rawSvg = generateRawSvg(cleanPts, edges, 360, 210, false);
+            
+            return `
+                <div class="parcel-cadastral-box">
+                    <div class="cadastral-header">
+                        <div class="cadastral-header-left">
+                            <span>📐 SƠ ĐỒ HÌNH THỂ THỬA ĐẤT</span>
+                            <span class="cadastral-tag">${{n}} CẠNH</span>
+                        </div>
+                        <div class="cadastral-actions">
+                            <button class="btn-cad-tool" onclick="panelCadZoom(1.25)" title="Phóng to sơ đồ">🔍+</button>
+                            <button class="btn-cad-tool" onclick="panelCadZoom(0.8)" title="Thu nhỏ sơ đồ">🔍-</button>
+                            <button class="btn-cad-tool" onclick="resetPanelCadZoom()" title="Khôi phục gốc">🔄</button>
+                            <button class="btn-cad-tool" style="color: #0284c7; font-weight: 700;" onclick="openCadastralModal()" title="Mở sơ đồ toàn màn hình siêu nét">⛶ Toàn màn hình</button>
+                        </div>
+                    </div>
+                    <div class="cadastral-svg-wrap" id="panel-cad-svg-wrap" ondblclick="openCadastralModal()" title="Nhấp đúp hoặc bấm 'Toàn màn hình' để xem chi tiết lớn">
+                        <div class="cadastral-svg-content" id="panel-cad-svg-content">
+                            ${{rawSvg}}
+                        </div>
+                        <div class="cadastral-hint">🖱️ Cuộn chuột / Kéo để zoom & di chuyển</div>
+                        <div class="cadastral-zoom-badge" id="panel-cad-zoom-badge">100%</div>
+                    </div>
+                </div>
+            `;
+        }}
+
+        let activeParcelData = null;
+        let activeSelectedLayer = null;
+
+        // Trạng thái Zoom / Pan trên Side Inspector Panel
+        let panelCadState = {{
+            scale: 1,
+            translateX: 0,
+            translateY: 0,
+            isDragging: false,
+            startX: 0,
+            startY: 0
+        }};
+
+        // Trạng thái Zoom / Pan trong Fullscreen Modal
+        let modalCadState = {{
+            scale: 1,
+            translateX: 0,
+            translateY: 0,
+            isDragging: false,
+            startX: 0,
+            startY: 0
+        }};
+
+        function applyPanelCadTransform() {{
+            const el = document.getElementById('panel-cad-svg-content');
+            const badge = document.getElementById('panel-cad-zoom-badge');
+            if (el) {{
+                el.style.transform = `translate(${{panelCadState.translateX}}px, ${{panelCadState.translateY}}px) scale(${{panelCadState.scale}})`;
+            }}
+            if (badge) {{
+                badge.innerText = `${{Math.round(panelCadState.scale * 100)}}%`;
+            }}
+        }}
+
+        window.panelCadZoom = function(factor) {{
+            panelCadState.scale = Math.max(0.4, Math.min(8, panelCadState.scale * factor));
+            applyPanelCadTransform();
+        }};
+
+        window.resetPanelCadZoom = function() {{
+            panelCadState.scale = 1;
+            panelCadState.translateX = 0;
+            panelCadState.translateY = 0;
+            applyPanelCadTransform();
+        }};
+
+        function applyModalCadTransform() {{
+            const el = document.getElementById('modal-cad-svg-content');
+            const badge = document.getElementById('modal-cad-zoom-badge');
+            if (el) {{
+                el.style.transform = `translate(${{modalCadState.translateX}}px, ${{modalCadState.translateY}}px) scale(${{modalCadState.scale}})`;
+            }}
+            if (badge) {{
+                badge.innerText = `${{Math.round(modalCadState.scale * 100)}}%`;
+            }}
+        }}
+
+        window.modalCadZoom = function(factor) {{
+            modalCadState.scale = Math.max(0.3, Math.min(10, modalCadState.scale * factor));
+            applyModalCadTransform();
+        }};
+
+        window.resetModalCadZoom = function() {{
+            modalCadState.scale = 1;
+            modalCadState.translateX = 0;
+            modalCadState.translateY = 0;
+            applyModalCadTransform();
+        }};
+
+        window.openCadastralModal = function() {{
+            if (!activeParcelData) return;
+            const edgesInfo = calculatePolygonEdges(activeParcelData.ranh_coords);
+            if (!edgesInfo || !edgesInfo.cleanPts) return;
+
+            const modalOverlay = document.getElementById('cadastral-modal-overlay');
+            const modalContent = document.getElementById('modal-cad-svg-content');
+            const modalTag = document.getElementById('modal-cad-tag');
+            const modalInfo = document.getElementById('modal-parcel-info');
+            const modalPerimeter = document.getElementById('modal-parcel-perimeter');
+
+            if (modalTag) modalTag.innerText = `${{edgesInfo.vertexCount}} CẠNH`;
+            if (modalInfo) modalInfo.innerText = `Thửa ${{activeParcelData.sothua}} / Tờ ${{activeParcelData.soto}} | ${{activeParcelData.tenphuongxa}}, ${{activeParcelData.tenquanhuyen}} (Diện tích: ${{activeParcelData.dientich_formatted || activeParcelData.dientich}} m²)`;
+            if (modalPerimeter) modalPerimeter.innerText = `Tổng chu vi thửa: ${{edgesInfo.perimeterFormatted}}`;
+
+            const svgHtml = generateRawSvg(edgesInfo.cleanPts, edgesInfo.edges, 880, 520, true);
+            if (modalContent) modalContent.innerHTML = svgHtml;
+
+            resetModalCadZoom();
+            if (modalOverlay) modalOverlay.classList.add('open');
+            bindCadastralInteractions();
+        }};
+
+        window.closeCadastralModal = function() {{
+            const modalOverlay = document.getElementById('cadastral-modal-overlay');
+            if (modalOverlay) modalOverlay.classList.remove('open');
+        }};
+
+        window.handleModalOverlayClick = function(e) {{
+            if (e.target && e.target.id === 'cadastral-modal-overlay') {{
+                closeCadastralModal();
+            }}
+        }};
+
+        document.addEventListener('keydown', (e) => {{
+            if (e.key === 'Escape') {{
+                closeCadastralModal();
+            }}
+        }});
+
+        function bindCadastralInteractions() {{
+            const pWrap = document.getElementById('panel-cad-svg-wrap');
+            if (pWrap && !pWrap.dataset.bound) {{
+                pWrap.dataset.bound = 'true';
+                pWrap.addEventListener('wheel', (e) => {{
+                    e.preventDefault();
+                    const factor = e.deltaY < 0 ? 1.15 : 0.87;
+                    panelCadZoom(factor);
+                }}, {{ passive: false }});
+
+                pWrap.addEventListener('mousedown', (e) => {{
+                    panelCadState.isDragging = true;
+                    panelCadState.startX = e.clientX - panelCadState.translateX;
+                    panelCadState.startY = e.clientY - panelCadState.translateY;
+                    pWrap.classList.add('dragging');
+                }});
+            }}
+
+            const mWrap = document.getElementById('modal-cad-svg-wrap');
+            if (mWrap && !mWrap.dataset.bound) {{
+                mWrap.dataset.bound = 'true';
+                mWrap.addEventListener('wheel', (e) => {{
+                    e.preventDefault();
+                    const factor = e.deltaY < 0 ? 1.15 : 0.87;
+                    modalCadZoom(factor);
+                }}, {{ passive: false }});
+
+                mWrap.addEventListener('mousedown', (e) => {{
+                    modalCadState.isDragging = true;
+                    modalCadState.startX = e.clientX - modalCadState.translateX;
+                    modalCadState.startY = e.clientY - modalCadState.translateY;
+                    mWrap.classList.add('dragging');
+                }});
+            }}
+        }}
+
+        window.addEventListener('mousemove', (e) => {{
+            if (panelCadState.isDragging) {{
+                panelCadState.translateX = e.clientX - panelCadState.startX;
+                panelCadState.translateY = e.clientY - panelCadState.startY;
+                applyPanelCadTransform();
+            }}
+            if (modalCadState.isDragging) {{
+                modalCadState.translateX = e.clientX - modalCadState.startX;
+                modalCadState.translateY = e.clientY - modalCadState.startY;
+                applyModalCadTransform();
+            }}
+        }});
+
+        window.addEventListener('mouseup', () => {{
+            if (panelCadState.isDragging) {{
+                panelCadState.isDragging = false;
+                const pWrap = document.getElementById('panel-cad-svg-wrap');
+                if (pWrap) pWrap.classList.remove('dragging');
+            }}
+            if (modalCadState.isDragging) {{
+                modalCadState.isDragging = false;
+                const mWrap = document.getElementById('modal-cad-svg-wrap');
+                if (mWrap) mWrap.classList.remove('dragging');
+            }}
+        }});
+
+        window.closeSidePanel = function() {{
+            const panel = document.getElementById('parcel-side-panel');
+            if (panel) panel.classList.remove('open');
+            edgeLabelsGroup.clearLayers();
+            if (activeSelectedLayer) {{
+                activeSelectedLayer.setStyle({{ weight: 2.5, fillOpacity: 0.45, color: '#ea580c' }});
+                activeSelectedLayer = null;
+            }}
+        }};
+
+        window.showParcelDetails = function(p) {{
+            activeParcelData = p;
+            const panel = document.getElementById('parcel-side-panel');
+            const subTitle = document.getElementById('side-panel-sub');
+            const content = document.getElementById('side-panel-content');
+            if (!panel || !content) return;
+            
+            if (subTitle) subTitle.innerText = `Thửa ${{p.sothua}} / Tờ ${{p.soto}} (${{p.tenphuongxa}}, ${{p.tenquanhuyen}})`;
+            
+            const edgesInfo = calculatePolygonEdges(p.ranh_coords);
+            const svgHtml = (edgesInfo && edgesInfo.cleanPts) ? generateParcelSvg(edgesInfo.cleanPts, edgesInfo.edges) : '';
+            
+            let html = `
+                <div class="pop-section-title">THÔNG TIN THỬA ĐẤT</div>
+                <div class="pop-row"><span class="label">Tỉnh / Thành:</span><span class="val">TP. Hồ Chí Minh</span></div>
+                <div class="pop-row"><span class="label">Quận / Huyện:</span><span class="val">${{p.tenquanhuyen}}</span></div>
+                <div class="pop-row"><span class="label">Phường / Xã:</span><span class="val">${{p.tenphuongxa}}</span></div>
+                <div class="pop-row"><span class="label">Diện tích:</span><span class="val" style="color: #ea580c; font-weight: 700;">${{p.dientich_formatted || p.dientich}} m²</span></div>
+                <div class="pop-row"><span class="label">Mã thửa SQHKT:</span><span class="val" style="font-family: monospace;">${{p.mathuadat}}</span></div>
+                
+                ${{svgHtml}}
+            `;
+            
+            if (edgesInfo && edgesInfo.edges && edgesInfo.edges.length > 0) {{
+                html += `
+                    <div class="pop-section-title" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                        <span>📐 BẢNG KÍCH THƯỚC CÁC CẠNH (${{edgesInfo.vertexCount}} CẠNH)</span>
+                        <span class="perimeter-badge">Chu vi: ${{edgesInfo.perimeterFormatted}}</span>
+                    </div>
+                    <div class="parcel-edges-container">
+                        <div class="edges-grid">
+                `;
+                edgesInfo.edges.forEach(e => {{
+                    html += `
+                        <div class="edge-item" title="Cạnh ${{e.index}}: ${{e.lengthFormatted}}">
+                            <span class="edge-tag">Cạnh ${{e.index}}</span>
+                            <span class="edge-val">${{e.lengthFormatted}}</span>
+                        </div>
+                    `;
+                }});
+                html += `
+                        </div>
+                    </div>
+                `;
+            }}
+            
+            html += `
+                <div class="pop-section-title">ĐỒ ÁN QUY HOẠCH 1/2000</div>
+                <div class="pop-doan">${{p.tendoan || 'Chưa có thông tin đồ án'}}</div>
+
+                <div class="pop-section-title">Ô CHỨC NĂNG SỬ DỤNG ĐẤT & CHỈ TIÊU KT</div>
+            `;
+            
+            if (p.qhpk_details && p.qhpk_details.length > 0) {{
+                p.qhpk_details.forEach(o => {{
+                    html += `
+                        <div class="function-card">
+                            <div class="func-title">
+                                <span class="func-badge">${{o.maopho || 'Ô phố'}}</span>
+                                <span>${{o.chucnang || 'Chưa phân định'}}</span>
+                            </div>
+                            <div style="font-size: 11px; color: #475569; margin: 2px 0;">
+                                Diện tích ô: <b>${{o.dientich_formatted || o.dientich}} m²</b> (Chiếm <b>${{o.tldientich_formatted || o.tldientich}}%</b>)
+                            </div>
+                            <div style="font-size: 11px; color: #0284c7; background: #f0f9ff; padding: 4px; border-radius: 4px; margin-top: 3px;">
+                                Tầng cao: <b>${{o.tangcao || '-'}}</b> | Cao: <b>${{o.chieucao ? o.chieucao + 'm' : '-'}}</b> | Mật độ: <b>${{o.matdo ? o.matdo + '%' : '-'}}</b> | HSSDĐ: <b>${{o.hesosdd || '-'}}</b>
+                            </div>
+                        </div>
+                    `;
+                }});
+            }} else {{
+                html += `<div style="color: #64748b; font-size: 11px; margin: 4px 0;">${{p.chucnang_summary || 'Chưa phân định'}}</div>`;
+            }}
+            
+            html += `
+                <div class="pop-section-title">LỘ GIỚI TIẾP GIÁP</div>
+                <div class="logioi-box">${{p.logioi_summary || 'Không có lộ giới'}}</div>
+                <button class="btn-delete-thua" onclick="deleteParcel('${{p.mathuadat}}', '${{p.sothua}}', '${{p.soto}}')" style="margin-top: 14px; width: 100%; background: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; padding: 9px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;" onmouseover="this.style.background='#fee2e2'" onmouseout="this.style.background='#fef2f2'">
+                    🗑️ Xoá thửa này khỏi bản đồ & Excel
+                </button>
+            `;
+            
+            content.innerHTML = html;
+            panel.classList.add('open');
+            resetPanelCadZoom();
+            bindCadastralInteractions();
+            
+            if (activeSelectedLayer) {{
+                activeSelectedLayer.setStyle({{ weight: 2.5, fillOpacity: 0.45, color: '#ea580c' }});
+            }}
+            if (parcelLayers[p.mathuadat]) {{
+                activeSelectedLayer = parcelLayers[p.mathuadat];
+                activeSelectedLayer.setStyle({{ weight: 4.5, fillOpacity: 0.7, color: '#0284c7' }});
+                
+                const pBounds = activeSelectedLayer.getBounds();
+                map.fitBounds(pBounds.pad(0.35), {{
+                    paddingTopLeft: [50, 50],
+                    paddingBottomRight: [410, 50],
+                    maxZoom: 19
+                }});
+            }}
+            
+            edgeLabelsGroup.clearLayers();
+            if (edgesInfo && edgesInfo.edges) {{
+                edgesInfo.edges.forEach(e => {{
+                    if (e.length >= 0.3) {{
+                        const icon = L.divIcon({{
+                            className: 'edge-dim-wrapper',
+                            html: `<span class="edge-dim-tag">C${{e.index}}: ${{e.lengthFormatted}}</span>`,
+                            iconSize: [0, 0]
+                        }});
+                        L.marker(e.midPoint, {{ icon: icon, interactive: false }}).addTo(edgeLabelsGroup);
+                    }}
+                }});
+            }}
+        }};
+
         function renderParcels(parcels) {{
             if (!parcels) return;
             Object.values(parcels).forEach(p => {{
                 if (!p.ranh_coords || p.ranh_coords.length === 0) return;
                 if (window.EXCLUDED_PARCELS && window.EXCLUDED_PARCELS.has(p.mathuadat)) return;
                 
-                // Chỉ vẽ nếu thửa đất chưa được render
                 if (!parcelLayers[p.mathuadat]) {{
                     const poly = L.polygon(p.ranh_coords, {{
                         color: '#ea580c',
@@ -545,69 +1509,36 @@ def generate_interactive_map(route_coords, buffer_coords, grid_points, output_ht
                     }});
 
                     poly.on('mouseover', () => {{
-                        poly.setStyle({{ weight: 4, fillOpacity: 0.65, color: '#c2410c' }});
+                        if (activeSelectedLayer !== poly) {{
+                            poly.setStyle({{ weight: 4, fillOpacity: 0.65, color: '#c2410c' }});
+                        }}
                     }});
                     poly.on('mouseout', () => {{
-                        poly.setStyle({{ weight: 2.5, fillOpacity: 0.45, color: '#ea580c' }});
+                        if (activeSelectedLayer !== poly) {{
+                            poly.setStyle({{ weight: 2.5, fillOpacity: 0.45, color: '#ea580c' }});
+                        }}
                     }});
 
-                    let popupHtml = `
-                        <div class="planning-popup">
-                            <div class="pop-header">
-                                <span>Thửa số: ${{p.sothua}}</span>
-                                <span>Tờ số: ${{p.soto}}</span>
-                            </div>
-                            
-                            <div class="pop-section-title">THÔNG TIN THỬA ĐẤT</div>
-                            <div class="pop-row"><span class="label">Tỉnh / Thành:</span><span class="val">TP. Hồ Chí Minh</span></div>
-                            <div class="pop-row"><span class="label">Quận / Huyện:</span><span class="val">${{p.tenquanhuyen}}</span></div>
-                            <div class="pop-row"><span class="label">Phường / Xã:</span><span class="val">${{p.tenphuongxa}}</span></div>
-                            <div class="pop-row"><span class="label">Diện tích:</span><span class="val" style="color: #ea580c; font-weight: 700;">${{p.dientich_formatted || p.dientich}} m²</span></div>
-                            <div class="pop-row"><span class="label">Mã thửa SQHKT:</span><span class="val" style="font-family: monospace;">${{p.mathuadat}}</span></div>
+                    poly.on('click', () => {{
+                        showParcelDetails(p);
+                    }});
 
-                            <div class="pop-section-title">ĐỒ ÁN QUY HOẠCH 1/2000</div>
-                            <div class="pop-doan">${{p.tendoan || 'Chưa có thông tin đồ án'}}</div>
-
-                            <div class="pop-section-title">Ô CHỨC NĂNG SỬ DỤNG ĐẤT & CHỈ TIÊU KT</div>
-                    `;
-
-                    if (p.qhpk_details && p.qhpk_details.length > 0) {{
-                        p.qhpk_details.forEach(o => {{
-                            popupHtml += `
-                                <div class="function-card">
-                                    <div class="func-title">
-                                        <span class="func-badge">${{o.maopho || 'Ô phố'}}</span>
-                                        <span>${{o.chucnang || 'Chưa phân định'}}</span>
-                                    </div>
-                                    <div style="font-size: 11px; color: #475569; margin: 2px 0;">
-                                        Diện tích ô: <b>${{o.dientich_formatted || o.dientich}} m²</b> (Chiếm <b>${{o.tldientich_formatted || o.tldientich}}%</b>)
-                                    </div>
-                                    <div style="font-size: 11px; color: #0284c7; background: #f0f9ff; padding: 4px; border-radius: 4px; margin-top: 3px;">
-                                        Tầng cao: <b>${{o.tangcao || '-'}}</b> | Cao: <b>${{o.chieucao ? o.chieucao + 'm' : '-'}}</b> | Mật độ: <b>${{o.matdo ? o.matdo + '%' : '-'}}</b> | HSSDĐ: <b>${{o.hesosdd || '-'}}</b>
-                                    </div>
-                                </div>
-                            `;
-                        }});
-                    }} else {{
-                        popupHtml += `<div style="color: #64748b; font-size: 11px; margin: 4px 0;">${{p.chucnang_summary || 'Chưa phân định'}}</div>`;
-                    }}
-
-                    popupHtml += `
-                            <div class="pop-section-title">LỘ GIỚI TIẾP GIÁP</div>
-                            <div class="logioi-box">${{p.logioi_summary || 'Không có lộ giới'}}</div>
-                            <button class="btn-delete-thua" onclick="deleteParcel('${{p.mathuadat}}', '${{p.sothua}}', '${{p.soto}}')" style="margin-top: 12px; width: 100%; background: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; padding: 7px 10px; border-radius: 6px; font-size: 11.5px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; transition: all 0.2s;" onmouseover="this.style.background='#fee2e2'" onmouseout="this.style.background='#fef2f2'">
-                                🗑️ Xoá thửa này khỏi bản đồ
-                            </button>
-                        </div>
-                    `;
-
-                    poly.bindPopup(popupHtml, {{ maxWidth: 380 }});
                     parcelLayers[p.mathuadat] = poly;
                 }}
             }});
 
             const parcelCount = Object.keys(parcelLayers).length;
             document.getElementById('parcels-count').innerText = parcelCount;
+
+            if (parcelCount > 0 && !window.HAS_FITTED_PARCEL_BOUNDS) {{
+                try {{
+                    const pBounds = parcelsGroup.getBounds();
+                    if (pBounds && pBounds.isValid()) {{
+                        map.fitBounds(pBounds.pad(0.08));
+                        window.HAS_FITTED_PARCEL_BOUNDS = true;
+                    }}
+                }} catch(e) {{}}
+            }}
         }}
 
         window.EXCLUDED_PARCELS = new Set();

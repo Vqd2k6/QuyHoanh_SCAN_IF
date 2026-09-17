@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>B 70-1 -  Bến xe Củ Chi - Bến xe Tây Ninh</name>
+    <description>Lộ trình tuyến xe buýt B 70-1 (3:00 - 19:00)</description>
+    <Style id="routeLineStyle">
+      <LineStyle>
+        <color>e6008CFB</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="busStopStyle">
+      <IconStyle>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>Lượt đi: Bến xe Củ Chi → Bến xe Tây Ninh (67.11 km)</name>
+      <Placemark>
+        <name>B 70-1 - Đường đi Lượt đi</name>
+        <description><![CDATA[&lt;b&gt;Tuyến:&lt;/b&gt; B 70-1 -  Bến xe Củ Chi - Bến xe Tây Ninh&lt;br/&gt;&lt;b&gt;Lượt:&lt;/b&gt; Lượt đi&lt;br/&gt;&lt;b&gt;Cự ly:&lt;/b&gt; 67.11 km&lt;br/&gt;&lt;b&gt;Thời gian hành trình:&lt;/b&gt; 115 phút&lt;br/&gt;&lt;b&gt;Thời gian hoạt động:&lt;/b&gt; 3:00 - 19:00]]></description>
+        <styleUrl>#routeLineStyle</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>106.48210144,10.97161674,0 106.48210144,10.97161674,0 106.48210144,10.97161674,0 106.48210144,10.97161674,0 106.48187256,10.97175407,0 106.4832077,10.97370815,0 106.48303986,10.97380257,0 106.48154449,10.97150612,0 106.48094177,10.97202015,0 106.48064423,10.97227573,0 106.48030853,10.9724865,0 106.48034668,10.97253323,0 106.48034668,10.97253323,0 106.48034668,10.97253323,0 106.48034668,10.97253323,0 106.48034668,10.97253323,0 106.48031616,10.97248077,0 106.47977448,10.97278118,0 106.47917938,10.97306538,0 106.47802734,10.97359753,0 106.47686768,10.97415066,0 106.47570801,10.97469234,0 106.47573853,10.97475624,0 106.47573853,10.97475624,0 106.47572327,10.97468758,0 106.47505951,10.97502708,0 106.47438812,10.97536659,0 106.47373962,10.97572708,0 106.47309875,10.97608852,0 106.47312927,10.97613335,0 106.47312927,10.97613335,0 106.47310638,10.9760828,0 106.47216797,10.97659397,0 106.47125244,10.97710991,0 106.47033691,10.9776001,0 106.46942139,10.97811604,0 106.4694519,10.97817898,0 106.4694519,10.97817898,0 106.4694519,10.97817898,0 106.46940613,10.97810555,0 106.46873474,10.97847557,0 106.46807098,10.9788456,0 106.4673996,10.97921467,0 106.46672821,10.97958469,0 106.4661026,10.97994137,0 106.46547699,10.980299,0 106.46485901,10.98065567,0 106.4642334,10.98101711,0 106.46430206,10.98113346,0 106.46430206,10.98113346,0 106.46430206,10.98113346,0 106.46430206,10.98113346,0 106.46421814,10.98101234,0 106.46342468,10.98147869,0 106.46263885,10.98194408,0 106.46189117,10.98244476,0 106.46114349,10.98294449,0 106.46123505,10.98305035,0 106.46123505,10.98305035,0 106.46123505,10.98305035,0 106.46116638,10.98295498,0 106.46046448,10.98340797,0 106.4597702,10.98386097,0 106.45907593,10.9843111,0 106.45837402,10.98476124,0 106.4584198,10.98480892,0 106.4584198,10.98480892,0 106.45839691,10.98475075,0 106.45732117,10.98546505,0 106.45624542,10.9861784,0 106.45517731,10.9868679,0 106.45411682,10.98755836,0 106.45295715,10.98830032,0 106.45191193,10.9890852,0 106.45101929,10.99002743,0 106.4502182,10.99092293,0 106.45037842,10.99103546,0 106.45037842,10.99103546,0 106.45022583,10.99089146,0 106.44994354,10.99120426,0 106.44965363,10.99151707,0 106.44937134,10.99182987,0 106.44908142,10.99214172,0 106.44879913,10.99245453,0 106.44850922,10.99276733,0 106.44822693,10.99308014,0 106.44793701,10.99339294,0 106.44799042,10.99342442,0 106.44799042,10.99342442,0 106.44792938,10.99337673,0 106.44755554,10.99379253,0 106.4471817,10.99420929,0 106.44680786,10.99462509,0 106.44643402,10.99504089,0 106.44606018,10.9954567,0 106.44569397,10.99587345,0 106.44532013,10.99628925,0 106.44494629,10.99670506,0 106.44506073,10.99678898,0 106.44506073,10.99678898,0 106.44494629,10.99669933,0 106.44412994,10.99761105,0 106.44329071,10.9985323,0 106.44238281,10.99943256,0 106.44187164,10.99982262,0 106.44133759,11.00016499,0 106.43898773,11.0014286,0 106.43782043,11.00205517,0 106.43666077,11.00268173,0 106.43667603,11.00271893,0 106.43667603,11.00271893,0 106.43666077,11.00266647,0 106.4355545,11.00326061,0 106.4344635,11.00375557,0 106.43319702,11.00415325,0 106.4319458,11.00456142,0 106.43196869,11.00463009,0 106.43196869,11.00463009,0 106.43196869,11.00463009,0 106.43196869,11.00463009,0 106.4319458,11.00455666,0 106.43119812,11.00477505,0 106.43045807,11.00499344,0 106.42972565,11.00524902,0 106.42899323,11.00550461,0 106.42814636,11.00576687,0 106.42814636,11.00576687,0 106.42814636,11.00576687,0 106.42814636,11.00576687,0 106.4187851,11.00885296,0 106.41801453,11.00918007,0 106.41703796,11.00979042,0 106.41625977,11.01052761,0 106.41454315,11.01203346,0 106.41300201,11.01336098,0 106.40552521,11.01692009,0 106.39746857,11.02068996,0 106.38716888,11.02544022,0 106.37459564,11.02846241,0 106.36972809,11.03079987,0 106.36493683,11.03291607,0 106.36190796,11.03166294,0 106.35946655,11.03071594,0 106.35858154,11.03045273,0 106.35774231,11.03049469,0 106.35722351,11.03081036,0 106.35562897,11.03213692,0 106.35125732,11.03592873,0 106.3422699,11.04412079,0 106.33177948,11.05334473,0 106.32969666,11.05517769,0 106.32666016,11.05729389,0 106.32583618,11.05788326,0 106.32492065,11.05831528,0 106.31804657,11.06083202,0 106.3042984,11.06589603,0 106.29747772,11.06833935,0 106.28971863,11.07115078,0 106.27729797,11.07563591,0 106.27616119,11.0763092,0 106.27407837,11.07774162,0 106.27085876,11.07984734,0 106.2669754,11.08251095,0 106.26586914,11.08295345,0 106.26560211,11.08441734,0 106.26248932,11.10029411,0 106.26219177,11.10196781,0 106.26134491,11.10424137,0 106.25950623,11.10835838,0 106.25765991,11.11188507,0 106.2565155,11.11454868,0 106.25511932,11.11767483,0 106.24819946,11.13240242,0 106.24460602,11.14002419,0 106.24228668,11.14487648,0 106.24043274,11.14936161,0 106.23924255,11.15212917,0 106.23737335,11.15563488,0 106.23197937,11.15924549,0 106.22577667,11.16319275,0 106.22399902,11.16431904,0 106.22270966,11.16482353,0 106.21933746,11.16552925,0 106.21636963,11.16641331,0 106.21016693,11.16966534,0 106.20396423,11.17301273,0 106.19187164,11.17958069,0 106.18304443,11.18450642,0 106.18245697,11.18468571,0 106.1811676,11.18484306,0 106.17131805,11.18420124,0 106.16696167,11.18392754,0 106.16345215,11.18390656,0 106.16143799,11.18440151,0 106.1594162,11.18499088,0 106.15249634,11.18947411,0 106.15207672,11.18990612,0 106.15182495,11.19043159,0 106.1517334,11.19095802,0 106.15161133,11.19320011,0 106.15126801,11.19489479,0 106.14936829,11.1991148,0 106.1492691,11.20000935,0 106.14964294,11.20492458,0 106.15032959,11.21062851,0 106.15116882,11.21811104,0 106.15112305,11.21920586,0 106.15074921,11.21983719,0 106.14996338,11.22046852,0 106.14797211,11.22119427,0 106.14738464,11.22148895,0 106.14654541,11.22269917,0 106.14544678,11.22479343,0 106.14361572,11.22809792,0 106.1413269,11.23132896,0 106.14039612,11.23295975,0 106.13961029,11.23447514,0 106.13905334,11.23579025,0 106.13860321,11.23732662,0 106.13804626,11.23883152,0 106.13742828,11.23976803,0 106.13674164,11.2406311,0 106.13319397,11.24309349,0 106.13280487,11.24817085,0 106.13232422,11.25332737,0 106.13148499,11.26356506,0 106.13106537,11.2686739,0 106.13058472,11.27378178,0 106.13010406,11.27948475,0 106.12992859,11.28224182,0 106.13041687,11.28228378,0 106.13056183,11.28235245,0 106.13065338,11.28249359,0 106.13056183,11.28389835,0 106.13040924,11.28404045,0 106.12975311,11.28402519,0 106.12954712,11.28625584,0 106.12947083,11.28646088,0 106.12955475,11.28695011,0 106.1293869,11.28741264,0 106.12934875,11.28792572,0 106.12923431,11.28939056,0 106.12900543,11.29207897,0 106.12876129,11.29476166,0 106.12783051,11.29493523,0 106.12715912,11.29508781,0 106.12718964,11.29577732,0 106.12820435,11.29921532,0 106.12924957,11.30334187,0 106.12930298,11.30539322,0 106.12586975,11.3064661,0 106.12241364,11.30722332,0 106.11501312,11.30871773,0 106.11277008,11.30890751,0 106.11035919,11.30866528,0 106.10794067,11.30861282,0 106.10378265,11.31055832,0 106.09700775,11.31362057,0 106.09677887,11.31389904,0 106.09648132,11.31379414,0 106.0966568,11.3128624,0 106.09697723,11.31192112,0 106.09747314,11.31039047,0 106.09814453,11.30826569,0 106.09824371,11.30774975,0 106.0982132,11.30720234,0 106.09802246,11.30708694,0 106.09796143,11.30695057,0 106.09796906,11.30677128,0 106.09767151,11.30645561,0 106.09732819,11.30626106,0 106.09708405,11.3061924,0 106.09680939,11.30619812,0 106.09481049,11.30643463,0 106.09259796,11.306777,0 106.09214783,11.3069191,0 106.09172821,11.30710316,0 106.08960724,11.30851746,0 106.08773804,11.30975914,0 106.08783722,11.30993843,0 106.08783722,11.30993843,0 106.08783722,11.30993843,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Folder>
+        <name>Trạm dừng (15 trạm)</name>
+        <Placemark>
+          <name>[BX 63] Bến xe Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX 63&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe Củ Chi Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 126, 13, 70-1, 70-2, 74, 79, 87, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.482099,10.971617,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 018] Bến xe Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 018&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 928 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2, 79]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.480347,10.972533,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 019] Bệnh viện Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 019&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 18 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Thị trấn Củ Chi, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2, 79]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.475742,10.974756,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 020] Trạm xăng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm xăng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 020&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 86 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2, 79]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.473129,10.976133,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 021] Công ty phân bón Sinh hóa Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty phân bón Sinh hóa Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 021&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 128 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.469455,10.978179,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 297] Ấp Bàu Tre</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ấp Bàu Tre&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 297&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 246B Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.4643,10.981133,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 022] Trạm xăng Phước Hiệp 1</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm xăng Phước Hiệp 1&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 022&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 282 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.461232,10.98305,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 344] Đường số 606</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường số 606&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 344&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cạnh đường số 606 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Tân An Hội, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.458421,10.984809,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 023] Đối diện UBND xa Phước Hiệp</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đối diện UBND xa Phước Hiệp&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 023&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện UBND xa Phước Hiệp (số 438) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.451361,10.989707,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 024] Đối diện Trường Tiểu học Phước Hiệp</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đối diện Trường Tiểu học Phước Hiệp&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 024&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện cây xăng 54 (508) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.447987,10.993424,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 025] Cây xăng Phước Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Phước Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 025&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 576 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.445058,10.996789,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 349] Đường 622</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường 622&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 349&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 671 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Thạnh, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.436679,11.002719,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 026] UBND xã Phước Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; UBND xã Phước Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 026&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; UBND xã Phước Thạnh Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Thạnh, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.431969,11.00463,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QCCT028] Ngã tư Phước Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã tư Phước Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QCCT028&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 826 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Thạnh, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.428146,11.005767,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[BXLT Tay Ninh] Bến xe Tây Ninh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Tây Ninh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BXLT Tay Ninh&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe Tây Ninh Trưng Nữ Vương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Ngoại thành&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 70-1]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.087836,11.309938,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+    <Folder>
+      <name>Lượt về: Bến xe Tây Ninh → Bến xe Củ Chi (67.85 km)</name>
+      <Placemark>
+        <name>B 70-1 - Đường đi Lượt về</name>
+        <description><![CDATA[&lt;b&gt;Tuyến:&lt;/b&gt; B 70-1 -  Bến xe Củ Chi - Bến xe Tây Ninh&lt;br/&gt;&lt;b&gt;Lượt:&lt;/b&gt; Lượt về&lt;br/&gt;&lt;b&gt;Cự ly:&lt;/b&gt; 67.85 km&lt;br/&gt;&lt;b&gt;Thời gian hành trình:&lt;/b&gt; 115 phút&lt;br/&gt;&lt;b&gt;Thời gian hoạt động:&lt;/b&gt; 3:00 - 19:00]]></description>
+        <styleUrl>#routeLineStyle</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>106.08783722,11.30993843,0 106.087677,11.30966473,0 106.0916214,11.30703449,0 106.09218597,11.30678177,0 106.09257507,11.30667114,0 106.09675598,11.30608273,0 106.09725952,11.30613518,0 106.09758759,11.30628777,0 106.09806061,11.30669785,0 106.09825897,11.30671883,0 106.09838104,11.30680275,0 106.09844971,11.30696106,0 106.09830475,11.30718708,0 106.09832764,11.30778122,0 106.09822845,11.3083334,0 106.09765625,11.31010628,0 106.09705353,11.31195259,0 106.09707642,11.3121109,0 106.09677887,11.31301498,0 106.09680176,11.31339931,0 106.09689331,11.31348324,0 106.10208893,11.31111145,0 106.1076355,11.30857563,0 106.10801697,11.30842304,0 106.11074829,11.30852795,0 106.11260986,11.30869102,0 106.11506653,11.3085022,0 106.12271881,11.30694485,0 106.12573242,11.30629253,0 106.12916565,11.30518246,0 106.12909698,11.30339432,0 106.12765503,11.29784489,0 106.1271286,11.29581356,0 106.12708282,11.29503059,0 106.12870026,11.29469872,0 106.1292038,11.28842258,0 106.12931061,11.28738117,0 106.12918854,11.28692341,0 106.12939453,11.28641891,0 106.12935638,11.28625011,0 106.12954712,11.28403568,0 106.12889862,11.28394032,0 106.1288147,11.28373528,0 106.12891388,11.28234196,0 106.1290741,11.28221035,0 106.1297226,11.28224182,0 106.12995148,11.27947426,0 106.13084412,11.2698946,0 106.13130951,11.26436996,0 106.13170624,11.25926685,0 106.13252258,11.25035477,0 106.13304901,11.24304104,0 106.13667297,11.24055767,0 106.1372757,11.23973656,0 106.13790894,11.23881054,0 106.13817596,11.23820019,0 106.13899994,11.23555946,0 106.13944244,11.23449612,0 106.14093018,11.23178101,0 106.14308929,11.2286768,0 106.14461517,11.22600365,0 106.14612579,11.22319412,0 106.14696503,11.22175217,0 106.14746857,11.22125816,0 106.14826965,11.22092056,0 106.15016937,11.22024727,0 106.1506958,11.21975327,0 106.15093994,11.21936321,0 106.15106964,11.21882153,0 106.15106964,11.21799564,0 106.15065002,11.2143116,0 106.150383,11.21184921,0 106.15003967,11.20905018,0 106.14953613,11.20503998,0 106.14939117,11.203125,0 106.14916229,11.1999836,0 106.14930725,11.19904613,0 106.15034485,11.19673634,0 106.15114594,11.19487858,0 106.15146637,11.19358444,0 106.15153503,11.19281578,0 106.15161133,11.19091606,0 106.15171051,11.19046402,0 106.15194702,11.18992138,0 106.15253448,11.18930054,0 106.15937805,11.18488503,0 106.16036987,11.18455887,0 106.16234589,11.18399048,0 106.16339111,11.18381214,0 106.16711426,11.18381214,0 106.17266846,11.18414879,0 106.18128204,11.18474865,0 106.18236542,11.18459034,0 106.18312836,11.18433762,0 106.1882019,11.18149662,0 106.19562531,11.17738056,0 106.21430969,11.16734982,0 106.21637726,11.1663084,0 106.21929932,11.16545582,0 106.22278595,11.16472435,0 106.22389221,11.16423416,0 106.22805786,11.16162682,0 106.23069763,11.15998745,0 106.23432922,11.15757656,0 106.23731232,11.15555096,0 106.23916626,11.15204525,0 106.24169159,11.14607143,0 106.24463654,11.13968754,0 106.24884033,11.13062859,0 106.25104523,11.12589169,0 106.25228882,11.12319183,0 106.25370026,11.12026501,0 106.25733185,11.11218452,0 106.2596817,11.107584,0 106.26029968,11.10631084,0 106.26139832,11.10359383,0 106.2620163,11.10176754,0 106.26364899,11.09357643,0 106.26462555,11.08843327,0 106.26527405,11.0849905,0 106.26580811,11.08256912,0 106.26686859,11.08231068,0 106.2765274,11.07578278,0 106.28884125,11.0712347,0 106.30922699,11.06388569,0 106.31815338,11.06049442,0 106.32527924,11.05794621,0 106.32686615,11.05689335,0 106.32933044,11.05520916,0 106.33360291,11.05156517,0 106.34020996,11.04571056,0 106.34542084,11.04099846,0 106.35134888,11.03553867,0 106.35440826,11.032938,0 106.35701752,11.03069496,0 106.35778046,11.03032589,0 106.35858154,11.03026772,0 106.35929108,11.03041553,0 106.361763,11.03142166,0 106.36439514,11.03250599,0 106.36523438,11.03258991,0 106.36780548,11.03147411,0 106.37234497,11.02926254,0 106.37411499,11.02845192,0 106.37775421,11.0274725,0 106.38658142,11.02541828,0 106.38761139,11.02502918,0 106.39006042,11.02389145,0 106.4092865,11.01494026,0 106.41175842,11.01380253,0 106.41282654,11.01321888,0 106.41699982,11.00960636,0 106.41773987,11.00910568,0 106.41873932,11.0086422,0 106.42245483,11.00744247,0 106.42802429,11.00567245,0 106.42807007,11.0055666,0 106.42809296,11.00564671,0 106.43164825,11.0045042,0 106.43164825,11.0045042,0 106.43165588,11.00456142,0 106.43273163,11.00420856,0 106.43382263,11.00384045,0 106.43483734,11.00349808,0 106.43578339,11.00303459,0 106.43575287,11.00296593,0 106.43575287,11.00296593,0 106.43580627,11.0030241,0 106.43778229,11.00198174,0 106.43877411,11.00144196,0 106.43976593,11.00090218,0 106.44074249,11.0003624,0 106.44171143,10.99982262,0 106.44216156,10.99950123,0 106.44258118,10.99915886,0 106.44329071,10.99839497,0 106.4432373,10.99835873,0 106.4432373,10.99835873,0 106.44329834,10.9983902,0 106.44368744,10.99795341,0 106.44407654,10.99751568,0 106.44448853,10.99707413,0 106.44487,10.99661732,0 106.44487,10.99661732,0 106.44487,10.99661732,0 106.44487,10.99661732,0 106.44491577,10.99664211,0 106.44532776,10.99616814,0 106.44578552,10.99568844,0 106.44620514,10.99521255,0 106.44663239,10.99473572,0 106.44706726,10.99425697,0 106.44750214,10.99377728,0 106.44792175,10.99328899,0 106.44833374,10.99279976,0 106.44833374,10.99279976,0 106.44836426,10.99269772,0 106.44836426,10.99269772,0 106.44833374,10.99279976,0 106.44871521,10.99242496,0 106.44909668,10.99205017,0 106.44947815,10.99163151,0 106.44985199,10.99121284,0 106.45023346,10.99079418,0 106.4506073,10.99037552,0 106.45126343,10.9895668,0 106.45126343,10.9895668,0 106.45126343,10.9895668,0 106.45173645,10.98910618,0 106.45226288,10.98869038,0 106.45340729,10.98792171,0 106.45458984,10.9871521,0 106.45570374,10.9864254,0 106.45565796,10.98633575,0 106.45565796,10.98633575,0 106.45571899,10.98639965,0 106.45700073,10.98556232,0 106.45827484,10.98471451,0 106.45823669,10.98466206,0 106.45823669,10.98466206,0 106.45826721,10.98470879,0 106.45897675,10.98425579,0 106.45967865,10.9838028,0 106.46038055,10.98334503,0 106.46108246,10.98288727,0 106.46103668,10.98285484,0 106.46101379,10.98288345,0 106.46101379,10.98288345,0 106.46105194,10.98292923,0 106.46173096,10.98248196,0 106.46240997,10.98203373,0 106.46311188,10.98159981,0 106.46380615,10.98116493,0 106.46374512,10.98104858,0 106.46374512,10.98104858,0 106.46374512,10.98104858,0 106.46374512,10.98104858,0 106.46379852,10.98114395,0 106.46451569,10.98073292,0 106.46524048,10.98031712,0 106.4659729,10.97991467,0 106.46670532,10.97951126,0 106.46744537,10.97910309,0 106.46818542,10.97869492,0 106.46892548,10.97828674,0 106.46966553,10.97787857,0 106.46963501,10.97778416,0 106.46963501,10.97778416,0 106.46963501,10.97778416,0 106.46963501,10.97778416,0 106.46966553,10.97787857,0 106.47042084,10.97744942,0 106.47117615,10.97702026,0 106.47195435,10.97659683,0 106.47274017,10.97617245,0 106.47271729,10.97610855,0 106.47271729,10.97610855,0 106.47271729,10.97610855,0 106.47271729,10.97610855,0 106.47273254,10.97614956,0 106.47273254,10.97614956,0 106.47333527,10.97581673,0 106.47393799,10.97548294,0 106.47455597,10.97516727,0 106.47518158,10.97485065,0 106.47574615,10.97456169,0 106.47631073,10.97427177,0 106.47689056,10.97400284,0 106.4774704,10.97373295,0 106.4774704,10.97373295,0 106.47743988,10.97365475,0 106.47743988,10.97365475,0 106.47657776,10.97406101,0 106.47689819,10.97399235,0 106.47734833,10.97375488,0 106.47782135,10.97355556,0 106.47809601,10.97330761,0 106.47809601,10.97330761,0 106.4785614,10.97319698,0 106.47930908,10.97284985,0 106.4799881,10.97250748,0 106.48049164,10.97209072,0 106.48049164,10.97209072,0 106.48049164,10.97209072,0 106.48056793,10.97216511,0 106.48134613,10.97150135,0 106.48191071,10.97102737,0 106.48249054,10.9705534,0 106.48245239,10.97049522,0 106.48245239,10.97049522,0 106.48245239,10.97049522,0 106.48248291,10.97053242,0 106.48420715,10.96936321,0 106.48522949,10.9686842,0 106.48571014,10.96838856,0 106.48602295,10.96812534,0 106.48632813,10.96824646,0 106.48619843,10.96862602,0 106.48579407,10.9686203,0 106.48487091,10.9690733,0 106.48377991,10.96977901,0 106.48271942,10.9705162,0 106.48174286,10.97130108,0 106.48210144,10.97161674,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Folder>
+        <name>Trạm dừng (19 trạm)</name>
+        <Placemark>
+          <name>[BXLT Tay Ninh] Bến xe Tây Ninh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Tây Ninh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BXLT Tay Ninh&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe Tây Ninh Trưng Nữ Vương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Ngoại thành&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 70-1]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.087836,11.309938,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 028] Ngã tư Phước Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã tư Phước Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 028&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 863 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Thạnh, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.428069,11.005567,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 029] Ủy Ban nhân dân Xã Phước Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ủy Ban nhân dân Xã Phước Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 029&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 755 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Thạnh, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.431647,11.004504,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 348] Đường 622</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường 622&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 348&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; cạnh 685 (cạnh đường 622) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Thạnh, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.435756,11.002966,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 353] Cây xăng Phước Thạnh 2</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Phước Thạnh 2&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 353&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 613 (cạnh hẻm 53) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Tân An Hội, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.443239,10.998359,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 030] ấp cây trôm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; ấp cây trôm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 030&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 585 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.44487,10.996617,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 031] Trường Tiểu học Phước Hiệp</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường Tiểu học Phước Hiệp&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 031&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 499 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.448362,10.992698,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 032] UBND xã Phước Hiệp</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; UBND xã Phước Hiệp&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 032&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; UBND xã Phước Hiệp Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.451263,10.989567,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 347] Cây xăng Phước Thạnh 3</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Phước Thạnh 3&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 347&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 351 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.455658,10.986336,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 345] Đường số 606</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường số 606&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 345&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện đường số 606 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Tân An Hội, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.458238,10.984662,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 033] Cây xăng Tài Lộc 3</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Tài Lộc 3&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 033&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 281 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.461033,10.982855,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 298] Ấp Bàu Tre</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ấp Bàu Tre&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 298&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 227 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phước Hiệp, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.463742,10.981049,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 034] Công ty phân bón sinh hóa Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty phân bón sinh hóa Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 034&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 121 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.469632,10.977784,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 035] Ngã 3 Nguyễn Thị Rành</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã 3 Nguyễn Thị Rành&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 035&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 55 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Tân An Hội, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2, 79]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.472717,10.976109,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 036] Bệnh viện Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 036&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 991 (số 5-7 xe máy Quang Phương) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Tân An Hội, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2, 79]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.476579,10.974061,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 365] Bệnh viện đa khoa khu vực Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện đa khoa khu vực Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 365&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 965 Phan Văn Khải&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Tân An Hội, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2, 79]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.478097,10.973308,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 037] Bến xe Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 037&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 907 (Chợ Củ Chi) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Thị trấn Củ Chi, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 70-1, 70-2, 79]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.48049,10.972091,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HCC 279] chợ Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; chợ Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HCC 279&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; chợ Củ Chi Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Thị trấn Củ Chi, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 126, 13, 70-1, 70-2, 74, 79, 87, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.482453,10.970495,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[BX 63] Bến xe Củ Chi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Củ Chi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX 63&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe Củ Chi Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Củ Chi&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 100, 107, 126, 13, 70-1, 70-2, 74, 79, 87, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.482099,10.971617,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+  </Document>
+</kml>

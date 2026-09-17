@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>B 71 - Bến xe An Sương - Phật Cô Đơn</name>
+    <description>Lộ trình tuyến xe buýt B 71 (5:00 - 20:30)</description>
+    <Style id="routeLineStyle">
+      <LineStyle>
+        <color>e6414C6D</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="busStopStyle">
+      <IconStyle>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>Lượt đi: Bến xe An Sương → Phật Cô Đơn (25.09 km)</name>
+      <Placemark>
+        <name>B 71 - Đường đi Lượt đi</name>
+        <description><![CDATA[&lt;b&gt;Tuyến:&lt;/b&gt; B 71 - Bến xe An Sương - Phật Cô Đơn&lt;br/&gt;&lt;b&gt;Lượt:&lt;/b&gt; Lượt đi&lt;br/&gt;&lt;b&gt;Cự ly:&lt;/b&gt; 25.09 km&lt;br/&gt;&lt;b&gt;Thời gian hành trình:&lt;/b&gt; 65 phút&lt;br/&gt;&lt;b&gt;Thời gian hoạt động:&lt;/b&gt; 5:00 - 20:30]]></description>
+        <styleUrl>#routeLineStyle</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>106.6133728,10.8437376,0 106.6133194,10.84385967,0 106.61410522,10.84443378,0 106.61462402,10.84361649,0 106.61486053,10.84324837,0 106.61502075,10.84288406,0 106.61500549,10.84266281,0 106.6151123,10.84247875,0 106.61531067,10.84236813,0 106.61556244,10.84245205,0 106.61565399,10.84266281,0 106.61557007,10.84288979,0 106.615242,10.84305859,0 106.6144104,10.84423828,0 106.61328125,10.84600353,0 106.61335754,10.846035,0 106.61335754,10.846035,0 106.61335754,10.846035,0 106.61335754,10.846035,0 106.61335754,10.846035,0 106.61335754,10.846035,0 106.61328888,10.84599876,0 106.61224365,10.84767914,0 106.61121368,10.84932232,0 106.61127472,10.84936047,0 106.61127472,10.84936047,0 106.61127472,10.84936047,0 106.61127472,10.84936047,0 106.61127472,10.84936047,0 106.61127472,10.84936047,0 106.61118317,10.84931755,0 106.61030579,10.85063457,0 106.60943604,10.8519516,0 106.6085968,10.85328484,0 106.60775757,10.85461712,0 106.60786438,10.85466003,0 106.60786438,10.85466003,0 106.60786438,10.85466003,0 106.60786438,10.85466003,0 106.60786438,10.85466003,0 106.60786438,10.85466003,0 106.60786438,10.85466003,0 106.60786438,10.85466003,0 106.60778046,10.85461712,0 106.6073761,10.85523415,0 106.60696411,10.85585308,0 106.60655975,10.85647106,0 106.6061554,10.85708809,0 106.60620117,10.85711479,0 106.60620117,10.85711479,0 106.60620117,10.85711479,0 106.60620117,10.85711479,0 106.60620117,10.85711479,0 106.60620117,10.85711479,0 106.60620117,10.85711479,0 106.60620117,10.85711479,0 106.60613251,10.85708332,0 106.60565948,10.85775852,0 106.60518646,10.85843468,0 106.60471344,10.85910988,0 106.60424042,10.85978603,0 106.60430908,10.85982323,0 106.60430908,10.85982323,0 106.60430908,10.85982323,0 106.60430908,10.85982323,0 106.60430908,10.85982323,0 106.60424805,10.85980129,0 106.60360718,10.86071014,0 106.60297394,10.861619,0 106.60277557,10.86136627,0 106.60245514,10.86008358,0 106.60212708,10.85880089,0 106.60203552,10.85882092,0 106.60203552,10.85882092,0 106.60212708,10.85880089,0 106.60186768,10.85771275,0 106.60160828,10.8566246,0 106.60135651,10.85554218,0 106.60109711,10.85445976,0 106.6010437,10.85448074,0 106.6010437,10.85448074,0 106.60109711,10.85446453,0 106.60090637,10.85367966,0 106.60071564,10.85289478,0 106.6005249,10.85210991,0 106.60033417,10.85132504,0 106.60025024,10.85135269,0 106.60025024,10.85135269,0 106.60033417,10.85132504,0 106.6001358,10.85047626,0 106.59997559,10.84962845,0 106.60011292,10.84893322,0 106.60024261,10.84824276,0 106.6003418,10.84756088,0 106.60044098,10.84687805,0 106.60025787,10.84626198,0 106.60025787,10.84626198,0 106.60025787,10.84626198,0 106.60025787,10.84626198,0 106.60025787,10.84626198,0 106.60002899,10.84552383,0 106.59992218,10.8448,0 106.59983826,10.84436989,0 106.59983063,10.84418011,0 106.59985352,10.84385967,0 106.59989929,10.84331989,0 106.59990692,10.84292984,0 106.59989929,10.84229946,0 106.59980774,10.84185696,0 106.599617,10.84148788,0 106.59920502,10.84103012,0 106.59920502,10.84103012,0 106.59920502,10.84103012,0 106.59920502,10.84103012,0 106.59920502,10.84103012,0 106.59920502,10.84103012,0 106.59883118,10.84061909,0 106.60002899,10.83958149,0 106.59996033,10.83950233,0 106.59996033,10.83950233,0 106.59996033,10.83950233,0 106.59996033,10.83950233,0 106.59996033,10.83950233,0 106.6000061,10.83957577,0 106.60020447,10.83939648,0 106.5998764,10.83862782,0 106.59951782,10.83786297,0 106.59951782,10.83786297,0 106.59951782,10.83786297,0 106.59951782,10.83786297,0 106.5991745,10.83717346,0 106.59857941,10.83623505,0 106.59857941,10.83623505,0 106.59857941,10.83623505,0 106.59857941,10.83623505,0 106.59799194,10.83518314,0 106.59739685,10.83413124,0 106.59739685,10.83413124,0 106.59739685,10.83413124,0 106.59739685,10.83413124,0 106.59686279,10.83300018,0 106.59661865,10.8324995,0 106.59625244,10.83181,0 106.59625244,10.83181,0 106.59625244,10.83181,0 106.59594727,10.83109856,0 106.59555054,10.83038139,0 106.59509277,10.82966518,0 106.59468842,10.82911205,0 106.59436798,10.82870674,0 106.59422302,10.8286171,0 106.59407806,10.82840633,0 106.59357452,10.82770538,0 106.59307861,10.82697296,0 106.59235382,10.82604313,0 106.59235382,10.82604313,0 106.59235382,10.82604313,0 106.5918045,10.82532883,0 106.59123993,10.82460213,0 106.59120178,10.82462502,0 106.59120178,10.82462502,0 106.59122467,10.82459641,0 106.59082794,10.82409096,0 106.59038544,10.82359505,0 106.58992004,10.82312679,0 106.58945465,10.82265759,0 106.58942413,10.82267857,0 106.58942413,10.82267857,0 106.58944702,10.82266235,0 106.58901215,10.82220936,0 106.58855438,10.82176208,0 106.58809662,10.82132721,0 106.58764648,10.82089233,0 106.58761597,10.82091904,0 106.58761597,10.82091904,0 106.58763123,10.82090282,0 106.58731842,10.82061005,0 106.5872879,10.82050037,0 106.5872879,10.82040024,0 106.58706665,10.82017994,0 106.58631134,10.81946945,0 106.58553314,10.81877708,0 106.58553314,10.81877708,0 106.58482361,10.81815434,0 106.5841217,10.81753159,0 106.58341217,10.81690884,0 106.58270264,10.81628609,0 106.58270264,10.81628609,0 106.58189392,10.81562042,0 106.58107758,10.8149538,0 106.58023071,10.81431675,0 106.57939148,10.81367874,0 106.57846069,10.81309128,0 106.57752991,10.81250381,0 106.57660675,10.81191921,0 106.57568359,10.81133461,0 106.57565308,10.81137562,0 106.57565308,10.81137562,0 106.57565308,10.81137562,0 106.57565308,10.81137562,0 106.57565308,10.81137562,0 106.57565308,10.81137562,0 106.57568359,10.81132412,0 106.57489014,10.81080723,0 106.57409668,10.81029129,0 106.57328033,10.8098011,0 106.57247162,10.80931091,0 106.57245636,10.80933189,0 106.57245636,10.80933189,0 106.57245636,10.80933189,0 106.57245636,10.80933189,0 106.57245636,10.80933189,0 106.57245636,10.80933189,0 106.57247925,10.80930996,0 106.57180023,10.80887032,0 106.57112885,10.80843067,0 106.56982422,10.80762959,0 106.56854248,10.80681038,0 106.56850433,10.80684471,0 106.56854248,10.80681038,0 106.56813049,10.80655003,0 106.56762695,10.80626011,0 106.56649017,10.80550957,0 106.56555176,10.80494976,0 106.56522369,10.8046999,0 106.56504059,10.80453014,0 106.56477356,10.80418015,0 106.56476593,10.80416775,0 106.56477356,10.80418015,0 106.56386566,10.80301952,0 106.56290436,10.80188084,0 106.56200409,10.80066395,0 106.56106567,10.79957294,0 106.56106567,10.79957294,0 106.5607605,10.79913998,0 106.56002045,10.79819965,0 106.55991364,10.79811001,0 106.55860138,10.79646015,0 106.55812073,10.79589462,0 106.55812073,10.79589462,0 106.55812073,10.79589462,0 106.55709076,10.7945509,0 106.55648041,10.79316521,0 106.55641937,10.7931757,0 106.55641937,10.7931757,0 106.55641937,10.7931757,0 106.55641937,10.7931757,0 106.55641937,10.7931757,0 106.55645752,10.79316044,0 106.55612183,10.79233265,0 106.55575562,10.79149532,0 106.5553894,10.79065704,0 106.55500031,10.78983498,0 106.55500031,10.78983498,0 106.55500031,10.78983498,0 106.55500031,10.78983498,0 106.55500031,10.78983498,0 106.55443573,10.78825378,0 106.55422211,10.78677368,0 106.55394745,10.78529263,0 106.55394745,10.78529263,0 106.55394745,10.78529263,0 106.55394745,10.78529263,0 106.55378723,10.78398609,0 106.55358887,10.78271103,0 106.5533905,10.78139877,0 106.55311584,10.78012753,0 106.55311584,10.78012753,0 106.55311584,10.78012753,0 106.55311584,10.78012753,0 106.55306244,10.77933788,0 106.55284882,10.77809429,0 106.55266571,10.77688217,0 106.5524292,10.77581215,0 106.5524292,10.77581215,0 106.55239105,10.7751379,0 106.55224609,10.77403641,0 106.55201721,10.77271366,0 106.55184174,10.77198124,0 106.55184174,10.77198124,0 106.55184174,10.77198124,0 106.55184174,10.77198124,0 106.55168915,10.77071667,0 106.55036926,10.77132797,0 106.55039978,10.77138042,0 106.55039978,10.77138042,0 106.55039978,10.77138042,0 106.54925537,10.77193928,0 106.54811859,10.77249813,0 106.54701996,10.77308273,0 106.5459137,10.77366829,0 106.5459137,10.77366829,0 106.54515076,10.7740469,0 106.54438019,10.77442646,0 106.54364014,10.774827,0 106.54290771,10.77522659,0 106.54290771,10.77522659,0 106.54176331,10.77579117,0 106.5406189,10.77635479,0 106.53947449,10.77691936,0 106.53833008,10.77748299,0 106.53833008,10.77748299,0 106.5370636,10.77810478,0 106.53580475,10.77872658,0 106.5345993,10.7793541,0 106.53340149,10.77998066,0 106.53343964,10.78003407,0 106.53343964,10.78003407,0 106.53340149,10.77998638,0 106.53192139,10.78069782,0 106.53044128,10.78140354,0 106.5289917,10.7821207,0 106.52754211,10.78284264,0 106.52758026,10.78289032,0 106.52758026,10.78289032,0 106.52754974,10.7828474,0 106.52642059,10.78341103,0 106.52529144,10.78397274,0 106.52416229,10.78453541,0 106.52303314,10.78509808,0 106.52306366,10.78515625,0 106.52306366,10.78515625,0 106.52303314,10.78508759,0 106.52167511,10.78576279,0 106.52031708,10.78643894,0 106.51896667,10.7871151,0 106.51760864,10.7877903,0 106.51763153,10.78783321,0 106.51763153,10.78783321,0 106.51760864,10.78779602,0 106.51714325,10.7880249,0 106.51668549,10.78826523,0 106.51655579,10.78833294,0 106.51647186,10.78832245,0 106.5164032,10.78827,0 106.51622772,10.78822803,0 106.51593018,10.78831196,0 106.51554871,10.78859138,0 106.51517487,10.78880215,0 106.51475525,10.78900814,0 106.51449585,10.78903389,0 106.51425934,10.78814983,0 106.51420593,10.78800678,0 106.51420593,10.78800678,0 106.51420593,10.78800678,0 106.51420593,10.78800678,0 106.51420593,10.78800678,0 106.51420593,10.78800678,0 106.51420593,10.78800678,0 106.51399231,10.78726864,0 106.5138092,10.78646755,0 106.51361847,10.78568268,0 106.51348114,10.78490829,0 106.51348114,10.78490829,0 106.51348114,10.78490829,0 106.51348114,10.78490829,0 106.51322937,10.78414345,0 106.51303864,10.78335857,0 106.51268768,10.78185177,0 106.51278687,10.78183079,0 106.51278687,10.78183079,0 106.51278687,10.78183079,0 106.51268768,10.78185654,0 106.51251221,10.7811451,0 106.51235199,10.78042889,0 106.51215363,10.77972507,0 106.51195526,10.77902222,0 106.51153564,10.77761745,0 106.51132965,10.77690887,0 106.51104736,10.7762289,0 106.51112366,10.77620792,0 106.51112366,10.77620792,0 106.51104736,10.77621841,0 106.51054382,10.77510643,0 106.50997162,10.7740097,0 106.50981903,10.77385044,0 106.50886536,10.77280331,0 106.50761414,10.77175999,0 106.50761414,10.77173424,0 106.50761414,10.77173424,0 106.5063858,10.77079296,0 106.50515747,10.76985264,0 106.50392914,10.76890373,0 106.50268555,10.76798725,0 106.50268555,10.76798725,0 106.5021286,10.76753902,0 106.50157166,10.7670908,0 106.50095367,10.76668739,0 106.50032806,10.76628399,0 106.50032806,10.76628399,0 106.50032806,10.76628399,0 106.49990082,10.7659626,0 106.49925232,10.76558399,0 106.49891663,10.76495075,0 106.49874115,10.76474571,0 106.49795532,10.76423931,0 106.49785614,10.76435566,0 106.49785614,10.76435566,0 106.49785614,10.76435566,0 106.49785614,10.76435566,0 106.49796295,10.76423454,0 106.49748993,10.76391792,0 106.4968338,10.76342773,0 106.49617767,10.76293755,0 106.49555206,10.76247883,0 106.49493408,10.76202106,0 106.49485779,10.7621212,0 106.49485779,10.7621212,0 106.49485779,10.7621212,0 106.49494934,10.76199436,0 106.49414063,10.76140404,0 106.49339294,10.76078224,0 106.49254608,10.76019192,0 106.49175262,10.75957775,0 106.49093628,10.7589798,0 106.49014282,10.75837421,0 106.48928833,10.7578001,0 106.48854828,10.75716019,0 106.4885025,10.75706673,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Folder>
+        <name>Trạm dừng (52 trạm)</name>
+        <Placemark>
+          <name>[BX41] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX41&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe An Sương Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 122, 151, 27, 33, 41, 61-3, 62-5, 65, 71, 74, 85]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61337280273438,10.843737602233887,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 123] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 123&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 142 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 151, 27, 41, 65, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.613361,10.846035,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 125] Cây xăng Quân Đội</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Quân Đội&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 125&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 2 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 145, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.611274,10.84936,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 127] Trung tâm Văn hóa Quận 12</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trung tâm Văn hóa Quận 12&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 127&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Trung tâm văn hóa Quận 12 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 145, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.607863,10.85466,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 022] Liên đoàn lao động Hóc Môn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Liên đoàn lao động Hóc Môn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 022&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 69/1 (21/7) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Trung Chánh, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.6062,10.857115,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 023] Cây xăng Củ Cải</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Củ Cải&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 023&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 33/4 (336) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Trung Chánh, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.604306,10.859823,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 251] Chợ Đầu Mối Nông Sản Thực Phẩm Hóc Môn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chợ Đầu Mối Nông Sản Thực Phẩm Hóc Môn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 251&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cây xanh số 78 – 80 Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Xuân Thới Sơn, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.602038,10.858821,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 252] Ấp Bắc Lân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ấp Bắc Lân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 252&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 3/1 Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.601045,10.854481,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 253] Trường THPT Bà Điểm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường THPT Bà Điểm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 253&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Trường THPT Bà Điểm Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.600253,10.851353,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 175] Nguyễn Thị Sóc</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 175&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 88/2 Nguyễn Ánh Thủ&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.600256,10.846262,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 176] Trường Phan Công Hớn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường Phan Công Hớn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 176&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đ/d T. Phan Công Hớn Nguyễn Ánh Thủ&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.599205,10.84103,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 202] Chợ Bà Điểm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chợ Bà Điểm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 202&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 17/7 Phan Văn Hớn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 23, 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.59996,10.839502,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 157] Chùa Giác Hoàng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Giác Hoàng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 157&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 29/3C (36/2D) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.599521,10.837863,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 158] Nhà Hàng Ngọc Huyền</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nhà Hàng Ngọc Huyền&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 158&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 31/4A (35/1B) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.598577,10.836235,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 159] Bưu điện Phan Văn Đối</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bưu điện Phan Văn Đối&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 159&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 26/4A (264A) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.597396,10.834131,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 160] Chung cu Hoàng Hải</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chung cu Hoàng Hải&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 160&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 264 (Kế 34/11D) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.596254,10.83181,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 191] công ty Cholimex</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; công ty Cholimex&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 191&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện công ty Cholimex Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.592354,10.826043,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 190] Công ty Jonton</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Jonton&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 190&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Công ty Jonton Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.591202,10.824625,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 189] KCN Vĩnh Lộc</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; KCN Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 189&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 330 Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.589425,10.822679,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 188] Quỳnh Tiên</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Quỳnh Tiên&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 188&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; F9/18B1 Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.587616,10.820919,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 187] xã Nhị Bình</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; xã Nhị Bình&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 187&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; F9/6B Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.585533,10.818777,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 319] Đường Phạm Thị Nghĩ</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường Phạm Thị Nghĩ&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 319&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 236-238 Hương Lộ 80&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.582704,10.816286,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 136] Chợ mới Vĩnh Lộc</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chợ mới Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 136&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột Điện T127T (F1/17) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.575655,10.811376,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 137] Khu dân cư Đồng Danh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Khu dân cư Đồng Danh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 137&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; A1/2F Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.572458,10.809332,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 138] Trạm xăng Hoàng Phú</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm xăng Hoàng Phú&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 138&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đ/d 1704 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.568504,10.806845,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 139] Bãi đá Đức Cường</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bãi đá Đức Cường&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 139&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Công ty Hợp Nhất Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.564765,10.804168,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 140] UB xã Vĩnh Lộc B</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; UB xã Vĩnh Lộc B&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 140&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đ/d 1340 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.561069,10.799573,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 141] Trạm xăng Hiệp Hòa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm xăng Hiệp Hòa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 141&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1175 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.558118,10.795895,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 148] Mầm non Hoa Thiên Lý</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Mầm non Hoa Thiên Lý&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 148&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Mầm non Hoa Thiên Lý Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.556418,10.793176,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 149] Kinh Trung Ương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kinh Trung Ương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 149&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Công ty Sơn Hà Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.555002,10.789835,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 150] Cầu Bà Tri</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cầu Bà Tri&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 150&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Kế 1A/188 (1A/117) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.55395,10.785293,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 151] Công ty Bảo Huy</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Bảo Huy&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 151&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1A/167/1 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.553113,10.780128,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 152] Công ty Hùng Tuấn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Hùng Tuấn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 152&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1A209/1 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.552427,10.775812,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 153] Bà Lát</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bà Lát&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 153&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đ/d 1A99/1 (Đối diện A1/94) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.551842,10.771981,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 284] Trường tiểu học Phạm Văn Hai</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường tiểu học Phạm Văn Hai&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 284&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 2A2 Tỉnh lộ 10&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.550399,10.77138,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 285] Bệnh viện Tâm thần Bình Minh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Tâm thần Bình Minh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 285&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 2A.27/1 Tỉnh lộ 10&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.545914,10.773668,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 286] Ủy ban xã Phạm Văn Hai</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ủy ban xã Phạm Văn Hai&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 286&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 2A41 (UBND Phạm Văn Hai) Tỉnh lộ 10&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.542905,10.775227,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 287] Ủy ban xã Lê Minh Xuân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ủy ban xã Lê Minh Xuân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 287&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 2A/63 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.538329,10.777483,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 288] Kênh A</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kênh A&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 288&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cafe 94 (2A/94) Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.533437,10.780034,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 291] Hoàng My</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Hoàng My&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 291&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 3A.11 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.527579,10.78289,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 292] Thịnh Thành</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Thịnh Thành&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 292&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 3A35/2 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.523067,10.785156,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 293] Trường Tiểu học Cầu Xáng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường Tiểu học Cầu Xáng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 293&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 3A61 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.517633,10.787833,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 328] Mai Bá Hương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Mai Bá Hương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 328&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 4P (Đối diện A8/7) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.514205,10.788007,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 329] Công ty Hoàng Long Anh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Hoàng Long Anh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 329&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện A8/25A Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.513481,10.784908,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 330] Chùa Phật Cô Đơn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Phật Cô Đơn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 330&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đ/d Chùa Phật Cô Đơn-Cột điện 19AP Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.512784,10.781831,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 331] Học viện Phật giáo Việt Nam</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Học viện Phật giáo Việt Nam&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 331&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 30P (Đối diện 10/8A) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.511126,10.776208,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 332] Công ty Minh Chương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Minh Chương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 332&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 38AP (Đối diện A11/1) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.507612,10.771734,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 333] Công ty Thịnh Mỹ</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Thịnh Mỹ&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 333&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 47P (Đối diện A11/19) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.502688,10.767987,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 334] Qua ngã 3 Trần Đại Nghĩa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Qua ngã 3 Trần Đại Nghĩa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 334&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 56P (Đối diện A1/27) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.500328,10.766284,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 335] Trần Đại Nghĩa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trần Đại Nghĩa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 335&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện B1.24 (B1/27A) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.497855,10.764356,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 336] Thánh Thất Lê Minh Xuân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Thánh Thất Lê Minh Xuân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 336&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; B3/24 Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.494856,10.762121,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[BX 59] Phật Cô Đơn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Phật Cô Đơn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX 59&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; ĐẦU BẾN PHẬT CÔ ĐƠN Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.488499,10.757067,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+    <Folder>
+      <name>Lượt về: Phật Cô Đơn → Bến xe An Sương (24.93 km)</name>
+      <Placemark>
+        <name>B 71 - Đường đi Lượt về</name>
+        <description><![CDATA[&lt;b&gt;Tuyến:&lt;/b&gt; B 71 - Bến xe An Sương - Phật Cô Đơn&lt;br/&gt;&lt;b&gt;Lượt:&lt;/b&gt; Lượt về&lt;br/&gt;&lt;b&gt;Cự ly:&lt;/b&gt; 24.93 km&lt;br/&gt;&lt;b&gt;Thời gian hành trình:&lt;/b&gt; 65 phút&lt;br/&gt;&lt;b&gt;Thời gian hoạt động:&lt;/b&gt; 5:00 - 20:30]]></description>
+        <styleUrl>#routeLineStyle</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>106.4885025,10.75706673,0 106.48929596,10.75767803,0 106.49008942,10.75828934,0 106.49090576,10.75889587,0 106.49171448,10.75950146,0 106.49251556,10.76010227,0 106.49332428,10.76070881,0 106.49412537,10.76131248,0 106.49493408,10.76191521,0 106.49485016,10.76199532,0 106.49485016,10.76199532,0 106.49491119,10.76193142,0 106.49565887,10.76247406,0 106.49639893,10.7630167,0 106.49713898,10.7635603,0 106.49787903,10.76410294,0 106.49778748,10.76419163,0 106.49778748,10.76419163,0 106.49787903,10.76408195,0 106.49835968,10.76440811,0 106.4988327,10.76473522,0 106.49906921,10.76514053,0 106.49930573,10.7655468,0 106.49958801,10.76570988,0 106.49986267,10.76587296,0 106.49990082,10.76584721,0 106.49990082,10.76584721,0 106.49986267,10.76589966,0 106.50058746,10.76633167,0 106.50127411,10.76685905,0 106.50196838,10.76738358,0 106.50267029,10.76790714,0 106.50270081,10.7678709,0 106.50270081,10.7678709,0 106.50270081,10.7678709,0 106.50266266,10.76791286,0 106.50325775,10.76835918,0 106.50385284,10.76880646,0 106.50444794,10.76925278,0 106.50504303,10.7696991,0 106.50563049,10.77015781,0 106.50621796,10.77061081,0 106.50679016,10.77107239,0 106.50737762,10.77154922,0 106.50745392,10.77148056,0 106.50745392,10.77148056,0 106.50745392,10.77148056,0 106.50737762,10.77155972,0 106.5085907,10.7725029,0 106.50933838,10.77322483,0 106.50999451,10.77400494,0 106.51045227,10.7748642,0 106.51086426,10.77573299,0 106.51100922,10.77566528,0 106.51100922,10.77566528,0 106.51100922,10.77566528,0 106.51100922,10.77566528,0 106.51087952,10.77571964,0 106.51126862,10.77667141,0 106.51159668,10.77777958,0 106.51187897,10.77871418,0 106.51216125,10.77964878,0 106.51239777,10.78062344,0 106.51262665,10.78159904,0 106.51282501,10.78155613,0 106.51282501,10.78155613,0 106.51282501,10.78155613,0 106.51282501,10.78155613,0 106.51282501,10.78155613,0 106.51264954,10.78158283,0 106.51282501,10.7823391,0 106.51300049,10.78309536,0 106.51318359,10.78383064,0 106.51337433,10.78456593,0 106.51350403,10.78452873,0 106.51350403,10.78452873,0 106.51350403,10.78452873,0 106.51350403,10.78452873,0 106.51350403,10.78452873,0 106.5133667,10.78455448,0 106.51358032,10.78540611,0 106.51379395,10.78625679,0 106.51400757,10.78710556,0 106.51421356,10.78795433,0 106.51429749,10.78792763,0 106.51429749,10.78792763,0 106.51429749,10.78792763,0 106.51429749,10.78792763,0 106.51429749,10.78792763,0 106.51429749,10.78792763,0 106.51419067,10.78796482,0 106.51448822,10.78904438,0 106.51475525,10.78902912,0 106.51551056,10.78861809,0 106.51635742,10.78796482,0 106.51702881,10.78794861,0 106.51760101,10.78765392,0 106.51756287,10.78757954,0 106.51756287,10.78757954,0 106.51756287,10.78757954,0 106.51756287,10.78757954,0 106.51756287,10.78757954,0 106.51760864,10.78765869,0 106.5189209,10.78700542,0 106.52023315,10.78635216,0 106.52155304,10.78569794,0 106.52278137,10.78509808,0 106.52275848,10.78503418,0 106.52275848,10.78503418,0 106.52275848,10.78503418,0 106.52281189,10.78511906,0 106.52431488,10.78433323,0 106.52574158,10.78362274,0 106.52716064,10.7829113,0 106.52709961,10.78281593,0 106.52709961,10.78281593,0 106.52709961,10.78281593,0 106.5271225,10.78287888,0 106.52841949,10.78226948,0 106.52970886,10.78166008,0 106.53083801,10.78110886,0 106.53197479,10.78055859,0 106.53330994,10.77992249,0 106.53327179,10.77982807,0 106.53327179,10.77982807,0 106.53330231,10.77990723,0 106.53570557,10.7786684,0 106.53824615,10.77736187,0 106.53820801,10.77731419,0 106.53820801,10.77731419,0 106.53820801,10.77731419,0 106.53820801,10.77731419,0 106.53820801,10.77731419,0 106.53820801,10.77731419,0 106.53820801,10.77731419,0 106.5382309,10.77737713,0 106.53943634,10.77676964,0 106.54063416,10.7761631,0 106.5418396,10.77555561,0 106.54290009,10.77503777,0 106.54285431,10.77494812,0 106.54285431,10.77494812,0 106.54290009,10.77502155,0 106.54360199,10.77466869,0 106.54431152,10.77431583,0 106.54502106,10.77394676,0 106.54572296,10.77357769,0 106.5456543,10.7734623,0 106.5456543,10.7734623,0 106.54573059,10.77358818,0 106.54653168,10.77317524,0 106.54732513,10.77276134,0 106.54827118,10.77228165,0 106.54920959,10.77180195,0 106.55015564,10.77132225,0 106.55012512,10.77128029,0 106.55012512,10.77128029,0 106.55012512,10.77128029,0 106.55012512,10.77128029,0 106.55012512,10.77128029,0 106.55012512,10.77128029,0 106.55014038,10.77133846,0 106.55091858,10.77097988,0 106.55169678,10.7706213,0 106.55181885,10.77139378,0 106.55193329,10.7721653,0 106.55197144,10.77215958,0 106.55197144,10.77215958,0 106.55197144,10.77215958,0 106.55197144,10.77215958,0 106.55197144,10.77215958,0 106.55197144,10.77215958,0 106.55192566,10.7721653,0 106.55208588,10.7731142,0 106.55223083,10.77405739,0 106.55238342,10.77500343,0 106.55252838,10.77594948,0 106.55258942,10.77594376,0 106.55258942,10.77594376,0 106.55258942,10.77594376,0 106.55258942,10.77594376,0 106.55258942,10.77594376,0 106.55258942,10.77594376,0 106.55252838,10.77594948,0 106.5526886,10.77700615,0 106.55284882,10.77806282,0 106.55302429,10.77914524,0 106.5532074,10.78022861,0 106.55330658,10.78021336,0 106.55330658,10.78021336,0 106.55330658,10.78021336,0 106.55330658,10.78021336,0 106.55330658,10.78021336,0 106.55330658,10.78021336,0 106.55330658,10.78021336,0 106.5532074,10.78022289,0 106.55342102,10.78154087,0 106.55361176,10.78286362,0 106.55382538,10.78418064,0 106.554039,10.78554535,0 106.55413055,10.78553009,0 106.55413055,10.78553009,0 106.55413055,10.78553009,0 106.55413055,10.78553009,0 106.55413055,10.78553009,0 106.55413055,10.78553009,0 106.55408478,10.78565121,0 106.55423737,10.78684235,0 106.55440521,10.78803253,0 106.55467224,10.78898144,0 106.55519104,10.79019356,0 106.55529022,10.79015064,0 106.55529022,10.79015064,0 106.55529022,10.79015064,0 106.55529022,10.79015064,0 106.55521393,10.79018307,0 106.5555191,10.79092312,0 106.55583191,10.79166412,0 106.55612946,10.79228592,0 106.55641937,10.79298115,0 106.55653381,10.79293442,0 106.55653381,10.79293442,0 106.55653381,10.79293442,0 106.55653381,10.79293442,0 106.55640411,10.79297066,0 106.55673218,10.79375553,0 106.55709076,10.79451466,0 106.55778503,10.79542065,0 106.55788422,10.79537868,0 106.55788422,10.79537868,0 106.55788422,10.79537868,0 106.55788422,10.79537868,0 106.55779266,10.79542637,0 106.55858612,10.796422,0 106.55937958,10.79739666,0 106.56016541,10.79837132,0 106.5609436,10.7993679,0 106.56102753,10.79930401,0 106.56102753,10.79930401,0 106.56102753,10.79930401,0 106.56102753,10.79930401,0 106.56102753,10.79937267,0 106.5609436,10.7993784,0 106.56185913,10.80049038,0 106.56273651,10.80160141,0 106.56359863,10.80268764,0 106.56450653,10.80383587,0 106.56459808,10.80379391,0 106.56459808,10.80379391,0 106.56459808,10.80379391,0 106.56459808,10.80379391,0 106.5644989,10.80384159,0 106.56522369,10.80471611,0 106.56584167,10.8051424,0 106.56645203,10.8055172,0 106.56733704,10.80605412,0 106.56822205,10.80659199,0 106.56824493,10.80653858,0 106.56824493,10.80653858,0 106.56824493,10.80653858,0 106.56824493,10.80653858,0 106.56819916,10.80660725,0 106.56929779,10.80727482,0 106.57029724,10.80789852,0 106.57129669,10.80853081,0 106.57234955,10.80920506,0 106.57239532,10.80915833,0 106.57239532,10.80915833,0 106.57239532,10.80915833,0 106.57239532,10.80915833,0 106.57239532,10.80915833,0 106.57235718,10.80921555,0 106.57355499,10.80993271,0 106.57444763,10.81052303,0 106.57529449,10.81103897,0 106.57534027,10.81102276,0 106.57534027,10.81102276,0 106.57534027,10.81102276,0 106.57534027,10.81102276,0 106.57534027,10.81102276,0 106.57529449,10.81105995,0 106.57646179,10.81180859,0 106.57765198,10.81254101,0 106.57850647,10.81311035,0 106.57936859,10.81365299,0 106.58074188,10.81464863,0 106.5821228,10.81577587,0 106.58347321,10.81691456,0 106.58447266,10.81780624,0 106.58545685,10.81872177,0 106.58547974,10.81869698,0 106.58547974,10.81869698,0 106.58547974,10.81869698,0 106.58547974,10.81869698,0 106.58547974,10.81869698,0 106.58547974,10.81869698,0 106.58547974,10.81869698,0 106.58547974,10.81869698,0 106.58551025,10.81877422,0 106.58635712,10.81952763,0 106.58718109,10.82029152,0 106.58737946,10.82032299,0 106.58763885,10.82057095,0 106.587677,10.82053947,0 106.587677,10.82053947,0 106.587677,10.82053947,0 106.587677,10.82053947,0 106.587677,10.82053947,0 106.587677,10.82053947,0 106.58763885,10.82056618,0 106.5885849,10.82146168,0 106.58953094,10.82239437,0 106.58956909,10.82236195,0 106.58956909,10.82236195,0 106.58956909,10.82236195,0 106.58956909,10.82236195,0 106.58953857,10.82239437,0 106.59002686,10.82288933,0 106.59050751,10.82338428,0 106.59095001,10.82389355,0 106.59139252,10.82440186,0 106.59139252,10.82440186,0 106.59139252,10.82440186,0 106.59139252,10.82440186,0 106.59204102,10.82523727,0 106.59268951,10.82607269,0 106.59268951,10.82607269,0 106.59307098,10.82661438,0 106.5933609,10.82715225,0 106.59406281,10.82819557,0 106.59477997,10.82922268,0 106.5954895,10.83023453,0 106.59558105,10.83019733,0 106.59558105,10.83019733,0 106.59547424,10.83023453,0 106.59592438,10.83100891,0 106.59632874,10.83185196,0 106.59670258,10.83267879,0 106.59710693,10.83351135,0 106.59716797,10.83347988,0 106.59716797,10.83347988,0 106.5970993,10.83350658,0 106.59750366,10.83427048,0 106.59790802,10.83503437,0 106.5983429,10.83578777,0 106.59877777,10.83653069,0 106.59885406,10.83647823,0 106.59885406,10.83647823,0 106.59877014,10.83651447,0 106.59937286,10.83747864,0 106.59983063,10.83851147,0 106.59993744,10.83846855,0 106.59993744,10.83846855,0 106.59983826,10.83851719,0 106.60023499,10.83943844,0 106.59964752,10.83992863,0 106.5996933,10.8399868,0 106.5996933,10.8399868,0 106.5996933,10.8399868,0 106.59964752,10.83991814,0 106.59883118,10.84061909,0 106.59931946,10.84111404,0 106.59963226,10.84149933,0 106.599823,10.8419199,0 106.59985352,10.84191036,0 106.59985352,10.84191036,0 106.59985352,10.84191036,0 106.59981537,10.84193134,0 106.59991455,10.84219933,0 106.59992218,10.84249496,0 106.59992981,10.84307957,0 106.59985352,10.84424877,0 106.60002899,10.84537697,0 106.60016632,10.84592438,0 106.60035706,10.84644604,0 106.60041046,10.84642982,0 106.60041046,10.84642982,0 106.60034943,10.84645176,0 106.60049438,10.84696198,0 106.6003418,10.84788704,0 106.60018921,10.8488121,0 106.60002899,10.84965992,0 106.60020447,10.85046864,0 106.60038757,10.85127735,0 106.60044098,10.85126686,0 106.60044098,10.85126686,0 106.60037994,10.85127163,0 106.60063934,10.85234642,0 106.60089874,10.85342121,0 106.60115814,10.854496,0 106.60140991,10.85557079,0 106.60144806,10.85555935,0 106.60144806,10.85555935,0 106.60140228,10.85556602,0 106.60170746,10.85678291,0 106.60201263,10.8579998,0 106.60206604,10.85797882,0 106.60206604,10.85797882,0 106.60201263,10.8579998,0 106.60219574,10.85877991,0 106.60237885,10.85956192,0 106.60256958,10.86034393,0 106.60275269,10.86112404,0 106.60294342,10.86121845,0 106.6033783,10.86065006,0 106.60332489,10.86060238,0 106.60332489,10.86060238,0 106.60332489,10.86060238,0 106.60340118,10.86065006,0 106.60375977,10.86015224,0 106.60412598,10.85965443,0 106.60448456,10.85915852,0 106.60485077,10.85866356,0 106.60520935,10.85817146,0 106.60557556,10.85767841,0 106.60590363,10.85718346,0 106.60623932,10.8566885,0 106.60617828,10.85661983,0 106.60617828,10.85661983,0 106.60617828,10.85661983,0 106.60617828,10.85661983,0 106.60617828,10.85661983,0 106.60617828,10.85661983,0 106.60626221,10.85666656,0 106.60676575,10.85591221,0 106.60726166,10.85516262,0 106.60774994,10.85441399,0 106.60823822,10.85364246,0 106.6081543,10.85359478,0 106.6081543,10.85359478,0 106.6081543,10.85359478,0 106.6081543,10.85359478,0 106.6081543,10.85359478,0 106.6081543,10.85359478,0 106.6081543,10.85359478,0 106.60823059,10.8536272,0 106.60881805,10.85268116,0 106.60940552,10.85173607,0 106.61006165,10.8507452,0 106.61070251,10.84973907,0 106.61064148,10.84971333,0 106.61064148,10.84971333,0 106.61064148,10.84971333,0 106.61064148,10.84971333,0 106.61064148,10.84971333,0 106.61064148,10.84971333,0 106.61070251,10.84973907,0 106.61142731,10.84860897,0 106.6121521,10.84747887,0 106.61287689,10.84635639,0 106.6135788,10.84521294,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61358643,10.84522343,0 106.61406708,10.84443855,0 106.61330414,10.84384346,0 106.6133728,10.8437376,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Folder>
+        <name>Trạm dừng (51 trạm)</name>
+        <Placemark>
+          <name>[BX 59] Phật Cô Đơn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Phật Cô Đơn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX 59&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; ĐẦU BẾN PHẬT CÔ ĐƠN Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.488499,10.757067,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 337] Thất Thất Lê Minh Xuân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Thất Thất Lê Minh Xuân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 337&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện Đại Đạo Tam Kỳ Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.494851,10.761995,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 338] Kênh 3</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kênh 3&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 338&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện Cột điện 70P Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.497785,10.764192,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 339] Ngã 3 Trần Đại Nghĩa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã 3 Trần Đại Nghĩa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 339&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 57P/17 (A12/8) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.499898,10.765847,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 340] Sơ Dừa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Sơ Dừa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 340&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; A11/20 Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.502704,10.767871,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 341] Công ty Minh Chương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Minh Chương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 341&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện cột điện 39P (A11/1) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.507452,10.771481,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 342] Học viện Phật giáo Việt Nam</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Học viện Phật giáo Việt Nam&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 342&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện cột điện 30AP (A10/8A) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.511008,10.775665,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 343] Chùa Phật Cô Đơn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Phật Cô Đơn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 343&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; A9/19 (Đối diện bãi giữ xe Phật Cô Đơn) Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.512827,10.781556,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 344] Công ty Hoàng Long Anh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Hoàng Long Anh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 344&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; A8/27 Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.513503,10.784529,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 345] Kênh A2</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kênh A2&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 345&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; A8/4 Mai Bá Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.514297,10.787928,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 294] Trường Tiểu học Cầu Xáng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường Tiểu học Cầu Xáng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 294&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 187T (Đối diện 3A61) Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.517563,10.78758,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 295] Đa Khoa Sài Gòn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đa Khoa Sài Gòn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 295&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; A2/23 (Đối diện 3A35/3) Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.522762,10.785034,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 290] Hoàng My</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Hoàng My&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 290&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 3A13 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.527101,10.782816,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 296] Kênh A</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kênh A&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 296&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 2A/92 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.53327,10.779828,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 297] Ủy ban xã Lê Minh Xuân </name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ủy ban xã Lê Minh Xuân &lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 297&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; F2/11 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.538211,10.777314,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 298] Ủy ban xã Phạm Văn Hai</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ủy ban xã Phạm Văn Hai&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 298&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện 111T (F4.7) Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Phạm Văn Hai, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.542857,10.774948,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 299] Công ty Chấn Hưng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Chấn Hưng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 299&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; F5/6 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Lê Minh Xuân, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.545657,10.773462,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 300] Trường tiểu học Phạm Văn Hai</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường tiểu học Phạm Văn Hai&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 300&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; F7/6 Tỉnh lộ 10 Bình Chánh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 62-7, 71, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.550125,10.77128,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC_155] Bà Lát</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bà Lát&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC_155&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1A.96/1 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.551971,10.77216,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 155] Công ty Hùng Tuấn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Hùng Tuấn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 155&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1A.120 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.552588,10.775944,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 156] Công ty Bảo Huy</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Bảo Huy&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 156&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1A.149 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.553307,10.780213,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 157] Cầu Bà Tri</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cầu Bà Tri&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 157&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1A/163 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.554127,10.78553,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 158] Kinh Trung Ương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kinh Trung Ương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 158&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 888 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.555291,10.790151,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 159] Rửa xe Hải Trí</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Rửa xe Hải Trí&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 159&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Rửa xe Hải Trí Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.556536,10.792934,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 142] Trạm xăng Hiệp Hòa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm xăng Hiệp Hòa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 142&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1153A (F1/11) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.557888,10.795379,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 143] UB xã Vĩnh Lộc B</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; UB xã Vĩnh Lộc B&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 143&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1330 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.561031,10.799304,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 144] Bãi đá Đức Cường</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bãi đá Đức Cường&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 144&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1476A (1482) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.564599,10.803794,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 145] Trạm xăng Lan Anh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm xăng Lan Anh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 145&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1674 (1860) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.568246,10.806539,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 146] KDC Vĩnh Lộc A</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; KDC Vĩnh Lộc A&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 146&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1860 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.572393,10.809158,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HBC 147] Ngã 5 Vĩnh Lộc</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã 5 Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HBC 147&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện T142P (2170) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Vĩnh Lộc B, Huyện Bình Chánh&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.575338,10.811023,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 182] Trạm giữa Vĩnh Lộc</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm giữa Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 182&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện F9/6 (Châu Phú Mỹ) Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.58548,10.818697,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 183] Đường liên ấp 5-6</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường liên ấp 5-6&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 183&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 288 Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.587676,10.820539,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 184] Chốt 2 KCN Vĩnh Lộc</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chốt 2 KCN Vĩnh Lộc&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 184&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 330 Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.58957,10.822362,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 185] Kho vật tư thiết bị</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kho vật tư thiết bị&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 185&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Kho vật tư thiết bị Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.591393,10.824402,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 186] Công ty Cholimex</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Cholimex&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 186&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Công ty Cholimex Đường số 2&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.59269,10.826073,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 153] Chung cu Hoàng Hải</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chung cu Hoàng Hải&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 153&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 321 (43/12) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.595578,10.830197,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 154] Bưu điện Phan Văn Đối</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bưu điện Phan Văn Đối&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 154&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 43/11 (43/1) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.597166,10.83348,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 155] Nhà Hàng Ngọc Huyền</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nhà Hàng Ngọc Huyền&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 155&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 43/3E (31/3C) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.598856,10.836478,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 156] Chùa Giác Hoàng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Giác Hoàng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 156&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 41/2 (42/1B) Phan Văn Đối&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.599934,10.838469,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 179] Chợ Bà Điểm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chợ Bà Điểm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 179&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; đd 14/9 Phan Văn Hớn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 23, 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.599693,10.839987,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 167] Trường Phan Công Hớn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường Phan Công Hớn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 167&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 100/1 Nguyễn Ánh Thủ&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.599854,10.84191,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 168] Nguyễn Thị Sóc</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 168&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 60/8A (Đối diện 135) Nguyễn Ánh Thủ&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 48, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.600412,10.84643,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 248] Trường THPT Bà Điểm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường THPT Bà Điểm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 248&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 3/6C – 3/6D  Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.600438,10.851267,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 249] Ấp Hưng Lân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ấp Hưng Lân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 249&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1/8 B (cây xanh 117 – 119)  Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.601446,10.855559,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 250] Chợ Đầu Mối Nông Sản Thực Phẩm Hóc Môn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chợ Đầu Mối Nông Sản Thực Phẩm Hóc Môn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 250&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; B58/2 Nguyễn Thị Sóc&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Xuân Thới Sơn, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.602064,10.857979,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 053] Ngã 3 Củ Cải</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã 3 Củ Cải&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 053&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 43/1 (kế 33/5A), 7/2A Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Xuân Thới Đông, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.603324,10.860602,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 055] Chùa Linh Sơn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Linh Sơn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 055&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; G68A Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.606178,10.85662,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 056] Ngã tư Trung Chánh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã tư Trung Chánh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 056&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 30/10B (kế 30) Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Trung Chánh, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 145, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.608152,10.853595,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 057] Cư xá Bà Điểm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cư xá Bà Điểm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 057&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 3A Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 122, 13, 145, 62-5, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.610641,10.849713,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 058] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 058&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1B Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 122, 13, 145, 151, 33, 41, 61-3, 62-5, 65, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.613522,10.845187,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[BX41] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX41&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe An Sương Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 122, 151, 27, 33, 41, 61-3, 62-5, 65, 71, 74, 85]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61337280273438,10.843737602233887,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+  </Document>
+</kml>

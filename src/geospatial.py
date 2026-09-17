@@ -236,6 +236,69 @@ def get_spatial_data(kml_source, buffer_meters=0, grid_spacing_meters=30, focus_
         "is_polygon_boundary": is_boundary_polygon
     }
 
+def calculate_polygon_edges(coords):
+    """
+    Tính toán chiều dài từng cạnh của thửa đất (đơn vị: mét) và tổng chu vi.
+    coords: danh sách [[lat, lon], ...]
+    """
+    if not coords or not isinstance(coords, list) or len(coords) < 3:
+        return {"edges": [], "perimeter": 0.0, "perimeter_str": "0.00 m", "vertex_count": 0}
+    
+    pts = coords
+    while isinstance(pts, list) and len(pts) > 0 and isinstance(pts[0], list) and len(pts[0]) > 0 and isinstance(pts[0][0], list):
+        pts = pts[0]
+        
+    clean_pts = []
+    for p in pts:
+        if not isinstance(p, (list, tuple)) or len(p) < 2:
+            continue
+        try:
+            lat = float(p[0])
+            lon = float(p[1])
+        except Exception:
+            continue
+        if clean_pts:
+            if abs(lat - clean_pts[-1][0]) < 1e-6 and abs(lon - clean_pts[-1][1]) < 1e-6:
+                continue
+        clean_pts.append([lat, lon])
+        
+    if len(clean_pts) < 3:
+        return {"edges": [], "perimeter": 0.0, "perimeter_str": "0.00 m", "vertex_count": 0}
+        
+    if abs(clean_pts[0][0] - clean_pts[-1][0]) < 1e-6 and abs(clean_pts[0][1] - clean_pts[-1][1]) < 1e-6:
+        clean_pts.pop()
+        
+    import math
+    def haversine(p1, p2):
+        R = 6378137.0
+        phi1 = math.radians(p1[0])
+        phi2 = math.radians(p2[0])
+        dphi = math.radians(p2[0] - p1[0])
+        dlam = math.radians(p2[1] - p1[1])
+        a = math.sin(dphi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2)**2
+        return 2 * R * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    edges = []
+    total = 0.0
+    n = len(clean_pts)
+    for i in range(n):
+        p1 = clean_pts[i]
+        p2 = clean_pts[(i + 1) % n]
+        dist = haversine(p1, p2)
+        total += dist
+        edges.append({
+            "index": i + 1,
+            "length": round(dist, 2),
+            "length_str": f"{dist:.2f} m" if dist < 1000 else f"{dist/1000:.2f} km"
+        })
+        
+    return {
+        "edges": edges,
+        "perimeter": round(total, 2),
+        "perimeter_str": f"{total:.2f} m" if total < 1000 else f"{total/1000:.2f} km",
+        "vertex_count": n
+    }
+
 if __name__ == "__main__":
     import sys
     test_src = sys.argv[1] if len(sys.argv) > 1 else "sample_route.kml"

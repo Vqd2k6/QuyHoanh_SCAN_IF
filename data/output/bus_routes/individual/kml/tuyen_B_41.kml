@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>B 41 - Bến xe Miền Tây - Ngã tư Bốn Xã - Bến xe An Sương</name>
+    <description>Lộ trình tuyến xe buýt B 41 (5:00 - 19:20)</description>
+    <Style id="routeLineStyle">
+      <LineStyle>
+        <color>e6C1AC00</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="busStopStyle">
+      <IconStyle>
+        <scale>0.8</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>Lượt đi: Bến xe Miền Tây → Bến xe An Sương (22.86 km)</name>
+      <Placemark>
+        <name>B 41 - Đường đi Lượt đi</name>
+        <description><![CDATA[&lt;b&gt;Tuyến:&lt;/b&gt; B 41 - Bến xe Miền Tây - Ngã tư Bốn Xã - Bến xe An Sương&lt;br/&gt;&lt;b&gt;Lượt:&lt;/b&gt; Lượt đi&lt;br/&gt;&lt;b&gt;Cự ly:&lt;/b&gt; 22.86 km&lt;br/&gt;&lt;b&gt;Thời gian hành trình:&lt;/b&gt; 60 phút&lt;br/&gt;&lt;b&gt;Thời gian hoạt động:&lt;/b&gt; 5:00 - 19:20]]></description>
+        <styleUrl>#routeLineStyle</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>106.61943817,10.73948574,0 106.61952972,10.73958588,0 106.61917114,10.73998642,0 106.6198349,10.74056625,0 106.61986542,10.74078751,0 106.61959839,10.74117184,0 106.61911011,10.74184608,0 106.61776733,10.7407341,0 106.61643219,10.73962212,0 106.61639404,10.73967457,0 106.61639404,10.73967457,0 106.61639404,10.73967457,0 106.61639404,10.73967457,0 106.61643982,10.73961163,0 106.61549377,10.73881626,0 106.6151123,10.73835754,0 106.61480713,10.7385788,0 106.61475372,10.73937511,0 106.61465454,10.74017048,0 106.61455536,10.74085045,0 106.61423492,10.74172115,0 106.61423492,10.74172115,0 106.61423492,10.74172115,0 106.61423492,10.74172115,0 106.61368561,10.74311161,0 106.61317444,10.74450302,0 106.61225891,10.74400234,0 106.61225891,10.74400234,0 106.61225891,10.74400234,0 106.61225891,10.74400234,0 106.61101532,10.74316406,0 106.60965729,10.742342,0 106.60965729,10.742342,0 106.60965729,10.742342,0 106.60943604,10.74217892,0 106.60832977,10.74389172,0 106.60839081,10.74393368,0 106.60839081,10.74393368,0 106.60839081,10.74393368,0 106.60829926,10.74388123,0 106.60766602,10.74482441,0 106.60703278,10.74576759,0 106.60703278,10.74616337,0 106.60733032,10.7462368,0 106.60733032,10.7462368,0 106.60733032,10.7462368,0 106.60826874,10.74658489,0 106.60920715,10.74693203,0 106.61013794,10.747262,0 106.61107635,10.74759102,0 106.61112213,10.7475071,0 106.61112213,10.7475071,0 106.61109924,10.74757576,0 106.61193085,10.74791241,0 106.61172485,10.74849415,0 106.61151886,10.74907494,0 106.61130524,10.74965572,0 106.61109924,10.75023651,0 106.61089325,10.75081825,0 106.61067963,10.75139904,0 106.61047363,10.75197983,0 106.61026764,10.75256062,0 106.61026764,10.75256062,0 106.60995483,10.75345421,0 106.60964966,10.7543478,0 106.60964966,10.7543478,0 106.60928345,10.75523281,0 106.60829926,10.75508022,0 106.60829163,10.75513268,0 106.60829163,10.75513268,0 106.60831451,10.75506401,0 106.6076355,10.7549696,0 106.60694885,10.75487423,0 106.60613251,10.75484848,0 106.60611725,10.75532246,0 106.60609436,10.75579739,0 106.60614014,10.75580215,0 106.60614014,10.75580215,0 106.60609436,10.75580788,0 106.60606384,10.75654507,0 106.60600281,10.7572937,0 106.6064682,10.75786781,0 106.60689545,10.75808907,0 106.60694122,10.75800514,0 106.60694122,10.75800514,0 106.60688782,10.7580843,0 106.60703278,10.75812149,0 106.60670471,10.75848484,0 106.60640717,10.75886154,0 106.60640717,10.75886154,0 106.60591125,10.75932312,0 106.60547638,10.75980759,0 106.60519409,10.76039791,0 106.60508728,10.76098824,0 106.60508728,10.76098824,0 106.60488129,10.76163101,0 106.60470581,10.76227379,0 106.60453796,10.76291656,0 106.60437012,10.7635603,0 106.60437012,10.7635603,0 106.60420227,10.76412678,0 106.60403442,10.76469326,0 106.60379028,10.76582623,0 106.60360718,10.76697445,0 106.60347748,10.76754379,0 106.60324097,10.76809692,0 106.60324097,10.76809692,0 106.60288239,10.76905155,0 106.60259247,10.77001572,0 106.6023407,10.77097511,0 106.60205078,10.77192879,0 106.60205078,10.77192879,0 106.60190582,10.77265072,0 106.60172272,10.77337265,0 106.60151672,10.77408123,0 106.60131073,10.77478981,0 106.60131073,10.77478981,0 106.60109711,10.77556515,0 106.60087585,10.7763443,0 106.60183716,10.77636051,0 106.60279846,10.77632427,0 106.60279846,10.77632427,0 106.60359955,10.77632904,0 106.60440063,10.77633381,0 106.60520935,10.77630234,0 106.60601807,10.77627087,0 106.60601807,10.77627087,0 106.6068573,10.77626801,0 106.60769653,10.7762661,0 106.6085434,10.77624416,0 106.60939789,10.77622318,0 106.60939789,10.77622318,0 106.61035156,10.77623367,0 106.61129761,10.77619743,0 106.61227417,10.77614975,0 106.61322021,10.7760601,0 106.61321259,10.77602291,0 106.61321259,10.77602291,0 106.61323547,10.77607632,0 106.61375427,10.77586555,0 106.61425018,10.77560711,0 106.61469269,10.77550697,0 106.6155014,10.77549076,0 106.61627197,10.77531147,0 106.61775208,10.77481174,0 106.61850739,10.77457428,0 106.61924744,10.77435303,0 106.61923218,10.77431107,0 106.61923218,10.77431107,0 106.61925507,10.7743578,0 106.62039948,10.77398872,0 106.62156677,10.7735939,0 106.62152863,10.77423382,0 106.62149048,10.77487469,0 106.62148285,10.77551174,0 106.62146759,10.77614975,0 106.62152863,10.77615547,0 106.62152863,10.77615547,0 106.62152863,10.77615547,0 106.62147522,10.77615452,0 106.62129974,10.7771349,0 106.62111664,10.77767277,0 106.62091064,10.77826023,0 106.62070465,10.77884769,0 106.62075806,10.77886963,0 106.62075806,10.77886963,0 106.62070465,10.77884769,0 106.62042236,10.77968597,0 106.62014771,10.7805233,0 106.62039948,10.78125095,0 106.62065125,10.78197765,0 106.62075043,10.78194618,0 106.62075043,10.78194618,0 106.62075043,10.78194618,0 106.6206131,10.78199387,0 106.62142181,10.78450012,0 106.62215424,10.78672123,0 106.6222229,10.7866993,0 106.6222229,10.7866993,0 106.62213898,10.78672123,0 106.62272644,10.78845406,0 106.62319183,10.78993034,0 106.62458801,10.78974533,0 106.62457275,10.78971004,0 106.62456512,10.78968143,0 106.62456512,10.78968143,0 106.62456512,10.78968143,0 106.62457275,10.78971004,0 106.6246109,10.78974056,0 106.62585449,10.78953552,0 106.62709045,10.78932953,0 106.62815857,10.79013538,0 106.62825012,10.79034996,0 106.62827301,10.79034328,0 106.62827301,10.79034328,0 106.62827301,10.79034328,0 106.62841034,10.79088497,0 106.62854767,10.79142666,0 106.62869263,10.79197216,0 106.62882996,10.79251766,0 106.62889099,10.79251099,0 106.62889099,10.79251099,0 106.62889099,10.79251099,0 106.62889099,10.79251099,0 106.62882996,10.79250717,0 106.62893677,10.7929287,0 106.62840271,10.79300785,0 106.62852478,10.79353428,0 106.62872314,10.79384995,0 106.62876129,10.79382896,0 106.62876129,10.79382896,0 106.62876129,10.79382896,0 106.62876129,10.79382896,0 106.62872314,10.79384995,0 106.62915802,10.79456043,0 106.6293869,10.79491043,0 106.62921906,10.7950201,0 106.62879944,10.79528999,0 106.6282196,10.79564953,0 106.62824249,10.79569721,0 106.62824249,10.79569721,0 106.62792969,10.79576969,0 106.62737274,10.79580975,0 106.62692261,10.79585838,0 106.62546539,10.79587364,0 106.6248703,10.79590321,0 106.6248703,10.79590321,0 106.6248703,10.79590321,0 106.6245575,10.79590034,0 106.62380981,10.79590034,0 106.62380219,10.79646397,0 106.62387085,10.79646397,0 106.62387085,10.79646397,0 106.62387085,10.79646397,0 106.62380219,10.79646397,0 106.62380219,10.79743862,0 106.62384796,10.79845619,0 106.623909,10.79928303,0 106.62405396,10.79990482,0 106.62425232,10.80050087,0 106.62428284,10.80049706,0 106.62428284,10.80049706,0 106.62425232,10.80050087,0 106.62463379,10.80144882,0 106.6260376,10.8019762,0 106.62607574,10.80192947,0 106.62607574,10.80192947,0 106.62712096999999,10.80234528,0 106.62778473,10.80251312,0 106.62852478,10.80264282,0 106.62852478,10.80264282,0 106.62850189,10.80270863,0 106.6300354,10.80298805,0 106.63155365,10.80327797,0 106.6315918,10.80316639,0 106.6315918,10.80316639,0 106.63155365,10.80327225,0 106.63279724,10.80352497,0 106.63218689,10.80428219,0 106.63218689,10.80428219,0 106.63218689,10.80428219,0 106.63218689,10.80428219,0 106.6314621,10.80510044,0 106.63079834,10.80553246,0 106.62969971,10.80581188,0 106.62858582,10.80606461,0 106.62858582,10.80606461,0 106.62858582,10.80606461,0 106.62858582,10.80606461,0 106.62858582,10.80606461,0 106.6277771,10.80624485,0 106.62697601,10.80642509,0 106.62617493,10.80660439,0 106.62536621,10.80678463,0 106.62536621,10.80678463,0 106.62536621,10.80678463,0 106.62536621,10.80678463,0 106.62456512,10.80695438,0 106.62377167,10.80712414,0 106.62297821,10.80729389,0 106.62217712,10.80746365,0 106.62217712,10.80746365,0 106.62217712,10.80746365,0 106.62140656,10.80763435,0 106.62063599,10.80780411,0 106.61987305,10.80800152,0 106.61911774,10.80819893,0 106.619133,10.8082571,0 106.619133,10.8082571,0 106.61911774,10.80820942,0 106.61833191,10.8084259,0 106.61888123,10.80899525,0 106.61943054,10.80956364,0 106.61943054,10.80956364,0 106.62016296,10.81037235,0 106.62088776,10.81118107,0 106.62162018,10.81198978,0 106.62234497,10.81279755,0 106.62234497,10.81279755,0 106.62234497,10.81279755,0 106.62276459,10.81321049,0 106.62315369,10.81364727,0 106.62352753,10.81409836,0 106.62389374,10.81454849,0 106.62425995,10.81496429,0 106.62462616,10.81538105,0 106.62509918,10.81576824,0 106.62553406,10.81617641,0 106.62556458,10.81615639,0 106.62556458,10.81615639,0 106.62556458,10.81615639,0 106.62556458,10.81615639,0 106.62554169,10.81619263,0 106.62592316,10.81655598,0 106.62634277,10.81693554,0 106.62675476,10.81732273,0 106.62716675,10.81770992,0 106.62758636,10.81808949,0 106.62799835,10.81846905,0 106.62845612,10.81883717,0 106.62892151,10.81920624,0 106.6289444,10.81916904,0 106.6289444,10.81916904,0 106.6289444,10.81916904,0 106.62889862,10.81920624,0 106.62982178,10.81989098,0 106.63077545,10.82047653,0 106.63051605,10.82146454,0 106.63017273,10.82242584,0 106.63025665,10.82245159,0 106.63025665,10.82245159,0 106.63025665,10.82245159,0 106.63014984,10.82243061,0 106.62980652,10.82309532,0 106.6292572,10.82365322,0 106.62804413,10.82470703,0 106.62689209,10.82580853,0 106.62576294,10.82689381,0 106.6258316,10.82695675,0 106.6258316,10.82695675,0 106.6258316,10.82695675,0 106.62575531,10.82691002,0 106.62539673,10.82731533,0 106.62508392,10.82772064,0 106.62480164,10.82815266,0 106.62451935,10.82858467,0 106.62459564,10.82862663,0 106.62459564,10.82862663,0 106.62448883,10.8285799,0 106.62399292,10.82936001,0 106.62349701,10.83013916,0 106.6230011,10.83090878,0 106.62250519,10.83167839,0 106.62201691,10.83244228,0 106.621521,10.83320618,0 106.62102509,10.83397007,0 106.62052917,10.83473396,0 106.6206131,10.83478069,0 106.6206131,10.83478069,0 106.62052155,10.83473873,0 106.61995697,10.83561897,0 106.61940002,10.83649921,0 106.61885071,10.83733177,0 106.61830139,10.8381691,0 106.61840057,10.83822155,0 106.61840057,10.83822155,0 106.61840057,10.83822155,0 106.61828613,10.8381424,0 106.6179657,10.83863163,0 106.61765289,10.83911991,0 106.61734009,10.83960915,0 106.61701965,10.84009743,0 106.61670685,10.84059238,0 106.61639404,10.84108829,0 106.61608887,10.84158611,0 106.61577606,10.84208393,0 106.61547089,10.84256554,0 106.61516571,10.8430481,0 106.61483765,10.84353256,0 106.61450958,10.84401703,0 106.61421204,10.84451294,0 106.61390686,10.8450079,0 106.61360931,10.84550285,0 106.61330414,10.84599876,0 106.61335754,10.846035,0 106.61335754,10.846035,0 106.61335754,10.846035,0 106.61330414,10.84600925,0 106.61289215,10.84664917,0 106.61248016,10.84728909,0 106.61235046,10.84721565,0 106.61266327,10.84670925,0 106.61296844,10.8462038,0 106.61328125,10.84571934,0 106.61358643,10.84523392,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61352539,10.84518719,0 106.61358643,10.84522343,0 106.61406708,10.84443855,0 106.61330414,10.84384346,0 106.6133728,10.8437376,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Folder>
+        <name>Trạm dừng (56 trạm)</name>
+        <Placemark>
+          <name>[BX 46] Bến xe Miền Tây</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Miền Tây&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX 46&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe Miền Tây Kinh Dương Vương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 10, 102, 139, 14, 148, 151, 32, 39, 41, 60-1, 91]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.619438,10.739486,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 014] Bệnh viện Triều An</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Triều An&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 014&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 480 (EXIMBANK) Kinh Dương Vương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 09, 102, 151, 25, 39, 41, 60-1, 61, 62-1, 62-10, 62-2, 62-8, 63-1, 84]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.615362,10.738774,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 107] Kinh Dương Vương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kinh Dương Vương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 107&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 14 Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.614235,10.741721,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 301] Aeon Mall Bình Tân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Aeon Mall Bình Tân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 301&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 20-22 Đường số 17A&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.612256,10.744002,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 300] Bệnh Viện Quốc Tế</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh Viện Quốc Tế&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 300&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 138 Đường số 17A&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.60966,10.742342,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 299] Đường số 13</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường số 13&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 299&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Cột điện H35T Đường số 34&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.608388,10.743934,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 298] Đường số 34</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường số 34&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 298&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 451 Đường số 1&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.607332,10.746237,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 297] Đường Tên Lửa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường Tên Lửa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 297&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 339-341 Đường số 1&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.611124,10.747507,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 105] Tên Lửa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Tên Lửa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 105&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 390 Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.610266,10.752561,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 318] Đường số 23B</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường số 23B&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 318&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 456-458 Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.609648,10.754348,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 270] Đường 32</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường 32&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 270&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 652 Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.608292,10.755133,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 271] Quán cơm </name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Quán cơm &lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 271&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 706 (số mới 641) Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.606141,10.755802,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 160] Lê Đình Cẩn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Lê Đình Cẩn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 160&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 831 Tỉnh lộ 10,Tân Tạo, Hồ Chí Minh, Việt Nam&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41, 62-7, 81]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.60694,10.758005,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 272] Mã Lò</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Mã Lò&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 272&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 42-44 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.606407,10.758862,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 266] Công ty Hương Sở</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Hương Sở&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 266&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đ/d Công ty Hương Sở (số 122) Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.605084,10.760988,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 268] Bệnh viện Bình Tân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Bình Tân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 268&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 200 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.60437,10.76356,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 267] Phòng tiếp dân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Phòng tiếp dân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 267&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 160 (Mầm non Cẩm Tú) Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.603239,10.768097,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 265] Công ty Đại Càng Phát</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Đại Càng Phát&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 265&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 290 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.602053,10.771929,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 243] Ngã 3 Áo Đôi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã 3 Áo Đôi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 243&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 330 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.601313,10.77479,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 259] Ngã 3 Lê Văn Quới</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã 3 Lê Văn Quới&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 259&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 527 Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.602799,10.776324,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 258] Nhà thuốc Thiên Ân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nhà thuốc Thiên Ân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 258&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 371 Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.606017,10.776271,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 257] Chợ Lê Văn Quới</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chợ Lê Văn Quới&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 257&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 307-309  Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.609397,10.776223,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 256] Bệnh viện Đa khoa Bình Tân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Đa khoa Bình Tân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 256&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 167  Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.613216,10.776023,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 238] Siêu thị</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Siêu thị&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 238&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đ/d 42 (số 53) Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61923,10.774311,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 182] Bình Long</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bình Long&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 182&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 54 (445) Bình Long&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Phú Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.621531,10.776155,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 183] Đỗ Bí</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đỗ Bí&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 183&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 156 Bình Long&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Phú Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.62076,10.77887,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 167] Cây Xăng Bình Long</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây Xăng Bình Long&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 167&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 1H Văn Cao&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Phú Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.62075,10.781946,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTPT186] Trường GTVT</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường GTVT&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTPT186&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 64 Văn Cao&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Phú Thọ Hoà, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.622223,10.786699,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 107] Nhà Thờ Tân Hương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nhà Thờ Tân Hương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 107&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 141 Tân Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 30, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.624565,10.789681,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 108] Café Suối Reo</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Café Suối Reo&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 108&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 43 Tân Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 30, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628273,10.790343,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 109] Nhà thờ Martino</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nhà thờ Martino&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 109&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 15 Tân Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 30, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628891,10.792511,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 118] Tân Sơn Nhì</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Tân Sơn Nhì&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 118&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 377-379 Tân Sơn Nhì&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Thành, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628761,10.793829,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 052] Chung cư  Gò Dầu</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chung cư  Gò Dầu&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 052&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 44 Gò Dầu&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628242,10.795697,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 053] Café Tino</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Café Tino&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 053&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 122 Gò Dầu&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.62487,10.795903,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 058] Lê Đình Thám</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Lê Đình Thám&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 058&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 77 Cầu Xéo&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.623871,10.796464,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 059] Cuối Cầu Xéo</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cuối Cầu Xéo&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 059&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 3 Cầu Xéo&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.624283,10.800497,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 090] Trạm Xăng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Xăng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 090&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 295 Tân Kỳ Tân Quý&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Sơn Nhì, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.626075,10.801929,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 091] Trạm Đường Số 27</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Đường Số 27&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 091&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 235 Tân Kỳ Tân Quý&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Sơn Nhì, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628525,10.802643,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 092] Trạm Lê Trọng Tấn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 092&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 153 Tân Kỳ Tân Quý&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Sơn Nhì, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.631592,10.803166,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 060] Trạm Đầu Lê Trọng Tấn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Đầu Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 060&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 8A-8B Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.632187,10.804282,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 061] Trường Đại học Công Thương TPHCM</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường Đại học Công Thương TPHCM&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 061&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 142-144 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 48, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628586,10.806065,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 062] Nguyễn Hữu Tiến</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nguyễn Hữu Tiến&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 062&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 188 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41, 48, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.625366,10.806785,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 063] Trạm Bờ Bao Tân Thắng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Bờ Bao Tân Thắng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 063&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 284 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41, 48, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.622177,10.807464,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 064] Trạm Tây Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Tây Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 064&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 386 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41, 48, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.619133,10.808257,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 022] Trạm Đầu Tây Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Đầu Tây Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 022&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 389 Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.619434,10.809564,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 023] Trạm Trường Tiểu Học Lê Lai</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Trường Tiểu Học Lê Lai&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 023&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 237 Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.622345,10.812798,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 024] Cây xăng Tây Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Tây Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 024&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện công ty Ngọc Nghĩa Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 32, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.625565,10.816156,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 025] Trạm Cổng KCN Tân Bình</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Cổng KCN Tân Bình&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 025&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 29/26 (Công ty Thành Công) Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 32, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628945,10.819169,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTB 079] Khu Công Nghiệp Tân Bình</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Khu Công Nghiệp Tân Bình&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTB 079&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 932 Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Bình&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 23, 27, 32, 41, 62, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.630254,10.822452,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 128] Cầu Tham Lương - Siêu thị Thiên Hòa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cầu Tham Lương - Siêu thị Thiên Hòa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 128&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 60A-B (1/17A) Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 23, 27, 41, 62, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.625828,10.826957,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 129] Chùa Vĩnh Phước</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Vĩnh Phước&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 129&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 110 (189/4) Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 27, 41, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.624594,10.828627,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 132] Chùa Lạc Quang</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Lạc Quang&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 132&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 408 Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 27, 41, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.620614,10.834781,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 131] Bitis</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bitis&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 131&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 590 (640) Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 27, 41, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.618398,10.838222,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 123] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 123&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 142 Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 151, 27, 41, 65, 71]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.613361,10.846035,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[HHM 058] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; HHM 058&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 1B Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Xã Bà Điểm, Huyện Hóc Môn&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 122, 13, 145, 151, 33, 41, 61-3, 62-5, 65, 71, 74, 85, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.613522,10.845187,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[BX41] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX41&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe An Sương Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 122, 151, 27, 33, 41, 61-3, 62-5, 65, 71, 74, 85]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61337280273438,10.843737602233887,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+    <Folder>
+      <name>Lượt về: Bến xe An Sương → Bến xe Miền Tây (22.22 km)</name>
+      <Placemark>
+        <name>B 41 - Đường đi Lượt về</name>
+        <description><![CDATA[&lt;b&gt;Tuyến:&lt;/b&gt; B 41 - Bến xe Miền Tây - Ngã tư Bốn Xã - Bến xe An Sương&lt;br/&gt;&lt;b&gt;Lượt:&lt;/b&gt; Lượt về&lt;br/&gt;&lt;b&gt;Cự ly:&lt;/b&gt; 22.22 km&lt;br/&gt;&lt;b&gt;Thời gian hành trình:&lt;/b&gt; 60 phút&lt;br/&gt;&lt;b&gt;Thời gian hoạt động:&lt;/b&gt; 5:00 - 19:20]]></description>
+        <styleUrl>#routeLineStyle</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>106.6133728,10.8437376,0 106.61422729,10.84423351,0 106.61467743,10.84355354,0 106.61501312,10.84290028,0 106.61509705,10.84251595,0 106.61535645,10.84222031,0 106.61579895,10.84156704,0 106.61659241,10.84021854,0 106.61742401,10.83893299,0 106.61734772,10.83889103,0 106.61734772,10.83889103,0 106.61734772,10.83889103,0 106.61734772,10.83889103,0 106.6174469,10.8389492,0 106.61816406,10.83785248,0 106.61888123,10.83675671,0 106.61959076,10.83566093,0 106.62030792,10.83456516,0 106.62020874,10.83449745,0 106.62020874,10.83449745,0 106.62020874,10.83449745,0 106.62020874,10.83449745,0 106.62020874,10.83449745,0 106.62031555,10.83455467,0 106.62110138,10.83332157,0 106.62189484,10.83208847,0 106.62179565,10.83201981,0 106.62179565,10.83201981,0 106.62179565,10.83201981,0 106.62179565,10.83201981,0 106.62179565,10.83201981,0 106.62179565,10.83201981,0 106.62189484,10.83208847,0 106.62268829,10.83087444,0 106.62347412,10.82966042,0 106.62429047,10.82844257,0 106.62516022,10.82727814,0 106.62593842,10.82631969,0 106.62586212,10.82623959,0 106.62586212,10.82623959,0 106.62586212,10.82623959,0 106.62586212,10.82623959,0 106.62586212,10.82623959,0 106.62586212,10.82623959,0 106.62593079,10.8263092,0 106.62697601,10.82535553,0 106.62802124,10.82440186,0 106.62873077,10.82374001,0 106.62944031,10.82307911,0 106.62973785,10.82272625,0 106.62992096,10.8223362,0 106.62982178,10.82231522,0 106.62982178,10.82231522,0 106.62982178,10.82231522,0 106.62982178,10.82231522,0 106.62982178,10.82231522,0 106.62982178,10.82231522,0 106.62992096,10.82235146,0 106.63024139,10.82139301,0 106.63050079,10.82043362,0 106.62983704,10.81995201,0 106.62917328,10.81946945,0 106.62911224,10.81952763,0 106.62911224,10.81952763,0 106.62911224,10.81952763,0 106.62911224,10.81952763,0 106.62911224,10.81952763,0 106.62911224,10.81952763,0 106.62915802,10.81946945,0 106.62826538,10.81875801,0 106.62738037,10.81798935,0 106.62649536,10.81718826,0 106.62564087,10.81638718,0 106.62558746,10.81645107,0 106.62558746,10.81645107,0 106.62558746,10.81645107,0 106.62558746,10.81645107,0 106.62558746,10.81645107,0 106.62563324,10.81640816,0 106.62507629,10.81586933,0 106.62452698,10.81532955,0 106.62372589,10.81442165,0 106.62319946,10.81378746,0 106.62266541,10.81315231,0 106.62214661,10.81261539,0 106.62214661,10.81261539,0 106.62214661,10.81261539,0 106.62214661,10.81261539,0 106.62214661,10.81261539,0 106.62214661,10.81261539,0 106.62125397,10.81163979,0 106.62080383,10.8111496,0 106.6203537,10.81065941,0 106.61975861,10.81002235,0 106.61917114,10.80938435,0 106.619133,10.80942726,0 106.619133,10.80942726,0 106.619133,10.80942726,0 106.619133,10.80942726,0 106.61917877,10.80939007,0 106.61867523,10.80885506,0 106.61816406,10.80832005,0 106.61903381,10.80810738,0 106.61990356,10.80789375,0 106.61981964,10.8076458,0 106.61981964,10.8076458,0 106.61981964,10.8076458,0 106.61981964,10.8076458,0 106.61981964,10.8076458,0 106.61981964,10.8076458,0 106.61988831,10.80787277,0 106.6211319,10.80759144,0 106.62236786,10.8073101,0 106.62236786,10.8073101,0 106.62236786,10.8073101,0 106.62236786,10.8073101,0 106.62236786,10.8073101,0 106.62236786,10.8073101,0 106.62362671,10.80703926,0 106.62488556,10.80676746,0 106.62488556,10.80676746,0 106.62488556,10.80676746,0 106.62488556,10.80676746,0 106.6258316,10.80656338,0 106.62678528,10.80636024,0 106.62772369,10.80615711,0 106.62866211,10.80595398,0 106.62866974,10.80585861,0 106.62866974,10.80585861,0 106.628685,10.80594921,0 106.62968445,10.80572224,0 106.63069153,10.80549622,0 106.63106537,10.80531693,0 106.63139343,10.80504227,0 106.6319809,10.80435944,0 106.6319809,10.80435944,0 106.6319809,10.80435944,0 106.63264465,10.80349922,0 106.63158417,10.80330372,0 106.63157654,10.80334568,0 106.63157654,10.80334568,0 106.63157654,10.80334568,0 106.63157654,10.80329895,0 106.6308136,10.8031559,0 106.63005066,10.8030138,0 106.62927246,10.8028717,0 106.62850189,10.80272961,0 106.62848663,10.80281734,0 106.62848663,10.80281734,0 106.62848663,10.80281734,0 106.62851715,10.80272961,0 106.62793732,10.80261898,0 106.62736511,10.80250835,0 106.62665558,10.80223942,0 106.62595367,10.80197048,0 106.62592316,10.80204391,0 106.62592316,10.80204391,0 106.62592316,10.80204391,0 106.62595367,10.80196571,0 106.62461853,10.80144882,0 106.6242218,10.80039883,0 106.6242218,10.80039883,0 106.6242218,10.80039883,0 106.62422943,10.80039978,0 106.62400818,10.79967022,0 106.623909,10.79926014,0 106.62384033,10.79883957,0 106.6237793,10.79788971,0 106.62378693,10.79666424,0 106.62374878,10.79665947,0 106.62374878,10.79665947,0 106.62380219,10.79666042,0 106.62380981,10.79590034,0 106.62394714,10.79590034,0 106.62474823,10.79586983,0 106.62474823,10.79582882,0 106.62474823,10.79586983,0 106.62606049,10.79585838,0 106.62737274,10.79580975,0 106.62792969,10.79576969,0 106.6280365,10.79572964,0 106.62811279,10.79570007,0 106.62808228,10.79562378,0 106.62808228,10.79562378,0 106.62812805,10.7956686,0 106.62935638,10.79489422,0 106.62879944,10.79404831,0 106.62879944,10.79404831,0 106.62879944,10.79404831,0 106.62879944,10.79404831,0 106.62879944,10.79404831,0 106.628479,10.79347134,0 106.62835693,10.79297543,0 106.62891388,10.79290199,0 106.62886047,10.79265213,0 106.62886047,10.79265213,0 106.62886047,10.79265213,0 106.62886047,10.79265213,0 106.62886047,10.79265213,0 106.62886047,10.79265213,0 106.62886047,10.79265213,0 106.62851715,10.79140759,0 106.62817383,10.79016209,0 106.62778473,10.78986454,0 106.62778473,10.78986454,0 106.62778473,10.78986454,0 106.62778473,10.78986454,0 106.62705994,10.78934479,0 106.62590027,10.78952408,0 106.62495422,10.78970337,0 106.62399292,10.78983021,0 106.62400055,10.7898674,0 106.62400055,10.7898674,0 106.62316132,10.7899456,0 106.62240601,10.7875433,0 106.62207031,10.78639984,0 106.62205505,10.78640175,0 106.62205505,10.78640175,0 106.62200165,10.78641033,0 106.62205505,10.78640175,0 106.62135315,10.78431129,0 106.6206665,10.78221512,0 106.62055206,10.78224659,0 106.62055206,10.78224659,0 106.62055206,10.78224659,0 106.62055206,10.78224659,0 106.62055206,10.78224659,0 106.62055206,10.78224659,0 106.62055206,10.78224659,0 106.62055206,10.78224659,0 106.62067413,10.78220463,0 106.6204071,10.78138256,0 106.62008667,10.78054428,0 106.62049103,10.77944374,0 106.6204071,10.77943325,0 106.6204071,10.77943325,0 106.6204071,10.77943325,0 106.6204071,10.77943325,0 106.62047577,10.779459,0 106.62085724,10.77831078,0 106.62123871,10.7771616,0 106.62139893,10.7762661,0 106.62142181,10.77592754,0 106.62142181,10.77592754,0 106.62142181,10.77592754,0 106.62142181,10.77592754,0 106.62145996,10.77537155,0 106.62149048,10.77481651,0 106.62150574,10.77425766,0 106.62151337,10.77369881,0 106.62076569,10.77393627,0 106.62002563,10.77417374,0 106.61928558,10.77441025,0 106.61854553,10.77464771,0 106.61854553,10.77464771,0 106.61854553,10.77464771,0 106.6179657,10.77482224,0 106.61738586,10.7749958,0 106.61679077,10.77519321,0 106.61620331,10.77539063,0 106.61559296,10.77552795,0 106.61495972,10.77553272,0 106.61431885,10.77562809,0 106.61377716,10.77591801,0 106.61377716,10.77591801,0 106.61377716,10.77591801,0 106.61377716,10.77591801,0 106.61328125,10.77610779,0 106.61238861,10.77620792,0 106.61108398,10.77625275,0 106.60977173,10.77629757,0 106.6097641,10.77638721,0 106.6097641,10.77638721,0 106.6097641,10.77638721,0 106.6097641,10.77638721,0 106.6097641,10.77638721,0 106.6097641,10.77638721,0 106.6097641,10.77627659,0 106.60871124,10.77629375,0 106.60766602,10.77631092,0 106.60661316,10.77632809,0 106.6055603,10.7763443,0 106.6055603,10.77645493,0 106.6055603,10.77645493,0 106.6055603,10.77641773,0 106.6055603,10.77641773,0 106.60556793,10.7763443,0 106.60457611,10.77636623,0 106.60358429,10.77638721,0 106.60358429,10.77645493,0 106.60358429,10.77645493,0 106.60358429,10.77645493,0 106.60358429,10.77645493,0 106.60358429,10.77645493,0 106.60358429,10.7764082,0 106.60223389,10.7764082,0 106.60088348,10.7764082,0 106.60105133,10.7756176,0 106.6009903,10.77560711,0 106.6009903,10.77560711,0 106.6009903,10.77560711,0 106.6009903,10.77560711,0 106.6009903,10.77560711,0 106.60105133,10.7756176,0 106.60128784,10.77480602,0 106.60152435,10.77399445,0 106.60173798,10.77318573,0 106.60194397,10.77237606,0 106.60185242,10.77235031,0 106.60185242,10.77235031,0 106.60185242,10.77235031,0 106.60195923,10.77238178,0 106.60224152,10.77133846,0 106.6025238,10.77029514,0 106.60280609,10.76926708,0 106.60315704,10.76824474,0 106.60311127,10.76822376,0 106.60311127,10.76822376,0 106.60311127,10.76822376,0 106.60311127,10.76822376,0 106.60316467,10.76823997,0 106.60340118,10.76762295,0 106.60357666,10.76700974,0 106.60372925,10.76603031,0 106.60386658,10.76529026,0 106.60417175,10.76401329,0 106.60379791,10.76394939,0 106.60379791,10.76394939,0 106.60379791,10.76394939,0 106.60379791,10.76394939,0 106.60379791,10.76394939,0 106.60379791,10.76394939,0 106.60379791,10.76394939,0 106.60379791,10.76394939,0 106.60420227,10.76401329,0 106.60439301,10.76329613,0 106.60459137,10.76257992,0 106.6047821,10.76185799,0 106.60497284,10.76113605,0 106.60493469,10.76112461,0 106.60493469,10.76112461,0 106.60493469,10.76112461,0 106.60493469,10.76112461,0 106.60493469,10.76112461,0 106.60498047,10.76113033,0 106.60510254,10.76061916,0 106.60529327,10.76008987,0 106.6054306,10.75981998,0 106.60553741,10.75965977,0 106.60605621,10.75914955,0 106.60619354,10.75895691,0 106.60619354,10.75895691,0 106.60619354,10.75895691,0 106.60619354,10.75895691,0 106.60619354,10.75895691,0 106.60696411,10.75817871,0 106.60641479,10.7578783,0 106.60596466,10.7572937,0 106.60604095,10.75657177,0 106.60604095,10.75583363,0 106.60604095,10.75583363,0 106.60604095,10.75583363,0 106.60604095,10.75583363,0 106.6060791,10.75533009,0 106.60611725,10.7548275,0 106.60684967,10.7548275,0 106.60790253,10.75498009,0 106.60790253,10.75498009,0 106.60790253,10.75498009,0 106.60790253,10.75498009,0 106.60790253,10.75498009,0 106.6085434,10.75509071,0 106.60918427,10.75520134,0 106.60942841,10.75452137,0 106.60967255,10.7538414,0 106.60990906,10.75315666,0 106.61013794,10.75247097,0 106.61013794,10.75247097,0 106.61013794,10.75247097,0 106.61013794,10.75247097,0 106.61035156,10.75190353,0 106.61055756,10.75133514,0 106.61077118,10.75076771,0 106.6109848,10.75020027,0 106.6111908,10.74962044,0 106.61139679,10.7490406,0 106.61160278,10.74846077,0 106.61180878,10.74788094,0 106.61151886,10.74780655,0 106.61151886,10.74780655,0 106.61151886,10.74780655,0 106.61061859,10.74744129,0 106.60970306,10.74711132,0 106.60877991,10.74678993,0 106.60786438,10.74646854,0 106.60783386,10.74653244,0 106.60783386,10.74653244,0 106.60783386,10.74653244,0 106.60786438,10.74645805,0 106.60702515,10.74616337,0 106.60703278,10.74577332,0 106.60749817,10.74506187,0 106.60796356,10.74434948,0 106.60790253,10.74431801,0 106.60790253,10.74431801,0 106.60795593,10.74433899,0 106.60869598,10.74321175,0 106.60943604,10.74211502,0 106.61001587,10.7424736,0 106.61006165,10.74244213,0 106.61006165,10.74244213,0 106.61003876,10.74249458,0 106.61069489,10.74290848,0 106.61135864,10.74332237,0 106.61203766,10.74376202,0 106.61270905,10.74420261,0 106.61276245,10.74417114,0 106.61276245,10.74417114,0 106.61307526,10.74439716,0 106.6132431,10.74386311,0 106.61341095,10.74332809,0 106.61341095,10.74332809,0 106.61383057,10.74237347,0 106.61422729,10.74142361,0 106.61422729,10.74142361,0 106.61443329,10.7407341,0 106.6145401,10.74002266,0 106.61477661,10.73843098,0 106.61495209,10.73827362,0 106.61516571,10.73816776,0 106.61560059,10.73872662,0 106.61620331,10.73921967,0 106.61681366,10.73971176,0 106.61686707,10.73966503,0 106.61686707,10.73966503,0 106.61686707,10.73966503,0 106.61686707,10.73966503,0 106.61686707,10.73966503,0 106.61686707,10.73966503,0 106.61679077,10.73972225,0 106.61844635,10.74102974,0 106.61856842,10.74085045,0 106.61933136,10.74150944,0 106.6195755,10.74120331,0 106.6193161,10.74101925,0 106.61979675,10.7404871,0 106.61917877,10.7399807,0 106.61953735,10.73956966,0 106.61943817,10.73948574,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Folder>
+        <name>Trạm dừng (53 trạm)</name>
+        <Placemark>
+          <name>[BX41] Bến xe An Sương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe An Sương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX41&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe An Sương Quốc lộ 22&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 122, 151, 27, 33, 41, 61-3, 62-5, 65, 71, 74, 85]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61337280273438,10.843737602233887,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 135] Bitis</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bitis&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 135&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 487 Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 27, 41, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.617347,10.838891,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 136] Chùa Lạc Quang</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Lạc Quang&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 136&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 257 Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 27, 41, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.620212,10.834497,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 137] Chùa Vĩnh Phước</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Vĩnh Phước&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 137&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Chùa Vĩnh Phước Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 27, 41, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.621794,10.83202,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[Q12 139] Cầu Tham Lương - Siêu thị Thiên Hòa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cầu Tham Lương - Siêu thị Thiên Hòa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; Q12 139&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 21 (Kế 2/6B) Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận 12&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 23, 27, 41, 62, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.62586,10.82624,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 010] Trạm Dệt Thành Công</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Dệt Thành Công&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 010&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 8 Trường Chinh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 04, 104, 13, 145, 23, 27, 32, 41, 62, 65, 94]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.629825,10.822315,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 018] Cổng Khu công nghiệp Tân Bình</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cổng Khu công nghiệp Tân Bình&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 018&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Công ty dầu thực vật Tân Bình Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 32, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.629111,10.819528,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 019] Cây xăng Tây Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây xăng Tây Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 019&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Công ty Ngọc Nghĩa Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 32, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.625587,10.816451,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 020] Trạm Trường Tiểu Học Lê Lai</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Trường Tiểu Học Lê Lai&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 020&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Trường Lê Lai Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.622147,10.812615,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 021] Trạm Lê Trọng Tấn</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 021&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 298 Tây Thạnh&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tây Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 28, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.619133,10.809427,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 071] Tây Thạnh</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Tây Thạnh&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 071&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 363 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Sơn Kỳ, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41, 48, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61982,10.807646,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 072] Trạm Bờ Bao Tân Thắng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Bờ Bao Tân Thắng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 072&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 271 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Sơn Kỳ, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41, 48, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.622368,10.80731,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 073] Nguyễn Hữu Tiến</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nguyễn Hữu Tiến&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 073&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 220 (số 213) Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Sơn Kỳ, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41, 48, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.624886,10.806767,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 074] Trường Đại học Công Nghiệp Thực Phẩm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường Đại học Công Nghiệp Thực Phẩm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 074&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 117 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Sơn Kỳ, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628671,10.805859,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 075] Trạm Tân Kỳ Tân Quý</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Tân Kỳ Tân Quý&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 075&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 15 Lê Trọng Tấn&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Sơn Kỳ, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.631981,10.804359,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 077] Trạm café BonJour</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm café BonJour&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 077&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 128-130 Tân Kỳ Tân Quý&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Sơn Kỳ, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.631577,10.803346,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 078] Trạm Đường Số 27</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm Đường Số 27&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 078&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 216 Tân Kỳ Tân Quý&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Sơn Kỳ, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628487,10.802817,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 079] Trạm cây xăng Sài Gòn Petro</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm cây xăng Sài Gòn Petro&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 079&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 302 Tân Kỳ Tân Quý&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41, 69]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.625923,10.802044,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 056] Đầu cầu xéo</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đầu cầu xéo&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 056&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 9 Cầu Xéo&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.624222,10.800399,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 057] Lê Đình Thám</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Lê Đình Thám&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 057&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 94 Cầu Xéo&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.623749,10.796659,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 050] Café Tino</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Café Tino&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 050&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 111 Gò Dầu&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.624748,10.795829,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 051] Chung cư  Gò Dầu</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chung cư  Gò Dầu&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 051&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 65-67 Gò Dầu&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628082,10.795624,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 117] Tân Sơn Nhì</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Tân Sơn Nhì&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 117&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 432 Tân Sơn Nhì&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Sơn Nhì, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.628799,10.794048,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 110] Nhà thờ Martino</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nhà thờ Martino&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 110&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 2 Tân Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 30, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.62886,10.792652,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 111] Cafe Suối Reo</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cafe Suối Reo&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 111&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 90 Tân Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 30, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.627785,10.789865,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 112] Nhà Thờ Tân Hương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Nhà Thờ Tân Hương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 112&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 190 Tân Hương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Tân Qúy, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 30, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.623999,10.789867,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 165] Trường GTVT</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trường GTVT&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 165&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 73 Văn Cao&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Phú Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 32, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.621998,10.78641,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QTP 166] Cây Xăng Bình Long</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Cây Xăng Bình Long&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QTP 166&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; B10 Văn Cao&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Phú Thạnh, Quận Tân Phú&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.620552,10.782247,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 211] Bình Long</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bình Long&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 211&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 105 Bình Long&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Hưng Hoà A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.620405,10.779433,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 212] Chùa Như Thị Thất</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chùa Như Thị Thất&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 212&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 25 (Hoa Sen) Bình Long&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Hưng Hoà A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.621424,10.775928,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 251] Siêu thị (shop thời trang)</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Siêu thị (shop thời trang)&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 251&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 42 Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Hưng Hoà A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.618549,10.774648,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 252] BV Đa khoa Bình Tân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; BV Đa khoa Bình Tân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 252&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 194 Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Hưng Hoà A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.613774,10.775918,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 253] Chợ Lê Văn Quới</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Chợ Lê Văn Quới&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 253&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 284 Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Hưng Hoà A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.609762,10.776387,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 254] Trạm xăng</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Trạm xăng&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 254&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 442 Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Hưng Hoà A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.605561,10.776418,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 255] Mã Lò</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Mã Lò&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 255&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 596 Lê Văn Qưới&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Hưng Hoà A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.603584,10.776455,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 260] Ngã 3 Ao Đôi</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Ngã 3 Ao Đôi&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 260&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 339 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.600991,10.775607,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 261] Công ty Đại Càng Phát</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Đại Càng Phát&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 261&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 247 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.601849,10.77235,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 262] Phòng tiếp dân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Phòng tiếp dân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 262&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 201 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 16, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.60311,10.768224,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 263] Bệnh viện Bình Tân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Bình Tân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 263&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bệnh viện BT Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.603798,10.763949,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 264] Công ty Hương Sở</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Công ty Hương Sở&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 264&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 79 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.604934,10.761125,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 273] Bà Hom</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bà Hom&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 273&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 9-11 Mã Lò&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.606194,10.758957,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 283] Quán cơm</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Quán cơm&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 283&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 714 Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.606044,10.755834,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 269] Đường 32</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường 32&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 269&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 297 Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.6079,10.75498,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 101] Tên Lửa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Tên Lửa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 101&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 397 Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.610137,10.752471,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 294] Đường Tên Lửa</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường Tên Lửa&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 294&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 308 Đường số 1&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.611516,10.747807,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 295] Đường số 34</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường số 34&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 295&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; 408-410 Đường số 1&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường Bình Trị Đông B, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.607836,10.746532,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 296] Đường số 13</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Đường số 13&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 296&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 64 Đường số 34&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.607906,10.744318,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 206] Bệnh Viện Quốc Tế</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh Viện Quốc Tế&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 206&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 120 Đường số 17A&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.610062,10.742442,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 207] AEON Mall Bình Tân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; AEON Mall Bình Tân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 207&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 14 Đường số 17A&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61276,10.744171,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 103] Aeon mall Bình Tân</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Aeon mall Bình Tân&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 103&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 32 (Đ/d 150) Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61341,10.743328,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 104] Kinh Dương Vương</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Kinh Dương Vương&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 104&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Đối diện 14 (số 3-5) Tên Lửa&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc A, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 25, 41]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.614227,10.741424,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[QBT 007] Bệnh viện Triều An</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bệnh viện Triều An&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; QBT 007&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bệnh viện Triều An Kinh Dương Vương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; Phường An Lạc, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 09, 102, 151, 25, 39, 41, 60-1, 61, 62-1, 62-10, 62-2, 62-8, 63-1, 84]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.61687,10.739665,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>[BX 46] Bến xe Miền Tây</name>
+          <description><![CDATA[&lt;b&gt;Trạm:&lt;/b&gt; Bến xe Miền Tây&lt;br/&gt;&lt;b&gt;Mã trạm:&lt;/b&gt; BX 46&lt;br/&gt;&lt;b&gt;Địa chỉ:&lt;/b&gt; Bến xe Miền Tây Kinh Dương Vương&lt;br/&gt;&lt;b&gt;Khu vực:&lt;/b&gt; None, Quận Bình Tân&lt;br/&gt;&lt;b&gt;Các tuyến qua trạm:&lt;/b&gt; 10, 102, 139, 14, 148, 151, 32, 39, 41, 60-1, 91]]></description>
+          <styleUrl>#busStopStyle</styleUrl>
+          <Point>
+            <coordinates>106.619438,10.739486,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+  </Document>
+</kml>

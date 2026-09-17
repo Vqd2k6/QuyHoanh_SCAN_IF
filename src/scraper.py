@@ -347,33 +347,66 @@ def parse_planning_data(raw_data, lat, lon, urban_block_cache=None):
         "longitude": lon
     }
 
-async def fetch_planning_data(points, on_point_scraped=None, headless=True, concurrency=3, initial_parcels=None, initial_scanned_points=None):
+def is_safely_skippable_parcel(parsed_info):
+    """
+    Xác định xem một thửa đất có đủ điều kiện an toàn để áp dụng Point-in-Polygon Auto-Skip hay không.
+    Điều kiện an toàn:
+    1. Là thửa đất nhà dân riêng lẻ (Diện tích <= 500 m²).
+    2. Có đầy đủ số tờ, số thửa hợp lệ (không phải thửa định danh tạm).
+    3. Không phải là đất giao thông, đường đi, công viên, cây xanh hay đất công cộng lớn.
+    """
+    if not parsed_info or not isinstance(parsed_info, dict):
+        return False
+        
+    p_geom = parsed_info.get("polygon_geom")
+    if p_geom is None:
+        return False
+        
+    sothua = str(parsed_info.get("sothua", "")).strip()
+    soto = str(parsed_info.get("soto", "")).strip()
+    if not sothua or sothua in ("-", "None", "") or not soto or soto in ("-", "None", ""):
+        return False
+        
+    dt = parsed_info.get("dientich")
+    if dt is None or dt <= 0 or dt > 500.0:
+        return False
+        
+    chucnang_sum = str(parsed_info.get("chucnang_summary", "")).lower()
+    unsafe_keywords = ["giao thông", "đường", "công cộng", "công viên", "cây xanh", "hạ tầng", "kênh", "rạch", "sông", "chưa phân định"]
+    if any(k in chucnang_sum for k in unsafe_keywords):
+        return False
+        
+    return True
+
+async def fetch_planning_data(points, on_point_scraped=None, headless=True, concurrency=30, initial_parcels=None, initial_scanned_points=None):
     """
     Thu thập dữ liệu quy hoạch cho danh sách các điểm toạ độ thông qua API chính thức của SQHKT.
     Tự động truy vấn chỉ tiêu kiến trúc (tầng cao, mật độ, HSSDĐ) cho từng ô quy hoạch.
-    Hỗ trợ chạy song song đa luồng (Worker Pool) với concurrency luồng.
+    Hỗ trợ chạy song song đa luồng (Worker Pool) lên tới 100 luồng song song.
+    Kiểm tra Point-in-Polygon thông minh: Chỉ auto-skip cho các thửa nhà phố nhỏ (<= 500m²), 
+    tuyệt đối không skip trên đất giao thông/công cộng lớn để không bỏ sót bất kỳ hộ dân nào.
     Hỗ trợ nạp sẵn initial_parcels và initial_scanned_points để tiếp tục đợt quét dở dang (Resume).
     Gọi on_point_scraped(lon, lat, parsed_info, current_idx, total_count) sau mỗi điểm.
     """
     total_points = len(points)
     urban_block_cache = {}  # gid -> details dict
-    # Danh sách các bộ (polygon_geom, (minx, miny, maxx, maxy), parsed_info) để lọc không gian siêu tốc
-    known_parcels = []
+    scanned_lookup = set(initial_scanned_points.keys()) if initial_scanned_points else set()
     
-    # Nạp các thửa đất đã có từ đợt quét trước
+    # Danh sách các đa giác thửa đất an toàn để kiểm tra Point-in-Polygon tăng tốc
+    skippable_parcels = []
+    lock = asyncio.Lock()
+    
     if initial_parcels:
         for p_key, p_info in initial_parcels.items():
             if isinstance(p_info, dict):
                 p_geom = p_info.get("polygon_geom")
                 if p_geom is None and p_info.get("ranh_coords"):
                     p_geom = create_shapely_polygon(p_info.get("ranh_coords"))
-                if p_geom is not None:
-                    known_parcels.append((p_geom, p_geom.bounds, p_info))
-                    
-    scanned_lookup = set(initial_scanned_points.keys()) if initial_scanned_points else set()
-    lock = asyncio.Lock()
+                    p_info["polygon_geom"] = p_geom
+                if is_safely_skippable_parcel(p_info):
+                    skippable_parcels.append((p_info["polygon_geom"], p_info["polygon_geom"].bounds, p_info))
     
-    concurrency = max(1, min(int(concurrency), 30))  # Hỗ trợ tối đa đến 30 luồng song song (bao gồm 15 luồng)
+    concurrency = max(1, min(int(concurrency), 100))  # Hỗ trợ tối đa đến 100 luồng song song
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(
@@ -385,23 +418,26 @@ async def fetch_planning_data(points, on_point_scraped=None, headless=True, conc
         )
         await context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         
-        pages = [await context.new_page() for _ in range(concurrency)]
+        # Tạo pool kết nối trang Chromium (tối đa 10-15 tab để tối ưu RAM, các worker coroutine chia sẻ các trang này)
+        num_pages = min(concurrency, 10)
+        pages = [await context.new_page() for _ in range(num_pages)]
         
         async def init_page(page, p_idx):
             try:
                 await page.goto("https://thongtinquyhoach.hochiminhcity.gov.vn/", wait_until="domcontentloaded", timeout=30000)
                 await page.wait_for_timeout(1500)
             except Exception as e:
-                print(f"[!] Cảnh báo kết nối luồng #{p_idx + 1}: {e}")
+                print(f"[!] Cảnh báo kết nối pool #{p_idx + 1}: {e}")
 
-        print(f"[*] Khởi động {concurrency} luồng song song và kết nối tới Cổng thông tin quy hoạch TP.HCM...")
-        await asyncio.gather(*[init_page(pages[i], i) for i in range(concurrency)])
+        print(f"[*] Khởi động {concurrency} luồng song song (Pool {num_pages} kết nối) tới Cổng thông tin quy hoạch TP.HCM...")
+        await asyncio.gather(*[init_page(pages[i], i) for i in range(num_pages)])
         
         queue = asyncio.Queue()
         for idx, pt in enumerate(points):
             queue.put_nowait((idx, pt[0], pt[1]))
             
-        async def worker(worker_id, page):
+        async def worker(worker_id):
+            page = pages[worker_id % num_pages]
             while True:
                 try:
                     idx, lon, lat = queue.get_nowait()
@@ -412,8 +448,8 @@ async def fetch_planning_data(points, on_point_scraped=None, headless=True, conc
                 point_key = f"{lon:.6f},{lat:.6f}"
                 pt_query = Point(lon, lat)
                 
-                # 0. NẾU ĐIỂM ĐÃ TỪNG QUÉT Ở ĐỢT TRƯỚC VÀ KHÔNG CÓ THỬA (CÔNG CỘNG/GIAO THÔNG)
-                if point_key in scanned_lookup and initial_scanned_points.get(point_key) is False:
+                # 0. NẾU ĐIỂM ĐÃ TỪNG QUÉT Ở ĐỢT TRƯỚC (CHẾ ĐỘ RESUME)
+                if point_key in scanned_lookup:
                     if on_point_scraped:
                         try:
                             if asyncio.iscoroutinefunction(on_point_scraped):
@@ -425,9 +461,9 @@ async def fetch_planning_data(points, on_point_scraped=None, headless=True, conc
                     queue.task_done()
                     continue
 
-                # 1. KIỂM TRA AUTO-NEXT TRÊN BỘ NHỚ CHUNG (LỌC BẰNG BOUNDING BOX TRƯỚC - KHÔNG CHẶN KHÓA LUỒNG)
+                # 1. KIỂM TRA POINT-IN-POLYGON TRÊN CÁC THỬA NHÀ DÂN AN TOÀN (<= 500m²) ĐỂ TĂNG TỐC ĐỘ (0s)
                 cached_parcel = None
-                for p_geom, (minx, miny, maxx, maxy), p_info in known_parcels:
+                for p_geom, (minx, miny, maxx, maxy), p_info in skippable_parcels:
                     if minx <= lon <= maxx and miny <= lat <= maxy:
                         try:
                             if p_geom.covers(pt_query):
@@ -448,16 +484,16 @@ async def fetch_planning_data(points, on_point_scraped=None, headless=True, conc
                     queue.task_done()
                     continue
 
-                # 2. GỬI REQUEST TRUY VẤN MẠNG
+                # 2. GỬI REQUEST TRUY VẤN MẠNG VỚI TIMEOUT NHANH 8S
                 raw_result = None
                 try:
                     raw_result = await page.evaluate(f"""async () => {{
                         try {{
-                            let resp = await window.axios.post('https://sqhkt-qlqh.tphcm.gov.vn/computing/930/api/v3.1/a-z/all', 'Lat={lat}&Lon={lon}');
+                            let resp = await window.axios.post('https://sqhkt-qlqh.tphcm.gov.vn/computing/930/api/v3.1/a-z/all', 'Lat={lat}&Lon={lon}', {{timeout: 8000}});
                             return resp.data;
                         }} catch(e) {{
                             try {{
-                                let resp2 = await window.axios.post('https://thongtinquyhoach.hochiminhcity.gov.vn/computing/930/api/v3.1/a-z/all', 'Lat={lat}&Lon={lon}');
+                                let resp2 = await window.axios.post('https://thongtinquyhoach.hochiminhcity.gov.vn/computing/930/api/v3.1/a-z/all', 'Lat={lat}&Lon={lon}', {{timeout: 8000}});
                                 return resp2.data;
                             }} catch(e2) {{
                                 return {{error: e2.toString()}};
@@ -467,43 +503,57 @@ async def fetch_planning_data(points, on_point_scraped=None, headless=True, conc
                 except Exception as e:
                     raw_result = {"error": str(e)}
 
-                # 3. TRUY VẤN CHỈ TIÊU KIẾN TRÚC QHPK NẾU CÓ
+                # 3. TRUY VẤN SONG SONG CHỈ TIÊU KIẾN TRÚC QHPK NẾU CÓ (SIÊU TỐC VỚI PROMISE.ALL)
                 if isinstance(raw_result, dict) and "QHPK" in raw_result:
                     qhpk_val = raw_result.get("QHPK")
                     try:
                         qhpk_items = json.loads(qhpk_val) if isinstance(qhpk_val, str) else qhpk_val
                         if isinstance(qhpk_items, list):
+                            missing_gids = []
                             for item in qhpk_items:
                                 props = item.get("properties", {}) if isinstance(item, dict) else {}
                                 gid = props.get("gid")
                                 if gid and gid not in urban_block_cache:
-                                    try:
-                                        block_data = await page.evaluate(f"""async () => {{
+                                    missing_gids.append(gid)
+                                    
+                            if missing_gids:
+                                try:
+                                    blocks_data = await page.evaluate(f"""async (gids) => {{
+                                        let promises = gids.map(async (gid) => {{
                                             try {{
-                                                let res = await window.axios.get('https://sqhkt-qlqh.tphcm.gov.vn/api/qhpksdd/{gid}');
-                                                return res.data;
+                                                let res = await window.axios.get('https://sqhkt-qlqh.tphcm.gov.vn/api/qhpksdd/' + gid, {{timeout: 4000}});
+                                                return {{gid: gid, data: res.data}};
                                             }} catch(e) {{
-                                                return null;
+                                                return {{gid: gid, data: null}};
                                             }}
-                                        }}""")
-                                        if isinstance(block_data, dict):
-                                            urban_block_cache[gid] = block_data
-                                        elif isinstance(block_data, list) and len(block_data) > 0 and isinstance(block_data[0], dict):
-                                            urban_block_cache[gid] = block_data[0]
-                                        else:
-                                            urban_block_cache[gid] = {}
-                                    except Exception:
-                                        urban_block_cache[gid] = {}
+                                        }});
+                                        return await Promise.all(promises);
+                                    }}""", missing_gids)
+                                    
+                                    if isinstance(blocks_data, list):
+                                        for b_item in blocks_data:
+                                            b_gid = b_item.get("gid")
+                                            b_val = b_item.get("data")
+                                            if isinstance(b_val, dict):
+                                                urban_block_cache[b_gid] = b_val
+                                            elif isinstance(b_val, list) and len(b_val) > 0 and isinstance(b_val[0], dict):
+                                                urban_block_cache[b_gid] = b_val[0]
+                                            else:
+                                                urban_block_cache[b_gid] = {}
+                                except Exception:
+                                    for mg in missing_gids:
+                                        urban_block_cache[mg] = {}
                     except Exception:
                         pass
 
                 # 4. PHÂN TÍCH VÀ CẬP NHẬT KẾT QUẢ
                 parsed_info = parse_planning_data(raw_result, lat, lon, urban_block_cache=urban_block_cache)
                 
-                async with lock:
-                    if parsed_info and parsed_info.get("polygon_geom"):
-                        p_poly = parsed_info["polygon_geom"]
-                        known_parcels.append((p_poly, p_poly.bounds, parsed_info))
+                # Nếu là thửa đất an toàn (nhà dân <= 500m²), lưu vào cache Point-in-Polygon để skip các điểm trùng lặp tiếp theo
+                if is_safely_skippable_parcel(parsed_info):
+                    p_poly = parsed_info["polygon_geom"]
+                    async with lock:
+                        skippable_parcels.append((p_poly, p_poly.bounds, parsed_info))
                     
                 if on_point_scraped:
                     try:
@@ -514,10 +564,10 @@ async def fetch_planning_data(points, on_point_scraped=None, headless=True, conc
                     except Exception as cb_err:
                         print(f"[!] Lỗi callback xử lý kết quả: {cb_err}")
 
-                await page.wait_for_timeout(50)
+                await page.wait_for_timeout(10)
                 queue.task_done()
 
-        workers = [worker(i, pages[i]) for i in range(concurrency)]
+        workers = [worker(i) for i in range(concurrency)]
         try:
             await asyncio.gather(*workers)
         except (asyncio.CancelledError, KeyboardInterrupt):
@@ -530,7 +580,6 @@ async def fetch_planning_data(points, on_point_scraped=None, headless=True, conc
                 await browser.close()
             except Exception:
                 pass
-        
     return True
 
 if __name__ == "__main__":

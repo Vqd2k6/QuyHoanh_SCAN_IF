@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bản Đồ Hệ Thống 30 Tuyến Xe Buýt TP.HCM | Web GIS Visualizer</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --accent: #38bdf8;
+      --bg-dark: #0f172a;
+      --bg-card: rgba(30, 41, 59, 0.96);
+      --bg-card-hover: rgba(51, 65, 85, 0.95);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --sidebar-width: 400px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      position: relative;
+    }
+
+    /* Sidebar Styling */
+    #sidebar {
+      width: var(--sidebar-width);
+      height: 100vh;
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+      box-shadow: 6px 0 28px rgba(0, 0, 0, 0.4);
+      transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    #sidebar.collapsed {
+      margin-left: calc(-1 * var(--sidebar-width));
+      transform: translateX(0);
+    }
+
+    .sidebar-header {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(15, 23, 42, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-title i {
+      font-size: 1.25rem;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.15);
+      padding: 7px;
+      border-radius: 8px;
+    }
+
+    .brand-subtitle {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .btn-collapse-sidebar {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-collapse-sidebar:hover {
+      background: rgba(56, 189, 248, 0.2);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* Quick stats header */
+    .quick-stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 10px 14px;
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid var(--border-color);
+      gap: 6px;
+      text-align: center;
+    }
+
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 4px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .stat-val {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .stat-lbl {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    /* Direction Selector inside Sidebar */
+    .direction-section {
+      padding: 10px 14px 4px;
+      background: rgba(30, 41, 59, 0.7);
+    }
+
+    .dir-section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .dir-pill-container {
+      display: flex;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .dir-pill-btn {
+      flex: 1;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: all 0.18s ease;
+    }
+
+    .dir-pill-btn:hover {
+      color: #fff;
+    }
+
+    .dir-pill-btn.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+    }
+
+    /* Search & Controls */
+    .search-filter-box {
+      padding: 10px 14px 10px;
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(30, 41, 59, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .search-wrapper {
+      position: relative;
+    }
+
+    .search-wrapper i {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 8px 12px 8px 32px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 7px;
+      color: var(--text-main);
+      font-size: 0.82rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    .action-buttons-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-action {
+      flex: 1;
+      padding: 6px 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.73rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-action:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-action.active {
+      background: #0284c7;
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Filter dropdown */
+    .select-filter {
+      width: 100%;
+      padding: 6px 8px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      color: var(--text-main);
+      font-size: 0.74rem;
+      outline: none;
+    }
+
+    /* Route List */
+    .route-list-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px 10px;
+    }
+
+    .route-list-container::-webkit-scrollbar {
+      width: 5px;
+    }
+    .route-list-container::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+
+    .route-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 9px 11px;
+      margin-bottom: 7px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      position: relative;
+    }
+
+    .route-card:hover {
+      background: rgba(51, 65, 85, 0.6);
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .route-card.selected {
+      border-left: 4px solid var(--accent);
+      background: rgba(30, 41, 59, 0.98);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .route-card.inactive {
+      opacity: 0.4;
+    }
+
+    .route-check {
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+      accent-color: var(--accent);
+    }
+
+    .route-color-bar {
+      width: 5px;
+      height: 36px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .route-badge {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 6px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      flex-shrink: 0;
+      min-width: 46px;
+      text-align: center;
+    }
+
+    .route-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .route-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #f1f5f9;
+    }
+
+    .route-meta-row {
+      display: flex;
+      gap: 7px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .route-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .btn-zoom-route {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: color 0.15s;
+    }
+
+    .btn-zoom-route:hover {
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Sidebar Footer (Downloads) */
+    .sidebar-footer {
+      padding: 10px 14px;
+      border-top: 1px solid var(--border-color);
+      background: rgba(15, 23, 42, 0.95);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .download-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .btn-download {
+      padding: 6px 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 6px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+
+    .btn-download:hover {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Map container */
+    #map-container {
+      flex: 1;
+      height: 100vh;
+      position: relative;
+      background: #0b1120;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Floating Open Sidebar Button on Map */
+    .btn-floating-sidebar {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 999;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+      padding: 9px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+      transition: all 0.2s;
+    }
+
+    .btn-floating-sidebar:hover {
+      background: rgba(30, 41, 59, 0.98);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    #sidebar.collapsed ~ #map-container .btn-floating-sidebar {
+      display: flex;
+    }
+
+    /* Custom Leaflet Popups */
+    .leaflet-popup-content-wrapper {
+      background: rgba(15, 23, 42, 0.96) !important;
+      backdrop-filter: blur(16px);
+      color: #f8fafc !important;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55) !important;
+      padding: 4px !important;
+    }
+
+    .leaflet-popup-tip {
+      background: rgba(15, 23, 42, 0.96) !important;
+    }
+
+    .popup-card {
+      font-size: 0.8rem;
+      min-width: 240px;
+    }
+
+    .popup-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .popup-badge {
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: #fff;
+    }
+
+    .popup-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    .popup-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 0.76rem;
+    }
+
+    .popup-label {
+      color: var(--text-muted);
+    }
+
+    .popup-value {
+      font-weight: 600;
+      color: #f1f5f9;
+      text-align: right;
+    }
+
+    /* Bus Stop Marker */
+    .bus-stop-icon {
+      background: #fff;
+      border-radius: 50%;
+      border: 2px solid #0284c7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0284c7;
+      font-size: 9px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .terminal-marker {
+      animation: pulse-ring 2s infinite;
+      border-radius: 50%;
+    }
+
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-group">
+        <div class="brand-title">
+          <i class="fa-solid fa-bus-simple"></i>
+          <span>TUYẾN BUÝT TP.HCM</span>
+        </div>
+      </div>
+      <button id="btn-collapse-sidebar" class="btn-collapse-sidebar" title="Thu gọn bảng điều khiển (Ẩn sidebar)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+    </div>
+
+    <!-- Quick Stats Live in Sidebar -->
+    <div class="quick-stats-bar">
+      <div class="stat-pill">
+        <div class="stat-val" id="stat-routes-count">30 / 30</div>
+        <div class="stat-lbl">Tuyến hiển thị</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val" id="stat-total-km">792.0 km</div>
+        <div class="stat-lbl">Tổng cự ly</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-val" id="stat-stops-count">2,840</div>
+        <div class="stat-lbl">Trạm dừng</div>
+      </div>
+    </div>
+
+    <!-- Direction Selector inside Sidebar -->
+    <div class="direction-section">
+      <div class="dir-section-label"><i class="fa-solid fa-arrows-left-right"></i> Hướng Lộ Trình</div>
+      <div class="dir-pill-container">
+        <button class="dir-pill-btn active" data-dir="both"><i class="fa-solid fa-arrows-left-right"></i> Cả 2 lượt</button>
+        <button class="dir-pill-btn" data-dir="outbound"><i class="fa-solid fa-arrow-right"></i> Lượt đi</button>
+        <button class="dir-pill-btn" data-dir="inbound"><i class="fa-solid fa-arrow-left"></i> Lượt về</button>
+      </div>
+    </div>
+
+    <!-- Search & Actions -->
+    <div class="search-filter-box">
+      <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="route-search" class="search-input" placeholder="Tìm mã số, tên tuyến, điểm đi/đến..." />
+      </div>
+
+      <div class="action-buttons-row">
+        <button id="btn-select-all" class="btn-action"><i class="fa-solid fa-check-double"></i> Chọn hết</button>
+        <button id="btn-clear-all" class="btn-action"><i class="fa-solid fa-xmark"></i> Bỏ chọn</button>
+        <button id="btn-toggle-stops" class="btn-action"><i class="fa-solid fa-map-pin"></i> Hiện trạm</button>
+      </div>
+
+      <select id="filter-region" class="select-filter">
+        <option value="all">Tất cả khu vực (30 tuyến)</option>
+        <option value="cu_chi">Khu vực Củ Chi</option>
+        <option value="an_suong">Khu vực An Sương</option>
+        <option value="cho_lon">Khu vực Chợ Lớn / Trung tâm</option>
+        <option value="interprovincial">Tuyến Liên Tỉnh (Tây Ninh, Bình Dương, Đồng Nai)</option>
+      </select>
+    </div>
+
+    <!-- Route List -->
+    <div id="route-list" class="route-list-container">
+      <!-- Route items injected by JS -->
+    </div>
+
+    <!-- Sidebar Footer with direct downloads -->
+    <div class="sidebar-footer">
+      <div class="download-title"><i class="fa-solid fa-cloud-arrow-down"></i> Tải Dữ Liệu Lộ Trình</div>
+      <div class="download-grid">
+        <button class="btn-download" onclick="downloadMergedFile('geojson')">
+          <i class="fa-solid fa-file-code"></i> GeoJSON Gộp
+        </button>
+        <button class="btn-download" onclick="downloadMergedFile('kml')">
+          <i class="fa-solid fa-earth-americas"></i> KML Gộp
+        </button>
+        <button class="btn-download" onclick="downloadExcel()">
+          <i class="fa-solid fa-file-excel"></i> File Excel
+        </button>
+        <button class="btn-download" onclick="downloadCSV()">
+          <i class="fa-solid fa-file-csv"></i> File CSV
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map-container">
+    <button class="btn-floating-sidebar" id="btn-expand-sidebar">
+      <i class="fa-solid fa-bars"></i> Danh sách 30 tuyến
+    </button>
+
+    <div id="map"></div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Load Local Bus Routes Data -->
+  <script src="routes_data.js"></script>
+
+  <script>
+    // State management
+    let activeDirection = 'both'; // 'both' | 'outbound' | 'inbound'
+    let showBusStops = false;
+    let selectedRouteSTT = null;
+    const activeRouteMap = new Map(); // stt -> boolean
+    const routeLayers = new Map(); // stt -> { polylines: [], stops: [] }
+
+    // Base Maps configuration
+    const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
+    });
+
+    const googleStreets = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      attribution: '© Google Maps'
+    });
+
+    const googleHybrid = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      attribution: '© Google Satellite & Roads'
+    });
+
+    const cartoDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 20,
+      attribution: '© CARTO Dark'
+    });
+
+    const cartoPositron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 20,
+      attribution: '© CARTO Positron'
+    });
+
+    // Initialize Map with Smooth & Fractional Zoom
+    const map = L.map('map', {
+      center: [10.8231, 106.6297],
+      zoom: 11,
+      zoomSnap: 0.25,           // Cho phép mức zoom vi mô 0.25 (mịn hơn, không bị nhảy bước lớn)
+      zoomDelta: 0.5,            // Mỗi lần bấm +/- chỉ zoom 0.5 thay vì nhảy 1.0 bậc lớn
+      wheelPxPerZoomLevel: 140,  // Cuộn chuột mượt mà êm ái
+      layers: [googleStreets],
+      zoomControl: false
+    });
+
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+    L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
+
+    const baseMaps = {
+      "Google Đường Phố": googleStreets,
+      "Google Vệ Tinh (Hybrid)": googleHybrid,
+      "OpenStreetMap": osmStandard,
+      "Bản đồ Nền Tối (Dark)": cartoDark,
+      "Bản đồ Nền Sáng (Light)": cartoPositron
+    };
+    L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
+
+    // Sidebar Collapse / Expand Toggle
+    const sidebar = document.getElementById('sidebar');
+    const btnCollapse = document.getElementById('btn-collapse-sidebar');
+    const btnExpand = document.getElementById('btn-expand-sidebar');
+
+    function toggleSidebar(collapse) {
+      if (collapse) {
+        sidebar.classList.add('collapsed');
+      } else {
+        sidebar.classList.remove('collapsed');
+      }
+      setTimeout(() => {
+        map.invalidateSize({ animate: true, pan: false });
+      }, 350);
+    }
+
+    btnCollapse.addEventListener('click', () => toggleSidebar(true));
+    btnExpand.addEventListener('click', () => toggleSidebar(false));
+
+    // Shortcut: Press 'Esc' or 'm' to toggle sidebar
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' || (e.key === 'm' && document.activeElement.tagName !== 'INPUT')) {
+        toggleSidebar(!sidebar.classList.contains('collapsed'));
+      }
+    });
+
+    // Initialize routes state
+    BUS_ROUTES_DATA.forEach(r => {
+      activeRouteMap.set(r.stt, true);
+    });
+
+    // Render Routes on Leaflet Map
+    function buildMapLayers() {
+      // Clear existing
+      routeLayers.forEach(l => {
+        l.polylines.forEach(p => map.removeLayer(p));
+        l.stops.forEach(s => map.removeLayer(s));
+      });
+      routeLayers.clear();
+
+      BUS_ROUTES_DATA.forEach(route => {
+        const polylineLayers = [];
+        const stopLayers = [];
+        const isRouteActive = activeRouteMap.get(route.stt);
+
+        route.variants.forEach(variant => {
+          const isOutbound = variant.outbound;
+          if (activeDirection === 'outbound' && !isOutbound) return;
+          if (activeDirection === 'inbound' && isOutbound) return;
+
+          // LatLng pairs for Leaflet (coords are [lng, lat])
+          if (variant.coordinates && variant.coordinates.length > 0) {
+            const latLngs = variant.coordinates.map(c => [c[1], c[0]]);
+            const dirText = isOutbound ? "Lượt đi" : "Lượt về";
+
+            const poly = L.polyline(latLngs, {
+              color: route.color,
+              weight: (selectedRouteSTT === route.stt) ? 6 : 4,
+              opacity: (selectedRouteSTT === route.stt) ? 1.0 : (isOutbound ? 0.85 : 0.65),
+              dashArray: isOutbound ? null : "6, 6"
+            });
+
+            // Popup content
+            const popupHtml = `
+              <div class="popup-card">
+                <div class="popup-header">
+                  <span class="popup-badge" style="background: ${route.color}">${route.display_code}</span>
+                  <div class="popup-title">${route.display_code}: ${route.official_name}</div>
+                </div>
+                <div class="popup-row">
+                  <span class="popup-label">Hướng tuyến:</span>
+                  <span class="popup-value" style="color: ${route.color}">${dirText}</span>
+                </div>
+                <div class="popup-row">
+                  <span class="popup-label">Lộ trình:</span>
+                  <span class="popup-value">${variant.start_stop} → ${variant.end_stop}</span>
+                </div>
+                <div class="popup-row">
+                  <span class="popup-label">Cự ly thực tế:</span>
+                  <span class="popup-value">${variant.distance_km} km (Định mức: ${route.listed_length_km} km)</span>
+                </div>
+                <div class="popup-row">
+                  <span class="popup-label">Giờ hoạt động:</span>
+                  <span class="popup-value">${route.operating_hours}</span>
+                </div>
+                <div class="popup-row">
+                  <span class="popup-label">Thời gian chạy:</span>
+                  <span class="popup-value">${variant.running_time_min} phút</span>
+                </div>
+                <div class="popup-row">
+                  <span class="popup-label">Số trạm dừng:</span>
+                  <span class="popup-value">${variant.stops.length} trạm</span>
+                </div>
+                <div style="margin-top: 8px; text-align: center;">
+                  <a href="../individual/geojson/tuyen_${route.display_code.replace(' ','_').replace('-','_')}.geojson" download class="btn-download" style="padding: 4px 8px; font-size: 0.72rem; display: inline-flex;">
+                    <i class="fa-solid fa-download"></i> Tải GeoJSON tuyến này
+                  </a>
+                </div>
+              </div>
+            `;
+            poly.bindPopup(popupHtml);
+
+            poly.on('mouseover', function () {
+              this.setStyle({ weight: 7, opacity: 1 });
+            });
+            poly.on('mouseout', function () {
+              if (selectedRouteSTT !== route.stt) {
+                this.setStyle({ weight: 4, opacity: isOutbound ? 0.85 : 0.65 });
+              }
+            });
+            poly.on('click', function () {
+              selectRoute(route.stt, false);
+            });
+
+            if (isRouteActive) {
+              poly.addTo(map);
+            }
+            polylineLayers.push(poly);
+          }
+
+          // Bus Stops
+          if (variant.stops && variant.stops.length > 0) {
+            variant.stops.forEach((s, sIdx) => {
+              const isTerminal = (sIdx === 0 || sIdx === variant.stops.length - 1);
+              const stopIcon = L.divIcon({
+                className: `bus-stop-icon ${isTerminal ? 'terminal-marker' : ''}`,
+                html: `<i class="fa-solid fa-bus" style="color: ${route.color}"></i>`,
+                iconSize: isTerminal ? [18, 18] : [14, 14],
+                iconAnchor: isTerminal ? [9, 9] : [7, 7]
+              });
+
+              const marker = L.marker([s.lat, s.lng], { icon: stopIcon });
+              const stopPopupHtml = `
+                <div class="popup-card">
+                  <div class="popup-header">
+                    <span class="popup-badge" style="background: ${route.color}">[${s.code}]</span>
+                    <div class="popup-title">${s.name}</div>
+                  </div>
+                  <div class="popup-row">
+                    <span class="popup-label">Địa chỉ:</span>
+                    <span class="popup-value">${s.address || 'Đang cập nhật'}</span>
+                  </div>
+                  <div class="popup-row">
+                    <span class="popup-label">Phường/Xã - Quận:</span>
+                    <span class="popup-value">${s.ward}, ${s.zone}</span>
+                  </div>
+                  <div class="popup-row">
+                    <span class="popup-label">Tuyến xe qua trạm:</span>
+                    <span class="popup-value" style="color: var(--accent)">${s.routes}</span>
+                  </div>
+                </div>
+              `;
+              marker.bindPopup(stopPopupHtml);
+
+              if (isRouteActive && showBusStops) {
+                marker.addTo(map);
+              }
+              stopLayers.push(marker);
+            });
+          }
+        });
+
+        routeLayers.set(route.stt, {
+          polylines: polylineLayers,
+          stops: stopLayers
+        });
+      });
+
+      updateSidebarStats();
+    }
+
+    // Render Sidebar List
+    function renderSidebarList(filterText = '', regionFilter = 'all') {
+      const container = document.getElementById('route-list');
+      container.innerHTML = '';
+
+      const text = filterText.toLowerCase().trim();
+
+      const filteredRoutes = BUS_ROUTES_DATA.filter(r => {
+        const matchesText = !text || 
+          r.display_code.toLowerCase().includes(text) ||
+          r.official_name.toLowerCase().includes(text) ||
+          r.start_point.toLowerCase().includes(text) ||
+          r.end_point.toLowerCase().includes(text);
+
+        let matchesRegion = true;
+        if (regionFilter === 'cu_chi') {
+          matchesRegion = r.start_point.includes('Củ Chi') || r.end_point.includes('Củ Chi') || r.official_name.includes('Củ Chi');
+        } else if (regionFilter === 'an_suong') {
+          matchesRegion = r.start_point.includes('An Sương') || r.end_point.includes('An Sương') || r.official_name.includes('An Sương');
+        } else if (regionFilter === 'cho_lon') {
+          matchesRegion = r.start_point.includes('Chợ Lớn') || r.end_point.includes('Chợ Lớn') || r.start_point.includes('Bến Thành');
+        } else if (regionFilter === 'interprovincial') {
+          matchesRegion = ['60-1', '61-3', '62-5', '70-1', '70-2'].includes(r.code);
+        }
+
+        return matchesText && matchesRegion;
+      });
+
+      filteredRoutes.forEach(r => {
+        const isActive = activeRouteMap.get(r.stt);
+        const isSelected = selectedRouteSTT === r.stt;
+
+        const card = document.createElement('div');
+        card.className = `route-card ${isSelected ? 'selected' : ''} ${!isActive ? 'inactive' : ''}`;
+        card.id = `route-card-${r.stt}`;
+
+        card.innerHTML = `
+          <input type="checkbox" class="route-check" ${isActive ? 'checked' : ''} data-stt="${r.stt}" />
+          <div class="route-color-bar" style="background: ${r.color}"></div>
+          <div class="route-badge" style="background: ${r.color}33; border: 1px solid ${r.color}; color: #fff">${r.display_code}</div>
+          <div class="route-info">
+            <div class="route-title" title="${r.official_name}">${r.start_point} ➔ ${r.end_point}</div>
+            <div class="route-meta-row">
+              <span class="route-meta-item"><i class="fa-solid fa-route"></i> ${r.listed_length_km} km</span>
+              <span class="route-meta-item"><i class="fa-solid fa-clock"></i> ${r.operating_hours}</span>
+              <span class="route-meta-item"><i class="fa-solid fa-map-pin"></i> ${r.total_stops} trạm</span>
+            </div>
+          </div>
+          <button class="btn-zoom-route" title="Phóng to tuyến này" data-stt="${r.stt}">
+            <i class="fa-solid fa-crosshairs"></i>
+          </button>
+        `;
+
+        // Checkbox click
+        const check = card.querySelector('.route-check');
+        check.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleRouteVisibility(r.stt, check.checked);
+        });
+
+        // Zoom button
+        const zoomBtn = card.querySelector('.btn-zoom-route');
+        zoomBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          zoomToRoute(r.stt);
+        });
+
+        // Card select
+        card.addEventListener('click', () => {
+          selectRoute(r.stt, true);
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    function toggleRouteVisibility(stt, isVisible) {
+      activeRouteMap.set(stt, isVisible);
+      const layers = routeLayers.get(stt);
+      if (layers) {
+        layers.polylines.forEach(p => isVisible ? map.addLayer(p) : map.removeLayer(p));
+        layers.stops.forEach(s => (isVisible && showBusStops) ? map.addLayer(s) : map.removeLayer(s));
+      }
+      const card = document.getElementById(`route-card-${stt}`);
+      if (card) {
+        card.classList.toggle('inactive', !isVisible);
+      }
+      updateSidebarStats();
+    }
+
+    function selectRoute(stt, zoom = false) {
+      selectedRouteSTT = stt;
+      document.querySelectorAll('.route-card').forEach(c => c.classList.remove('selected'));
+      const activeCard = document.getElementById(`route-card-${stt}`);
+      if (activeCard) {
+        activeCard.classList.add('selected');
+        activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      // Highlight on map
+      routeLayers.forEach((l, rStt) => {
+        const isSel = (rStt === stt);
+        l.polylines.forEach(p => {
+          p.setStyle({
+            weight: isSel ? 6 : 4,
+            opacity: isSel ? 1.0 : 0.65
+          });
+        });
+      });
+
+      if (zoom) {
+        zoomToRoute(stt);
+      }
+    }
+
+    function zoomToRoute(stt) {
+      const layers = routeLayers.get(stt);
+      if (layers && layers.polylines.length > 0) {
+        const group = L.featureGroup(layers.polylines);
+        map.flyToBounds(group.getBounds(), { padding: [50, 50], maxZoom: 13.5, duration: 0.8 });
+      }
+    }
+
+    function updateSidebarStats() {
+      let activeCount = 0;
+      let activeKm = 0;
+      let activeStops = 0;
+
+      BUS_ROUTES_DATA.forEach(r => {
+        if (activeRouteMap.get(r.stt)) {
+          activeCount++;
+          activeKm += r.listed_length_km;
+          activeStops += r.total_stops;
+        }
+      });
+
+      document.getElementById('stat-routes-count').textContent = `${activeCount} / ${BUS_ROUTES_DATA.length}`;
+      document.getElementById('stat-total-km').textContent = `${activeKm.toFixed(1)} km`;
+      document.getElementById('stat-stops-count').textContent = activeStops.toLocaleString();
+    }
+
+    // Direction switcher buttons in Sidebar
+    document.querySelectorAll('.dir-pill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.dir-pill-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeDirection = btn.getAttribute('data-dir');
+        buildMapLayers();
+      });
+    });
+
+    // Search and Filters
+    document.getElementById('route-search').addEventListener('input', (e) => {
+      renderSidebarList(e.target.value, document.getElementById('filter-region').value);
+    });
+
+    document.getElementById('filter-region').addEventListener('change', (e) => {
+      renderSidebarList(document.getElementById('route-search').value, e.target.value);
+    });
+
+    // Select All / Clear All
+    document.getElementById('btn-select-all').addEventListener('click', () => {
+      BUS_ROUTES_DATA.forEach(r => activeRouteMap.set(r.stt, true));
+      buildMapLayers();
+      renderSidebarList(document.getElementById('route-search').value, document.getElementById('filter-region').value);
+    });
+
+    document.getElementById('btn-clear-all').addEventListener('click', () => {
+      BUS_ROUTES_DATA.forEach(r => activeRouteMap.set(r.stt, false));
+      buildMapLayers();
+      renderSidebarList(document.getElementById('route-search').value, document.getElementById('filter-region').value);
+    });
+
+    // Toggle Bus Stops
+    const btnStops = document.getElementById('btn-toggle-stops');
+    btnStops.addEventListener('click', () => {
+      showBusStops = !showBusStops;
+      btnStops.classList.toggle('active', showBusStops);
+      routeLayers.forEach((l, stt) => {
+        const isRouteActive = activeRouteMap.get(stt);
+        l.stops.forEach(s => (isRouteActive && showBusStops) ? map.addLayer(s) : map.removeLayer(s));
+      });
+    });
+
+    // Download helpers
+    function downloadMergedFile(type) {
+      const fileName = type === 'geojson' ? 'hcmc_30_bus_routes_merged.geojson' : 'hcmc_30_bus_routes_merged.kml';
+      const url = `../merged/${fileName}`;
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      a.click();
+    }
+
+    function downloadExcel() {
+      const a = document.createElement('a');
+      a.href = '../summary/danh_sach_30_tuyen_bus.xlsx';
+      a.download = 'danh_sach_30_tuyen_bus.xlsx';
+      a.click();
+    }
+
+    function downloadCSV() {
+      const a = document.createElement('a');
+      a.href = '../summary/danh_sach_30_tuyen_bus.csv';
+      a.download = 'danh_sach_30_tuyen_bus.csv';
+      a.click();
+    }
+
+    // Initial render
+    buildMapLayers();
+    renderSidebarList();
+
+    // Fit initial bounds to all routes
+    setTimeout(() => {
+      const allPolylines = [];
+      routeLayers.forEach(l => l.polylines.forEach(p => allPolylines.push(p)));
+      if (allPolylines.length > 0) {
+        map.fitBounds(L.featureGroup(allPolylines).getBounds(), { padding: [30, 30] });
+      }
+    }, 500);
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿STT,Mã số tuyến,Tên đầy đủ theo EBMS,Điểm đầu tuyến,Điểm cuối tuyến,Giờ mở tuyến,Giờ đóng tuyến,Chiều dài theo danh mục (km),Chiều dài Lượt đi thực tế (km),Chiều dài Lượt về thực tế (km),Số trạm Lượt đi,Số trạm Lượt về,Tổng số điểm tọa độ lộ trình,Thời gian chạy lượt đi (phút),Màu sắc định dạng
+1,B 04,Bến Thành - Cộng Hòa - Bến xe An Sương,Bến Thành,Bến xe An Sương,5:00,20:15,16,17.08,15.82,47,37,659,70,#E53935
+2,B 13,Bến xe buýt Sài Gòn - Bến xe Củ Chi,Bến xe buýt Sài Gòn,Bến xe Củ Chi,4:00,19:45,36,37.4,36.11,80,74,1423,80,#D81B60
+3,B 23,Bến xe buýt Chợ Lớn - Ngã ba Giồng - Cầu Lớn,Bến xe buýt Chợ Lớn,Cầu Lớn,4:00,20:30,23,23.15,22.94,59,59,785,75,#8E24AA
+4,B 24,Bến xe Miền Đông - Hóc Môn,Bến xe Miền Đông,Hóc Môn,4:00,20:30,27,29.05,26.2,67,64,1100,75,#5E35B1
+5,B 27,Bến xe buýt Sài Gòn - Âu Cơ - Bến xe An Sương,Bến xe buýt Sài Gòn,Bến xe An Sương,5:00,20:00,15,16.28,15.29,42,38,565,65,#3949AB
+6,B 30,Chợ Tân Hương - Bến xe buýt Văn Thánh,Chợ Tân Hương,Bến xe buýt Văn Thánh,5:00,22:00,18,18.38,19.93,47,55,917,50,#1E88E5
+7,B 33,Bến xe An Sương - Suối Tiên - Đại học Quốc gia,Bến xe An Sương,Đại học Quốc gia,4:30,22:00,25,25.59,25.04,48,52,871,60,#039BE5
+8,B 41,Bến xe Miền Tây - Ngã tư Bốn Xã - Bến xe An Sương,Bến xe Miền Tây,Bến xe An Sương,5:00,19:20,22,22.86,22.22,56,53,852,60,#00ACC1
+9,B 48,Bến xe buýt Tân Phú - Chợ Hiệp Thành,Bến xe buýt Tân Phú,Chợ Hiệp Thành,4:30,20:00,21,21.5,21.78,55,58,768,55,#00897B
+10,B 60-1,Bến xe Miền Tây - Bến xe Biên Hòa,Bến xe Miền Tây,Bến xe Biên Hòa,4:45,18:30,62,62.67,61.44,76,75,1166,130,#43A047
+11,B 61-3,Thủ Dầu Một - Bến xe An Sương,Bến xe An Sương,Thủ Dầu Một,6:00,16:30,34,31.98,31.66,53,60,980,75,#7CB342
+12,B 62,Bến xe buýt Quận 8 - Thới An,Bến xe buýt Quận 8,Thới An,5:00,19:00,24,23.12,25.73,60,67,1009,85,#C0CA33
+13,B 62-5,Bến xe An Sương - Bến xe Hậu Nghĩa,Bến xe An Sương,Bến xe Hậu Nghĩa,4:00,19:30,31,31.89,31.28,27,25,666,70,#FDD835
+14,B 65,Bến Thành - Cách Mạng Tháng Tám - Bến xe An Sương,Bến Thành,Bến xe An Sương,4:45,20:45,16,17.73,13.85,44,33,646,70,#FFB300
+15,B 70-1, Bến xe Củ Chi - Bến xe Tây Ninh,Bến xe Củ Chi,Bến xe Tây Ninh,3:00,19:00,66,67.11,67.85,15,19,586,115,#FB8C00
+16,B 70-2,Bến xe Củ Chi - Tòa Thánh - Khu du lịch Núi Bà Đen,Bến xe Củ Chi,Khu du lịch Núi Bà Đen,2:55,19:00,73,69.71,70.53,15,19,649,105,#F4511E
+17,B 71,Bến xe An Sương - Phật Cô Đơn,Bến xe An Sương,Phật Cô Đơn,5:00,20:30,24,25.09,24.93,52,51,880,65,#6D4C41
+18,B 74,Bến xe An Sương - Bến xe Củ Chi,Bến xe An Sương,Bến xe Củ Chi,3:30,21:00,21,22.38,22.29,42,42,780,45,#546E7A
+19,B 78,Bến xe buýt Thới An - Ngã ba Giồng - Cầu Lớn,Bến xe buýt Thới An,Cầu Lớn,5:00,20:00,18,19.67,19.33,45,44,581,60,#78909C
+20,B 79,Bến xe Củ Chi - Đền Bến Dược,Bến xe Củ Chi,Đền Bến Dược,5:00,20:00,25,25.42,25.96,41,42,753,45,#E91E63
+21,B 85,Bến xe An Sương - Khu công nghiệp Nhị Xuân,Bến xe An Sương,Khu công nghiệp Nhị Xuân,4:35,20:30,14,14.16,13.59,30,30,595,35,#9C27B0
+22,B 87,Bến xe Củ Chi - An Nhơn Tây,Bến xe Củ Chi,An Nhơn Tây,5:00,20:30,20,20.22,21.4,36,36,573,40,#673AB7
+23,B 94,Bến xe buýt Chợ Lớn - Bến xe Củ Chi,Bến xe buýt Chợ Lớn,Bến xe Củ Chi,4:00,19:00,36,36.69,35.79,80,72,1324,75,#3F51B5
+24,B 100,Bến xe Củ Chi - Cầu Tân Thái,Bến xe Củ Chi,Cầu Tân Thái,4:45,21:00,16,16.16,17.04,36,39,635,35,#2196F3
+25,B 104,Bến xe An Sương - Bến xe buýt Văn Thánh,Bến xe An Sương,Bến xe buýt Văn Thánh,4:30,22:00,16,17.4,16.35,40,41,791,45,#00BCD4
+26,B 107,Bến xe Củ Chi - Bố Heo,Bến xe Củ Chi,Bố Heo,4:45,20:00,15,16.25,17.13,28,32,459,30,#009688
+27,B 122,Bến xe An Sương - Tân Quy,Bến xe An Sương,Tân Quy,4:45,19:30,19,20.71,18.4,43,39,869,50,#4CAF50
+28,B 126,Bến xe Củ Chi - Bình Mỹ,Bến xe Củ Chi,Bình Mỹ,4:45,20:00,19,20.31,19.57,39,39,673,40,#8BC34A
+29,B 145,Bến xe buýt Chợ Lớn - Chợ Hiệp Thành,Bến xe buýt Chợ Lớn,Chợ Hiệp Thành,4:30,20:30,23,23.3,23.46,59,61,908,70,#FF9800
+30,B 151,Bến xe Miền Tây - Bến xe An Sương,Bến xe Miền Tây,Bến xe An Sương,4:00,20:00,17,18.0,16.88,39,36,515,50,#FF5722

@@ -519,13 +519,16 @@ async def run_pipeline(args):
         time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         point_key = f"{lon:.6f},{lat:.6f}"
         
-        # Xử lý trường hợp AUTO-NEXT: Điểm nằm trong ranh thửa đất đã quét
-        if is_skipped and parsed_info:
+        # Xử lý trường hợp AUTO-NEXT (Point-in-Polygon trên nhà dân an toàn) hoặc Resume
+        if is_skipped:
             scanned_points[point_key] = True
-            mathua = parsed_info.get("mathuadat", "")
-            sothua = parsed_info.get("sothua", "-")
-            soto = parsed_info.get("soto", "-")
-            print(f"[*] [Luồng #{worker_id}] [{idx}/{total}] ⏩ AUTO-NEXT (0s): Toạ độ ({lat:.6f}, {lon:.6f}) thuộc ranh Thửa {sothua}/Tờ {soto} (Mã {mathua}) -> Bỏ qua truy vấn mạng.")
+            if parsed_info:
+                mathua = parsed_info.get("mathuadat", "")
+                sothua = parsed_info.get("sothua", "-")
+                soto = parsed_info.get("soto", "-")
+                print(f"[*] [Luồng #{worker_id}] [{idx}/{total}] ⏩ AUTO-NEXT (0s): Toạ độ ({lat:.6f}, {lon:.6f}) thuộc ranh Thửa {sothua}/Tờ {soto} (Mã {mathua}) -> Bỏ qua truy vấn mạng.")
+            else:
+                print(f"[*] [Luồng #{worker_id}] [{idx}/{total}] ⏩ RESUME-SKIP: Toạ độ ({lat:.6f}, {lon:.6f}) đã quét ở đợt trước.")
             return
             
         if parsed_info and parsed_info.get("mathuadat"):
@@ -799,7 +802,7 @@ async def run_pipeline(args):
     auto_saver_task = asyncio.create_task(auto_save_loop())
     
     try:
-        concurrency_val = getattr(args, 'concurrency', 15)
+        concurrency_val = getattr(args, 'concurrency', 30)
         await fetch_planning_data(
             points_to_scan, 
             on_point_scraped=on_point_scraped, 
@@ -822,13 +825,13 @@ async def run_pipeline(args):
         except Exception:
             pass
 
+DEFAULT_URL = "https://www.google.com/maps/d/u/0/viewer?mid=1IjTEVFWwFg8n7OdD1uDaymCB2Q6aUTE&ll=10.821633009544064%2C106.62770133828562&z=16"
+
 def interactive_wizard():
     """
     Giao diện dòng lệnh tương tác thông minh (CLI Wizard) tối ưu trải nghiệm người dùng:
     Hỏi nguồn dữ liệu, mật độ lưới, diện tích/số điểm quét, file xuất với gợi ý mặc định tiện lợi.
     """
-    DEFAULT_URL = "https://www.google.com/maps/d/u/0/viewer?mid=1IjTEVFWwFg8n7OdD1uDaymCB2Q6aUTE&ll=10.821633009544064%2C106.62770133828562&z=16"
-    
     print("\n" + "="*80)
     print("🏛️   HỆ THỐNG KHẢO SÁT & TRÍCH XUẤT QUY HOẠCH ĐÔ THỊ TP. HỒ CHÍ MINH")
     print("    (Đồng bộ trực tiếp Cổng thông tin SQHKT: sqhkt-qlqh.tphcm.gov.vn)")
@@ -844,7 +847,7 @@ def interactive_wizard():
         
         if task_mode == "3":
             from src.viewer import start_viewer_server
-            print("\n  Nhập đường dẫn file Excel (vd: data/output/khao_sat_.../ket_qua.xlsx) hoặc thư mục kết quả:")
+            print("\n  Nhập đường dẫn file Excel (vd: data/output/KS003/KS003.xlsx) hoặc thư mục kết quả:")
             target_in = input("👉 Đường dẫn [Nhấn Enter để mở danh sách đợt khảo sát tại data/output/]: ").strip()
             if not target_in:
                 target_in = os.path.join("data", "output")
@@ -866,8 +869,8 @@ def interactive_wizard():
             grid_choice = input("👉 Mật độ lưới quét (mét) [Nhấn Enter chọn 30m]: ").strip()
             grid_val = int(grid_choice) if grid_choice.isdigit() and int(grid_choice) > 0 else 30
             
-            concurrency_choice = input("👉 Số luồng quét song song [1-30, Nhấn Enter chọn 15]: ").strip()
-            concurrency_val = int(concurrency_choice) if concurrency_choice.isdigit() and 1 <= int(concurrency_choice) <= 30 else 15
+            concurrency_choice = input("👉 Số luồng quét song song [1-100, Nhấn Enter chọn 30]: ").strip()
+            concurrency_val = int(concurrency_choice) if concurrency_choice.isdigit() and 1 <= int(concurrency_choice) <= 100 else 30
             
             limit_choice = input("👉 Giới hạn số điểm quét [0 để quét toàn bộ, Nhấn Enter chọn 0]: ").strip()
             scan_limit = int(limit_choice) if limit_choice.isdigit() and int(limit_choice) >= 0 else 0
@@ -919,26 +922,26 @@ def interactive_wizard():
 
         # [2.5] Tốc độ quét (Số luồng song song)
         print("\n[Bước 2.5] ⚡ TỐC ĐỘ QUÉT (Số luồng song song)")
-        print("  Chạy đa luồng song song giúp tăng tốc độ cào gấp 5x - 20x.")
-        print("  [1] 15 luồng (⚡ Siêu tốc - Khuyên dùng)")
-        print("  [2] 10 luồng (Tốc độ cao - Quét rất nhanh)")
-        print("  [3] 5 luồng  (Tiêu chuẩn - Ổn định)")
-        print("  [4] 3 luồng  (Cơ bản / Tiết kiệm)")
-        print("  [5] Tuỳ chỉnh số luồng (1 đến 30)")
-        concurrency_choice = input("👉 Chọn số luồng [1-5, Nhấn Enter chọn 1 (15 luồng)]: ").strip()
+        print("  Chạy đa luồng song song giúp tăng tốc độ cào gấp 5x - 50x.")
+        print("  [1] 30 luồng  (⚡ Siêu tốc - Khuyên dùng)")
+        print("  [2] 50 luồng  (🚀 Tốc độ cao)")
+        print("  [3] 100 luồng (🔥 Max công suất - Cực nhanh)")
+        print("  [4] 15 luồng  (Tiêu chuẩn / Ổn định)")
+        print("  [5] Tuỳ chỉnh số luồng (1 đến 100)")
+        concurrency_choice = input("👉 Chọn số luồng [1-5, Nhấn Enter chọn 1 (30 luồng)]: ").strip()
         if concurrency_choice == "1" or concurrency_choice == "":
-            concurrency_val = 15
+            concurrency_val = 30
         elif concurrency_choice == "2":
-            concurrency_val = 10
+            concurrency_val = 50
         elif concurrency_choice == "3":
-            concurrency_val = 5
+            concurrency_val = 100
         elif concurrency_choice == "4":
-            concurrency_val = 3
-        elif concurrency_choice == "5":
-            custom_c = input("   Nhập số luồng (1-30, vd: 15): ").strip()
-            concurrency_val = int(custom_c) if custom_c.isdigit() and 1 <= int(custom_c) <= 30 else 15
-        else:
             concurrency_val = 15
+        elif concurrency_choice == "5":
+            custom_c = input("   Nhập số luồng (1-100, vd: 50 hoặc 100): ").strip()
+            concurrency_val = int(custom_c) if custom_c.isdigit() and 1 <= int(custom_c) <= 100 else 30
+        else:
+            concurrency_val = 30
         print(f"   -> Đã chọn: {concurrency_val} luồng chạy song song")
 
         # [3/4] Phân tích không gian & Phạm vi quét
