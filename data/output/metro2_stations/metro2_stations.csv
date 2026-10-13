@@ -1,0 +1,27 @@
+﻿STT,Mã Ga,Tên Ga,Vĩ độ (Latitude),Kinh độ (Longitude),Lý trình,Cự ly tích lũy (km),Khoảng cách ga trước (km),Khoảng cách ga sau (km),Quận / Huyện,Phường / Xã,Loại ga,Chức năng / Quy hoạch
+1,S1,Phan Văn Hớn,10.82840562,106.62438281,Km 0+264,0.26,0.0,1.13,Quận 12,P. Tân Thới Nhất,Ga đầu/cuối,Ga đầu mối kết nối Tuyến Metro 2 Giai đoạn 1 & Depot Tham Lương
+2,S2,Đông Hưng Thuận,10.83683484,106.61897037,Km 1+393,1.39,1.13,1.14,Quận 12,P. Đông Hưng Thuận,Ga trên cao,Ga trên cao dọc trục Trường Chinh
+3,S3,An Sương,10.84510004,106.61361613,Km 2+530,2.53,1.14,1.19,Quận 12,Nút giao An Sương,Ga trung chuyển,Ga trung chuyển đa phương thức / Bến xe khách An Sương
+4,S4,Nguyễn Ảnh Thủ,10.85394911,106.60786161,Km 3+720,3.72,1.19,1.15,Hóc Môn,X. Bà Điểm - Trung Chánh,Ga trên cao,Ga trên cao cửa ngõ phía Nam Huyện Hóc Môn
+5,S5,Nguyễn Thị Sóc,10.86237159,106.60213891,Km 4+869,4.87,1.15,1.91,Hóc Môn,X. Xuân Thới Đông,Ga trên cao,Ga tiếp cận trung tâm Chợ đầu mối Nông sản Hóc Môn
+6,S6,Bà Triệu,10.87618576,106.59233429,Km 6+778,6.78,1.91,1.15,Hóc Môn,Thị trấn Hóc Môn,Ga trung chuyển,Ga trung tâm hành chính Đô thị Hóc Môn
+7,S7,Lý Thường Kiệt,10.8845512,106.58645867,Km 7+930,7.93,1.15,1.32,Hóc Môn,X. Tân Hiệp,Ga trên cao,Ga trên cao trục Quốc Lộ 22
+8,S8,Nguyễn Thị Nuôi,10.89412744,106.57975756,Km 9+247,9.25,1.32,1.16,Hóc Môn,X. Tân Hiệp,Ga trên cao,Ga cửa ngõ phía Bắc Hóc Môn giáp Củ Chi
+9,S9,Vòng cung Tây Bắc 2,10.90256984,106.57382749,Km 10+410,10.41,1.16,1.34,Củ Chi,X. Tân Phú Trung,Ga trên cao,Ga kết nối khu đô thị mới Vòng cung Tây Bắc
+10,S10,Vành Đai 3,10.91237123,106.56706798,Km 11+753,11.75,1.34,1.25,Củ Chi,X. Tân Phú Trung,Ga trung chuyển,Ga nút giao liên vùng Vành Đai 3 TP.HCM & Cao tốc Mộc Bài
+11,S11,An Hạ,10.92166257,106.56103416,Km 13+002,13.0,1.25,1.15,Củ Chi,X. Tân Phú Trung,Ga trên cao,Ga tiếp cận Khu công nghiệp & Cụm tiểu thủ công nghiệp An Hạ
+12,S12,Tân Phú Trung,10.92976802,106.55484287,Km 14+150,14.15,1.15,0.92,Củ Chi,X. Tân Phú Trung,Ga trên cao,Ga trung tâm dân cư Xã Tân Phú Trung
+13,S13,Hương Lộ 2,10.93512731,106.54872461,Km 15+074,15.07,0.92,1.8,Củ Chi,X. Tân Phú Trung,Ga trên cao,Ga giao cắt tuyến huyết mạch Hương Lộ 2
+14,S14,Đào Thị Kiểm,10.94215656,106.5342485,Km 16+872,16.87,1.8,1.41,Củ Chi,X. Tân Thông Hội,Ga trên cao,Ga tiếp cận khu dân cư hiện hữu Tân Thông Hội
+15,S15,Lê Minh Nhựt,10.94779196,106.52294597,Km 18+282,18.28,1.41,1.08,Củ Chi,X. Tân Thông Hội,Ga trên cao,Ga giao cắt tuyến đường Lê Minh Nhựt
+16,S16,Tân Thông Hội,10.95333211,106.51500496,Km 19+367,19.37,1.08,1.03,Củ Chi,X. Tân Thông Hội,Ga trên cao,Ga trung tâm Xã văn hóa nông thôn mới Tân Thông Hội
+17,S17,Trần Tử Bình,10.95807963,106.50711265,Km 20+400,20.4,1.03,1.05,Củ Chi,Thị trấn Củ Chi,Ga trên cao,Ga cửa ngõ phía Nam Đô thị Thị trấn Củ Chi
+18,S18,Huỳnh Văn Cọ,10.96255437,106.4988258,Km 21+453,21.45,1.05,1.31,Củ Chi,Thị trấn Củ Chi,Ga trên cao,Ga tiếp cận khu dân cư đông đúc trung tâm Củ Chi
+19,S19,Củ Chi,10.96746525,106.48825815,Km 22+759,22.76,1.31,1.28,Củ Chi,Thị trấn Củ Chi,Ga trung chuyển,Ga trung tâm hành chính - kinh tế Đô thị Củ Chi / Bến xe Củ Chi - Tỉnh Lộ 8
+20,S20,BV Củ Chi,10.97319014,106.47848023,Km 24+036,24.04,1.28,1.2,Củ Chi,X. Tân An Hội,Ga trên cao,Ga Bệnh viện Đa khoa Khu vực Củ Chi
+21,S21,Nguyễn Thị Rành,10.97827776,106.46900914,Km 25+238,25.24,1.2,1.54,Củ Chi,X. Tân An Hội,Ga trên cao,Ga giao cắt đường Nguyễn Thị Rành (hướng Địa đạo Bến Dược)
+22,S22,Tân An Hội,10.98544243,106.45723526,Km 26+782,26.78,1.54,1.09,Củ Chi,X. Tân An Hội,Ga trên cao,Ga trung tâm Xã Tân An Hội & Cụm tiểu thủ công nghiệp
+23,S23,Ba Sa,10.99142068,106.44962812,Km 27+874,27.87,1.09,1.76,Củ Chi,X. Phước Hiệp,Ga trên cao,Ga giao cắt đường Ba Sa / Quốc Lộ 22
+24,S24,Phước Hiệp,11.00180658,106.43812079,Km 29+632,29.63,1.76,1.44,Củ Chi,X. Phước Hiệp,Ga trên cao,Ga trung tâm Xã Phước Hiệp
+25,S25,Tỉnh Lộ 7,11.00628863,106.42606194,Km 31+072,31.07,1.44,1.75,Củ Chi,X. Phước Hiệp,Ga trung chuyển,Ga nút giao Tỉnh Lộ 7 huyết mạch kết nối Bến Súc - Dầu Tiếng
+26,S26,Thái Mỹ,11.01344302,106.41244102,Km 32+824,32.82,1.75,0.0,Củ Chi,X. Thái Mỹ,Ga đầu/cuối,Ga cuối ranh giới TP.HCM - Tây Ninh / Depot Thái Mỹ / Trạm thu phí An Sương - Mộc Bài
