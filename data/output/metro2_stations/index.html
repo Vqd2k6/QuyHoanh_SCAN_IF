@@ -21,10 +21,7 @@
       --primary: #dc2626;
       --primary-hover: #b91c1c;
       --primary-light: #fef2f2;
-      --primary-border: #fecaca;
-      --accent-blue: #0284c7;
-      --accent-purple: #7c3aed;
-      --accent-emerald: #059669;
+      --primary-border: #fca5a5;
       --bg-app: #f8fafc;
       --bg-sidebar: #ffffff;
       --bg-card: #ffffff;
@@ -32,8 +29,7 @@
       --text-main: #0f172a;
       --text-muted: #64748b;
       --border-color: #e2e8f0;
-      --border-subtle: #f1f5f9;
-      --sidebar-width: 410px;
+      --sidebar-width: 400px;
     }
 
     * {
@@ -55,7 +51,7 @@
     }
 
     /* =========================================================
-       SIDEBAR
+       SIDEBAR (NÚT 3 GẠCH)
        ========================================================= */
     #sidebar {
       width: var(--sidebar-width);
@@ -65,7 +61,7 @@
       display: flex;
       flex-direction: column;
       z-index: 1000;
-      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05);
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.06);
       transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.32s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       flex-shrink: 0;
@@ -78,7 +74,7 @@
 
     /* Sidebar Header */
     .sidebar-header {
-      padding: 16px 18px;
+      padding: 14px 16px;
       border-bottom: 1px solid var(--border-color);
       background: #ffffff;
       display: flex;
@@ -89,32 +85,32 @@
     .brand-group {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .brand-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--primary);
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
-      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+      font-size: 1.15rem;
+      box-shadow: 0 3px 8px rgba(220, 38, 38, 0.25);
     }
 
     .brand-title {
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       font-weight: 800;
       color: #0f172a;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.2px;
       line-height: 1.2;
     }
 
     .brand-subtitle {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--text-muted);
       margin-top: 2px;
       font-weight: 500;
@@ -124,9 +120,9 @@
       background: #f1f5f9;
       border: 1px solid var(--border-color);
       color: var(--text-muted);
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -137,50 +133,118 @@
     .btn-collapse-sidebar:hover {
       background: #e2e8f0;
       color: var(--text-main);
-      border-color: #cbd5e1;
     }
 
-    /* Dashboard Metrics Cards */
-    .quick-stats-bar {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding: 10px 14px;
+    /* Map Controls Section inside Sidebar */
+    .sidebar-map-tools {
+      padding: 12px 16px;
       background: #f8fafc;
-      border-bottom: 1px solid var(--border-color);
-      gap: 6px;
-      text-align: center;
-    }
-
-    .stat-pill {
-      background: #ffffff;
-      padding: 6px 2px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
-    }
-
-    .stat-val {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--primary);
-    }
-
-    .stat-lbl {
-      font-size: 0.62rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-top: 2px;
-      letter-spacing: 0.3px;
-    }
-
-    /* Filter & Search Bar */
-    .controls-panel {
-      padding: 12px 14px;
       border-bottom: 1px solid var(--border-color);
       display: flex;
       flex-direction: column;
       gap: 10px;
+    }
+
+    .tool-group-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* 3 Map Type Tabs */
+    .map-tabs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .map-tab-btn {
+      padding: 7px 6px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: all 0.2s;
+    }
+
+    .map-tab-btn:hover {
+      background: #f1f5f9;
+      color: var(--primary);
+    }
+
+    .map-tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.2);
+    }
+
+    /* Layer Toggles */
+    .layer-toggles-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .layer-check-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+    }
+
+    .layer-check-item input {
+      accent-color: var(--primary);
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+    }
+
+    /* Fit bounds button inside sidebar */
+    .btn-fit-full {
+      width: 100%;
+      padding: 8px 12px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-fit-full:hover {
+      background: #fee2e2;
+      border-color: var(--primary-border);
+    }
+
+    /* Search & Filter section */
+    .controls-panel {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       background: #ffffff;
     }
 
@@ -190,19 +254,19 @@
 
     .search-box i {
       position: absolute;
-      left: 12px;
+      left: 10px;
       top: 50%;
       transform: translateY(-50%);
       color: #94a3b8;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
 
     .search-input {
       width: 100%;
-      padding: 9px 12px 9px 34px;
-      border-radius: 8px;
+      padding: 8px 10px 8px 30px;
+      border-radius: 6px;
       border: 1px solid var(--border-color);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       background: #f8fafc;
       color: var(--text-main);
       outline: none;
@@ -212,27 +276,25 @@
     .search-input:focus {
       background: #ffffff;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+      box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.1);
     }
 
-    /* Filter pills */
     .district-filter-row {
       display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      padding-bottom: 2px;
+      gap: 5px;
     }
 
     .district-pill {
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 0.72rem;
+      flex: 1;
+      padding: 4px 6px;
+      border-radius: 16px;
+      font-size: 0.68rem;
       font-weight: 600;
       border: 1px solid var(--border-color);
       background: #f8fafc;
       color: var(--text-muted);
       cursor: pointer;
-      white-space: nowrap;
+      text-align: center;
       transition: all 0.2s;
     }
 
@@ -242,53 +304,31 @@
     }
 
     .district-pill.active {
-      background: var(--primary);
-      border-color: var(--primary);
+      background: #334155;
+      border-color: #334155;
       color: #ffffff;
-      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.25);
     }
 
-    /* Action bar */
-    .action-bar {
+    .count-status-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       color: var(--text-muted);
-      padding: 0 2px;
     }
 
-    .btn-action-small {
-      background: none;
-      border: none;
-      color: #0284c7;
-      font-size: 0.75rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 6px;
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
-
-    .btn-action-small:hover {
-      background: #e0f2fe;
-    }
-
-    /* Station List Container */
+    /* Station List */
     .station-list-container {
       flex: 1;
       overflow-y: auto;
-      padding: 10px 14px;
+      padding: 8px 14px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
 
     .station-list-container::-webkit-scrollbar {
-      width: 6px;
+      width: 5px;
     }
     .station-list-container::-webkit-scrollbar-thumb {
       background: #cbd5e1;
@@ -299,61 +339,38 @@
     .station-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 10px;
-      padding: 10px 12px;
+      border-radius: 8px;
+      padding: 8px 10px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       cursor: pointer;
-      transition: all 0.2s ease;
-      position: relative;
+      transition: all 0.15s ease;
     }
 
     .station-card:hover {
-      border-color: #f87171;
+      border-color: var(--primary-border);
       background: var(--bg-card-hover);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     }
 
     .station-card.selected {
       border-color: var(--primary);
       background: #fef2f2;
-      box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+      box-shadow: 0 0 0 1.5px rgba(220, 38, 38, 0.2);
     }
 
     .station-badge {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: #fef2f2;
-      border: 1.5px solid var(--primary-border);
-      color: var(--primary);
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--primary);
+      color: #ffffff;
       font-weight: 800;
-      font-size: 0.82rem;
+      font-size: 0.72rem;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: all 0.2s;
-    }
-
-    .station-card.selected .station-badge {
-      background: var(--primary);
-      color: #ffffff;
-      border-color: var(--primary);
-    }
-
-    .station-card.is-terminal .station-badge {
-      background: #fef3c7;
-      border-color: #fcd34d;
-      color: #b45309;
-    }
-
-    .station-card.is-hub .station-badge {
-      background: #f3e8ff;
-      border-color: #d8b4fe;
-      color: #7e22ce;
     }
 
     .station-info {
@@ -366,11 +383,10 @@
       align-items: center;
       justify-content: space-between;
       gap: 6px;
-      margin-bottom: 3px;
     }
 
     .station-name {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
       color: var(--text-main);
       white-space: nowrap;
@@ -378,61 +394,19 @@
       text-overflow: ellipsis;
     }
 
-    .station-tag {
-      font-size: 0.65rem;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: #f1f5f9;
-      color: #475569;
-      flex-shrink: 0;
-    }
-
-    .station-card.is-terminal .station-tag {
-      background: #fef3c7;
-      color: #b45309;
-    }
-
-    .station-card.is-hub .station-tag {
-      background: #f3e8ff;
-      color: #7e22ce;
-    }
-
     .station-meta-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
-
-    .station-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .station-meta-item i {
+      gap: 8px;
       font-size: 0.68rem;
-      color: #94a3b8;
+      color: var(--text-muted);
+      margin-top: 2px;
     }
 
-    .station-actions {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
-    .station-card:hover .station-actions {
-      opacity: 1;
-    }
-
-    .btn-station-action {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
+    .btn-card-zoom {
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
       border: 1px solid var(--border-color);
       background: #ffffff;
       color: #64748b;
@@ -440,65 +414,61 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.72rem;
-      transition: all 0.2s;
+      font-size: 0.68rem;
+      transition: all 0.15s;
     }
 
-    .btn-station-action:hover {
-      background: #fee2e2;
-      color: #dc2626;
-      border-color: #fca5a5;
+    .btn-card-zoom:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
     }
 
-    /* Sidebar Footer Downloads */
+    /* Footer Downloads */
     .sidebar-footer {
-      padding: 12px 16px;
+      padding: 10px 14px;
       border-top: 1px solid var(--border-color);
       background: #f8fafc;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
 
     .download-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px;
+      gap: 5px;
     }
 
     .btn-download {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 7px 10px;
-      border-radius: 7px;
-      font-size: 0.72rem;
+      gap: 5px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 0.7rem;
       font-weight: 600;
       text-decoration: none;
       color: #334155;
       background: #ffffff;
       border: 1px solid var(--border-color);
-      transition: all 0.2s;
+      transition: all 0.15s;
     }
 
     .btn-download:hover {
       background: #f1f5f9;
       color: #0f172a;
-      border-color: #cbd5e1;
     }
 
-    .btn-download i {
-      font-size: 0.8rem;
-    }
-
+    .btn-download i { font-size: 0.75rem; }
     .btn-download.excel i { color: #16a34a; }
     .btn-download.geojson i { color: #0284c7; }
     .btn-download.kml i { color: #dc2626; }
     .btn-download.csv i { color: #d97706; }
 
     /* =========================================================
-       MAP WRAPPER & CONTROLS
+       MAP WRAPPER
        ========================================================= */
     #map-wrapper {
       flex: 1;
@@ -513,19 +483,19 @@
       z-index: 1;
     }
 
-    /* Toggle button to expand sidebar when collapsed */
+    /* NÚT 3 GẠCH (Expand Sidebar) */
     #btn-expand-sidebar {
       position: absolute;
-      top: 16px;
-      left: 16px;
+      top: 14px;
+      left: 14px;
       z-index: 1001;
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
       background: #ffffff;
       border: 1px solid var(--border-color);
       color: var(--text-main);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       display: none;
       align-items: center;
       justify-content: center;
@@ -543,282 +513,146 @@
       display: flex;
     }
 
-    /* Floating Top Toolbar */
-    .top-floating-bar {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(226, 232, 240, 0.9);
-      border-radius: 10px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-    }
-
-    .map-tool-btn {
-      padding: 8px 12px;
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #334155;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    }
-
-    .map-tool-btn:hover {
-      background: #f8fafc;
-      color: var(--primary);
-      border-color: #cbd5e1;
-    }
-
-    .map-tool-btn.active {
-      background: #fef2f2;
-      color: var(--primary);
-      border-color: #fca5a5;
-    }
-
-    /* Floating Layer Switcher Modal / Dropdown */
-    .layer-menu-dropdown {
-      position: absolute;
-      top: 50px;
-      right: 0;
-      width: 250px;
-      padding: 12px;
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .layer-menu-dropdown.show {
-      display: flex;
-    }
-
-    .layer-group-title {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: #94a3b8;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-
-    .layer-checkbox-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.78rem;
-      color: #1e293b;
-      cursor: pointer;
-    }
-
-    .layer-checkbox-item input {
-      accent-color: var(--primary);
-      width: 15px;
-      height: 15px;
-      cursor: pointer;
-    }
-
-    /* Bottom Station Sequencer Bar */
-    .bottom-sequencer-bar {
-      position: absolute;
-      bottom: 22px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      padding: 8px 14px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      max-width: 90%;
-      overflow-x: auto;
-    }
-
-    .sequencer-title {
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: var(--primary);
-      white-space: nowrap;
-      margin-right: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .seq-node {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 2px solid #cbd5e1;
-      font-size: 0.65rem;
-      font-weight: 800;
-      color: #475569;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      flex-shrink: 0;
-      transition: all 0.2s;
-    }
-
-    .seq-node:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: scale(1.18);
-      background: #fef2f2;
-    }
-
-    .seq-node.active {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: #ffffff;
-      transform: scale(1.15);
-      box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
-    }
-
-    .seq-node.is-terminal {
-      border-color: #d97706;
-      color: #b45309;
-      background: #fffbeb;
-    }
-
-    .seq-node.is-hub {
-      border-color: #7c3aed;
-      color: #7c3aed;
-      background: #f5f3ff;
-    }
-
-    /* Floating Legend */
+    /* =========================================================
+       CHÚ THÍCH BẢN ĐỒ (26 ĐIỂM S KÈM TÊN)
+       ========================================================= */
     .floating-legend {
       position: absolute;
-      bottom: 76px;
+      bottom: 24px;
       left: 16px;
       z-index: 999;
-      padding: 12px 16px;
-      width: 250px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 10px 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 440px;
     }
 
     .legend-header {
-      font-size: 0.78rem;
-      font-weight: 700;
+      font-size: 0.74rem;
+      font-weight: 800;
       color: #0f172a;
-      margin-bottom: 8px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    .legend-row {
+    .legend-header-left {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.72rem;
-      color: #334155;
-      margin-bottom: 6px;
+      gap: 6px;
     }
 
-    .legend-swatch {
+    .legend-grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px 10px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.68rem;
+      color: #334155;
+      cursor: pointer;
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: all 0.15s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .legend-item:hover {
+      background: #fee2e2;
+      color: var(--primary);
+    }
+
+    .legend-item.selected {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .legend-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .legend-item.selected .legend-dot {
+      background: #ffffff;
+    }
+
+    .legend-code {
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .legend-item.selected .legend-code {
+      color: #ffffff;
+    }
+
+    .legend-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* =========================================================
+       LEAFLET MARKER & LABEL STYLES (ĐỒNG BỘ 1 MÀU, CHẤM NHỎ)
+       ========================================================= */
+    /* Small uniform 14px dot */
+    .station-marker-dot {
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .legend-line-swatch {
-      width: 22px;
-      height: 4px;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-
-    /* Leaflet Markers Custom Styles */
-    .station-marker-pin {
-      background: #ffffff;
-      border: 2.5px solid var(--primary);
-      color: var(--primary);
-      border-radius: 50%;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 900;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .station-marker-pin:hover,
-    .station-marker-pin.active {
       background: var(--primary);
-      color: #ffffff;
-      transform: scale(1.35);
-      box-shadow: 0 0 16px rgba(220, 38, 38, 0.6);
+      border: 2px solid #ffffff;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .station-marker-dot:hover,
+    .station-marker-dot.active {
+      transform: scale(1.6);
+      background: #b91c1c;
+      box-shadow: 0 0 10px rgba(220, 38, 38, 0.8);
       z-index: 1000 !important;
     }
 
-    .station-marker-pin.terminal {
-      border-color: #b45309;
-      color: #b45309;
-      background: #fef3c7;
-    }
-
-    .station-marker-pin.terminal.active,
-    .station-marker-pin.terminal:hover {
-      background: #d97706;
-      color: #ffffff;
-      border-color: #92400e;
-    }
-
-    .station-marker-pin.hub {
-      border-color: #6d28d9;
-      color: #6d28d9;
-      background: #f3e8ff;
-    }
-
-    .station-marker-pin.hub.active,
-    .station-marker-pin.hub:hover {
-      background: #7c3aed;
-      color: #ffffff;
-      border-color: #5b21b6;
-    }
-
-    /* Permanent Label Tooltip */
-    .station-permanent-label {
-      background: rgba(255, 255, 255, 0.95);
+    /* Small compact tooltip labels (Non-overlapping) */
+    .station-compact-label {
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid #cbd5e1;
       color: #0f172a;
-      font-size: 11px;
+      font-size: 9px;
       font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1px 5px;
+      border-radius: 3px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
       white-space: nowrap;
+      pointer-events: none;
     }
 
-    .station-permanent-label::before {
+    .station-compact-label::before {
       display: none;
     }
 
-    /* Leaflet Popup Styling */
+    /* Popup Styling */
     .leaflet-popup-content-wrapper {
-      border-radius: 12px;
+      border-radius: 10px;
       padding: 0;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
       border: 1px solid #e2e8f0;
     }
 
@@ -828,67 +662,57 @@
     }
 
     .popup-card {
-      width: 290px;
+      width: 280px;
     }
 
     .popup-header {
-      background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+      background: var(--primary);
       color: #ffffff;
-      padding: 12px 14px;
+      padding: 10px 14px;
     }
 
     .popup-badge {
       display: inline-block;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       font-weight: 800;
       background: rgba(255, 255, 255, 0.25);
       padding: 2px 6px;
       border-radius: 4px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .popup-title {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 800;
     }
 
     .popup-subtitle {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       opacity: 0.9;
-      margin-top: 2px;
     }
 
     .popup-body {
-      padding: 12px 14px;
+      padding: 10px 14px;
       background: #ffffff;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
     }
 
     .popup-row {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px dashed #f1f5f9;
-      padding-bottom: 4px;
+      padding-bottom: 3px;
     }
 
-    .popup-label {
-      color: #64748b;
-      font-weight: 500;
-    }
-
-    .popup-value {
-      color: #0f172a;
-      font-weight: 700;
-      text-align: right;
-    }
+    .popup-label { color: #64748b; font-weight: 500; }
+    .popup-value { color: #0f172a; font-weight: 700; text-align: right; }
 
     .popup-actions {
-      padding: 8px 14px 12px;
+      padding: 8px 12px 10px;
       display: flex;
       gap: 6px;
       background: #f8fafc;
@@ -897,9 +721,9 @@
 
     .btn-popup {
       flex: 1;
-      padding: 6px 8px;
-      border-radius: 6px;
-      font-size: 0.7rem;
+      padding: 5px 8px;
+      border-radius: 5px;
+      font-size: 0.68rem;
       font-weight: 600;
       border: 1px solid var(--border-color);
       background: #ffffff;
@@ -911,27 +735,12 @@
       align-items: center;
       justify-content: center;
       gap: 4px;
-      transition: all 0.2s;
     }
 
     .btn-popup:hover {
       background: #fee2e2;
-      color: #dc2626;
-      border-color: #fca5a5;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      #sidebar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2000;
-        width: 320px;
-      }
-      .bottom-sequencer-bar {
-        display: none;
-      }
+      color: var(--primary);
+      border-color: var(--primary-border);
     }
   </style>
 </head>
@@ -948,43 +757,67 @@
           <i class="fa-solid fa-train-subway"></i>
         </div>
         <div>
-          <div class="brand-title">Metro Tuyến Số 2</div>
-          <div class="brand-subtitle">An Sương - Củ Chi - Tây Ninh (26 Ga)</div>
+          <div class="brand-title">Tuyến Metro Số 2</div>
+          <div class="brand-subtitle">Hành lang QL22: 26 Mốc Ga (S1 - S26)</div>
         </div>
       </div>
-      <button class="btn-collapse-sidebar" id="btn-collapse" title="Thu gọn Sidebar (Phím M hoặc Esc)">
+      <button class="btn-collapse-sidebar" id="btn-collapse" title="Thu gọn Sidebar (Esc hoặc M)">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
     </div>
 
-    <!-- Quick Stats -->
-    <div class="quick-stats-bar">
-      <div class="stat-pill">
-        <div class="stat-val" id="stat-total-stations">26</div>
-        <div class="stat-lbl">Mốc Ga</div>
+    <!-- Map Controls (3 Tab Map, Lớp hiển thị, Toàn tuyến - Đưa vào trong nút 3 gạch) -->
+    <div class="sidebar-map-tools">
+      <div class="tool-group-label">
+        <span><i class="fa-solid fa-layer-group"></i> Loại bản đồ nền</span>
       </div>
-      <div class="stat-pill">
-        <div class="stat-val" id="stat-total-km">32.8</div>
-        <div class="stat-lbl">Tổng Km</div>
+      <div class="map-tabs-grid">
+        <button class="map-tab-btn active" id="btn-base-google" title="Google Maps Giao thông">
+          <i class="fa-solid fa-road"></i> Đường bộ
+        </button>
+        <button class="map-tab-btn" id="btn-base-satellite" title="Ảnh vệ tinh độ nét cao">
+          <i class="fa-solid fa-satellite"></i> Vệ tinh
+        </button>
+        <button class="map-tab-btn" id="btn-base-carto" title="Bản đồ sáng đơn giản">
+          <i class="fa-solid fa-map"></i> Bản đồ sáng
+        </button>
       </div>
-      <div class="stat-pill">
-        <div class="stat-val" id="stat-avg-spacing">1.26</div>
-        <div class="stat-lbl">TB Ga (km)</div>
+
+      <div class="tool-group-label" style="margin-top: 4px;">
+        <span><i class="fa-solid fa-sliders"></i> Lớp hiển thị</span>
       </div>
-      <div class="stat-pill">
-        <div class="stat-val" id="stat-districts">3</div>
-        <div class="stat-lbl">Quận Huyện</div>
+      <div class="layer-toggles-grid">
+        <label class="layer-check-item">
+          <input type="checkbox" id="chk-stations" checked />
+          <span>Mốc 26 Ga</span>
+        </label>
+        <label class="layer-check-item">
+          <input type="checkbox" id="chk-station-labels" checked />
+          <span>Nhãn tên Ga</span>
+        </label>
+        <label class="layer-check-item">
+          <input type="checkbox" id="chk-metro-line" checked />
+          <span>Đường ray Tuyến</span>
+        </label>
+        <label class="layer-check-item">
+          <input type="checkbox" id="chk-catchment-500m" checked />
+          <span>Vùng TOD 500m</span>
+        </label>
       </div>
+
+      <!-- Nút Toàn Tuyến (được đưa vào sidebar) -->
+      <button class="btn-fit-full" id="btn-fit-bounds" title="Xem toàn bộ lộ trình 26 ga">
+        <i class="fa-solid fa-expand"></i> Phóng to toàn tuyến (32.8 km)
+      </button>
     </div>
 
-    <!-- Search & Filters -->
+    <!-- Search & Filter section -->
     <div class="controls-panel">
       <div class="search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" id="station-search" class="search-input" placeholder="Tìm theo mã (S1, S19...) hoặc tên ga..." />
       </div>
 
-      <!-- District Filter Tabs -->
       <div class="district-filter-row">
         <button class="district-pill active" data-district="all">Tất cả (26)</button>
         <button class="district-pill" data-district="Quận 12">Quận 12 (3)</button>
@@ -992,23 +825,20 @@
         <button class="district-pill" data-district="Củ Chi">Củ Chi (18)</button>
       </div>
 
-      <!-- Action row -->
-      <div class="action-bar">
+      <div class="count-status-row">
         <span id="filtered-count-text">Hiển thị: <strong>26 / 26</strong> ga</span>
-        <button class="btn-action-small" id="btn-reverse-order" title="Đảo ngược chiều lộ trình">
-          <i class="fa-solid fa-arrow-down-up-across-line"></i> Đảo chiều
-        </button>
+        <span style="font-size: 0.68rem; color: #94a3b8;">Tổng cự ly: 32.82 km</span>
       </div>
     </div>
 
-    <!-- Station List -->
+    <!-- Station List Container -->
     <div class="station-list-container" id="station-list">
       <!-- Injected via JavaScript -->
     </div>
 
     <!-- Footer Downloads -->
     <div class="sidebar-footer">
-      <div style="font-size: 0.68rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Xuất dữ liệu hệ thống</div>
+      <div style="font-size: 0.65rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Tải bộ dữ liệu mốc ga</div>
       <div class="download-grid">
         <a href="metro2_stations.xlsx" download class="btn-download excel" title="Tải bảng danh sách Excel 26 ga">
           <i class="fa-solid fa-file-excel"></i> Excel (.xlsx)
@@ -1030,98 +860,25 @@
        MAP WRAPPER
        ========================================================= -->
   <main id="map-wrapper">
-    <!-- Button to expand sidebar if collapsed -->
-    <button id="btn-expand-sidebar" title="Mở danh sách ga (M)">
+    <!-- NÚT 3 GẠCH (Mở Sidebar khi đang thu gọn) -->
+    <button id="btn-expand-sidebar" title="Mở danh sách & điều khiển (M)">
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- Top floating toolbar -->
-    <div class="top-floating-bar">
-      <!-- Base map switcher -->
-      <div class="glass-card" style="padding: 4px; display: flex; gap: 4px;">
-        <button class="map-tool-btn active" id="btn-base-google" title="Bản đồ giao thông Google Maps">
-          <i class="fa-solid fa-map"></i> Google Đường
-        </button>
-        <button class="map-tool-btn" id="btn-base-satellite" title="Ảnh vệ tinh độ nét cao">
-          <i class="fa-solid fa-satellite"></i> Vệ tinh
-        </button>
-        <button class="map-tool-btn" id="btn-base-carto" title="Bản đồ sáng đơn giản">
-          <i class="fa-solid fa-layer-group"></i> Carto Sáng
-        </button>
-      </div>
-
-      <!-- Layer Menu Toggle Button -->
-      <div style="position: relative;">
-        <button class="map-tool-btn glass-card" id="btn-toggle-layer-menu">
-          <i class="fa-solid fa-sliders"></i> Lớp hiển thị <i class="fa-solid fa-caret-down"></i>
-        </button>
-        <!-- Layer Dropdown -->
-        <div class="glass-card layer-menu-dropdown" id="layer-menu-dropdown">
-          <div class="layer-group-title">Lớp đối tượng bản đồ</div>
-          <label class="layer-checkbox-item">
-            <input type="checkbox" id="chk-stations" checked />
-            <span>Mốc 26 Ga (S1 - S26)</span>
-          </label>
-          <label class="layer-checkbox-item">
-            <input type="checkbox" id="chk-station-labels" checked />
-            <span>Nhãn tên ga thường trực</span>
-          </label>
-          <label class="layer-checkbox-item">
-            <input type="checkbox" id="chk-metro-line" checked />
-            <span>Đường ray Tuyến Metro 2</span>
-          </label>
-          <label class="layer-checkbox-item">
-            <input type="checkbox" id="chk-catchment-500m" checked />
-            <span>Vùng tiếp cận TOD 500m</span>
-          </label>
-          <label class="layer-checkbox-item">
-            <input type="checkbox" id="chk-corridor-tube" />
-            <span>Hành lang đệm QL22 (800m)</span>
-          </label>
-        </div>
-      </div>
-
-      <!-- Reset View -->
-      <button class="map-tool-btn glass-card" id="btn-fit-bounds" title="Xem toàn bộ 26 Ga">
-        <i class="fa-solid fa-expand"></i> Toàn tuyến
-      </button>
-    </div>
-
-    <!-- Map container -->
+    <!-- Map Container -->
     <div id="map"></div>
 
-    <!-- Bottom Station Sequencer Bar -->
-    <div class="glass-card bottom-sequencer-bar" id="sequencer-bar">
-      <div class="sequencer-title">
-        <i class="fa-solid fa-route"></i> Tiến trình ga:
-      </div>
-      <!-- Injected nodes S1..S26 -->
-    </div>
-
-    <!-- Floating Legend Box -->
-    <div class="glass-card floating-legend">
+    <!-- CHÚ THÍCH BẢN ĐỒ (HIỂN THỊ LIST 26 ĐIỂM S KÈM TÊN, 3 CỘT GỌN GÀNG) -->
+    <div class="floating-legend" id="legend-box">
       <div class="legend-header">
-        <span><i class="fa-solid fa-circle-info" style="color: var(--primary);"></i> Chú thích bản đồ</span>
+        <div class="legend-header-left">
+          <span class="legend-dot"></span>
+          <span>Chú thích: 26 Mốc Ga Tuyến Metro Số 2</span>
+        </div>
+        <span style="font-size: 0.65rem; color: #64748b; font-weight: 600;">(Đồng bộ 1 màu đỏ)</span>
       </div>
-      <div class="legend-row">
-        <span class="legend-swatch" style="background: #fef3c7; border: 2px solid #b45309;"></span>
-        <span>Ga đầu / cuối tuyến (S1, S26)</span>
-      </div>
-      <div class="legend-row">
-        <span class="legend-swatch" style="background: #f3e8ff; border: 2px solid #7c3aed;"></span>
-        <span>Ga trung chuyển liên vùng (S3, S6, S10, S19, S25)</span>
-      </div>
-      <div class="legend-row">
-        <span class="legend-swatch" style="background: #ffffff; border: 2px solid #dc2626;"></span>
-        <span>Ga trên cao tiêu chuẩn</span>
-      </div>
-      <div class="legend-row">
-        <span class="legend-line-swatch" style="background: #dc2626;"></span>
-        <span>Tuyến đường sắt Metro 2 (Trục QL22)</span>
-      </div>
-      <div class="legend-row">
-        <span class="legend-line-swatch" style="background: #0284c7; border: 1px dashed #0284c7;"></span>
-        <span>Bán kính đi bộ TOD (500m)</span>
+      <div class="legend-grid-3col" id="legend-grid">
+        <!-- Injected 26 items via JavaScript -->
       </div>
     </div>
   </main>
@@ -1135,7 +892,6 @@
     /* =========================================================
        LEAFLET WEB GIS INITIALIZATION
        ========================================================= */
-    // Initialize map centered between An Sương and Củ Chi
     const map = L.map('map', {
       center: [10.925, 106.520],
       zoom: 11.5,
@@ -1144,7 +900,6 @@
       zoomControl: false
     });
 
-    // Zoom control at bottom right
     L.control.zoom({ position: 'bottomright' }).addTo(map);
     L.control.scale({ imperial: false, metric: true, position: 'bottomright' }).addTo(map);
 
@@ -1167,7 +922,7 @@
     // Default to Google Road
     baseLayers.googleRoad.addTo(map);
 
-    // Basemap switcher buttons
+    /* --- Base Map Tabs inside Sidebar --- */
     const btnGoogle = document.getElementById('btn-base-google');
     const btnSatellite = document.getElementById('btn-base-satellite');
     const btnCarto = document.getElementById('btn-base-carto');
@@ -1192,118 +947,101 @@
     const lineCoords = METRO2_DATA.line_geometry.coordinates; // [lng, lat]
     const lineLatLngs = lineCoords.map(c => [c[1], c[0]]);
 
-    // Layer Groups
     const stationLayerGroup = L.layerGroup().addTo(map);
-    const labelLayerGroup = L.layerGroup().addTo(map);
     const lineLayerGroup = L.layerGroup().addTo(map);
     const catchmentLayerGroup = L.layerGroup().addTo(map);
-    const corridorLayerGroup = L.layerGroup(); // optional 800m corridor
 
     let selectedStationCode = null;
-    let isReversedOrder = false;
     let activeDistrictFilter = 'all';
-    const markerRegistry = new Map(); // code -> { marker, circle, data }
+    const markerRegistry = new Map(); // code -> { marker, circle, dotEl }
 
-    /* --- 1. Render Metro Line Corridor --- */
-    // Double track casing effect
+    /* --- 1. Render Metro Line --- */
     const trackCasing = L.polyline(lineLatLngs, {
-      color: '#0f172a',
-      weight: 8,
-      opacity: 0.9,
+      color: '#1e293b',
+      weight: 6,
+      opacity: 0.85,
       lineCap: 'round',
       lineJoin: 'round'
     }).addTo(lineLayerGroup);
 
     const trackCore = L.polyline(lineLatLngs, {
       color: '#dc2626',
-      weight: 5,
+      weight: 3.5,
       opacity: 1.0,
       lineCap: 'round',
       lineJoin: 'round'
     }).addTo(lineLayerGroup);
 
-    // Optional 800m Corridor Envelope
-    if (METRO2_DATA.corridor_coordinates) {
-      const tubeLatLngs = METRO2_DATA.corridor_coordinates.map(c => [c[1], c[0]]);
-      L.polygon(tubeLatLngs, {
-        color: '#dc2626',
-        weight: 1.6,
-        dashArray: '6, 5',
-        opacity: 0.85,
-        fillColor: '#dc2626',
-        fillOpacity: 0.02
-      }).addTo(corridorLayerGroup);
-    }
-
-    /* --- 2. Render Station Markers & Catchment Circles --- */
-    stations.forEach(s => {
+    /* --- 2. Render Station Markers & Staggered Labels --- */
+    stations.forEach((s, idx) => {
       const latLng = [s.lat, s.lng];
-      const isTerminal = s.is_terminal;
-      const isHub = s.is_hub;
 
       // 500m Catchment circle
       const catchmentCircle = L.circle(latLng, {
         radius: 500,
-        color: '#0284c7',
-        weight: 1.5,
+        color: '#dc2626',
+        weight: 1.2,
         dashArray: '4, 4',
-        opacity: 0.7,
-        fillColor: '#0284c7',
-        fillOpacity: 0.05
+        opacity: 0.5,
+        fillColor: '#dc2626',
+        fillOpacity: 0.03
       }).addTo(catchmentLayerGroup);
 
-      // Station Marker DivIcon
-      const pinClass = isTerminal ? 'station-marker-pin terminal' : (isHub ? 'station-marker-pin hub' : 'station-marker-pin');
+      // Compact Dot Icon (14px, unified 1 color: #dc2626)
       const icon = L.divIcon({
-        className: 'station-div-icon',
-        html: `<div class="${pinClass}" id="pin-${s.code}">${s.code}</div>`,
-        iconSize: [28, 28],
-        iconAnchor: [14, 14]
+        className: 'station-dot-container',
+        html: `<div class="station-marker-dot" id="dot-${s.code}"></div>`,
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
       });
 
       const marker = L.marker(latLng, { icon: icon }).addTo(stationLayerGroup);
 
-      // Permanent / Hover label
-      marker.bindTooltip(s.name, {
+      // Stagger labels: Odd index -> Right side, Even index -> Left side to PREVENT overlap
+      const isOdd = (idx % 2 === 1);
+      const labelDirection = isOdd ? 'right' : 'left';
+      const labelOffset = isOdd ? [8, 0] : [-8, 0];
+
+      marker.bindTooltip(`${s.code} ${s.name}`, {
         permanent: true,
-        direction: 'top',
-        offset: [0, -12],
-        className: 'station-permanent-label'
+        direction: labelDirection,
+        offset: labelOffset,
+        className: 'station-compact-label'
       });
 
       // Popup Content
       const popupHtml = `
         <div class="popup-card">
-          <div class="popup-header" style="background: ${isTerminal ? 'linear-gradient(135deg, #d97706, #b45309)' : (isHub ? 'linear-gradient(135deg, #7c3aed, #5b21b6)' : 'linear-gradient(135deg, #dc2626, #991b1b)')}">
-            <div class="popup-badge">${s.code} &bull; ${isTerminal ? 'Ga Đầu / Cuối' : (isHub ? 'Ga Trung Chuyển' : 'Ga Tiêu Chuẩn')}</div>
+          <div class="popup-header">
+            <div class="popup-badge">${s.code} &bull; Mốc Ga Metro 2</div>
             <div class="popup-title">Ga ${s.name}</div>
             <div class="popup-subtitle">${s.ward}, ${s.district}</div>
           </div>
           <div class="popup-body">
             <div class="popup-row">
-              <span class="popup-label">Lý trình trục:</span>
+              <span class="popup-label">Lý trình:</span>
               <span class="popup-value" style="color: #dc2626;">${s.chainage_text} (${s.chainage_km} km)</span>
             </div>
             <div class="popup-row">
-              <span class="popup-label">Khoảng cách ga trước:</span>
-              <span class="popup-value">${s.stt === 1 ? 'Điểm khởi đầu' : s.dist_from_prev_km + ' km'}</span>
+              <span class="popup-label">Ga trước:</span>
+              <span class="popup-value">${s.stt === 1 ? 'Khởi đầu tuyến' : s.dist_from_prev_km + ' km'}</span>
             </div>
             <div class="popup-row">
-              <span class="popup-label">Khoảng cách ga sau:</span>
-              <span class="popup-value">${s.stt === stations.length ? 'Điểm kết thúc' : s.dist_to_next_km + ' km'}</span>
+              <span class="popup-label">Ga sau:</span>
+              <span class="popup-value">${s.stt === stations.length ? 'Kết thúc tuyến' : s.dist_to_next_km + ' km'}</span>
             </div>
             <div class="popup-row">
               <span class="popup-label">Tọa độ GPS:</span>
               <span class="popup-value" style="font-family: monospace;">${s.lat.toFixed(6)}, ${s.lng.toFixed(6)}</span>
             </div>
-            <div style="margin-top: 4px;">
+            <div style="margin-top: 3px;">
               <span class="popup-label">Quy hoạch chức năng:</span>
               <div style="color: #334155; font-size: 0.72rem; margin-top: 2px;">${s.role}</div>
             </div>
           </div>
           <div class="popup-actions">
             <button class="btn-popup" onclick="copyStationCoords(${s.lat}, ${s.lng}, '${s.code}')">
-              <i class="fa-solid fa-copy"></i> Sao chép tọa độ
+              <i class="fa-solid fa-copy"></i> Sao chép
             </button>
             <a class="btn-popup" href="https://www.google.com/maps?q=${s.lat},${s.lng}" target="_blank">
               <i class="fa-solid fa-arrow-up-right-from-square"></i> Google Maps
@@ -1314,7 +1052,6 @@
 
       marker.bindPopup(popupHtml);
 
-      // Marker click event
       marker.on('click', () => {
         selectStation(s.code, false);
       });
@@ -1323,27 +1060,48 @@
     });
 
     /* =========================================================
-       SIDEBAR & SEQUENCER RENDERING
+       RENDER CHÚ THÍCH BẢN ĐỒ (LIST 26 ĐIỂM S KÈM TÊN)
+       ========================================================= */
+    const legendGridEl = document.getElementById('legend-grid');
+
+    function renderLegendList() {
+      legendGridEl.innerHTML = '';
+      stations.forEach(s => {
+        const item = document.createElement('div');
+        item.className = `legend-item ${selectedStationCode === s.code ? 'selected' : ''}`;
+        item.id = `legend-item-${s.code}`;
+        item.title = `${s.code}: Ga ${s.name} (${s.chainage_text} - ${s.district})`;
+
+        item.innerHTML = `
+          <span class="legend-dot"></span>
+          <span class="legend-code">${s.code}</span>
+          <span class="legend-name">${s.name}</span>
+        `;
+
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectStation(s.code, true);
+        });
+
+        legendGridEl.appendChild(item);
+      });
+    }
+
+    /* =========================================================
+       RENDER SIDEBAR STATION LIST
        ========================================================= */
     const stationListEl = document.getElementById('station-list');
-    const sequencerBarEl = document.getElementById('sequencer-bar');
 
     function renderStationList() {
       const searchTerm = document.getElementById('station-search').value.trim().toLowerCase();
       stationListEl.innerHTML = '';
 
-      let displayList = [...stations];
-      if (isReversedOrder) {
-        displayList.reverse();
-      }
-
-      const filtered = displayList.filter(s => {
+      const filtered = stations.filter(s => {
         const matchesDistrict = (activeDistrictFilter === 'all') || (s.district === activeDistrictFilter);
         const matchesSearch = !searchTerm ||
           s.code.toLowerCase().includes(searchTerm) ||
           s.name.toLowerCase().includes(searchTerm) ||
-          s.district.toLowerCase().includes(searchTerm) ||
-          s.ward.toLowerCase().includes(searchTerm);
+          s.district.toLowerCase().includes(searchTerm);
         return matchesDistrict && matchesSearch;
       });
 
@@ -1352,31 +1110,24 @@
       filtered.forEach(s => {
         const isSelected = (selectedStationCode === s.code);
         const card = document.createElement('div');
-        card.className = `station-card ${isSelected ? 'selected' : ''} ${s.is_terminal ? 'is-terminal' : ''} ${s.is_hub ? 'is-hub' : ''}`;
+        card.className = `station-card ${isSelected ? 'selected' : ''}`;
         card.id = `card-${s.code}`;
-
-        const roleTag = s.is_terminal ? 'Đầu / Cuối' : (s.is_hub ? 'Trung chuyển' : 'Trên cao');
 
         card.innerHTML = `
           <div class="station-badge">${s.code}</div>
           <div class="station-info">
             <div class="station-title-row">
               <span class="station-name">${s.name}</span>
-              <span class="station-tag">${roleTag}</span>
+              <span style="font-size: 0.65rem; color: #64748b; font-weight: 600;">${s.chainage_text}</span>
             </div>
             <div class="station-meta-row">
-              <span class="station-meta-item"><i class="fa-solid fa-map-pin"></i> ${s.district}</span>
-              <span class="station-meta-item"><i class="fa-solid fa-location-arrow"></i> ${s.chainage_text}</span>
+              <span><i class="fa-solid fa-map-pin" style="color: #94a3b8;"></i> ${s.district}</span>
+              <span>&bull; Cách ga trước: ${s.stt === 1 ? '0 km' : s.dist_from_prev_km + ' km'}</span>
             </div>
           </div>
-          <div class="station-actions">
-            <button class="btn-station-action" title="Sao chép tọa độ" onclick="event.stopPropagation(); copyStationCoords(${s.lat}, ${s.lng}, '${s.code}')">
-              <i class="fa-solid fa-copy"></i>
-            </button>
-            <button class="btn-station-action" title="Phóng to ga này" onclick="event.stopPropagation(); selectStation('${s.code}', true)">
-              <i class="fa-solid fa-crosshairs"></i>
-            </button>
-          </div>
+          <button class="btn-card-zoom" title="Phóng to ga này" onclick="event.stopPropagation(); selectStation('${s.code}', true)">
+            <i class="fa-solid fa-crosshairs"></i>
+          </button>
         `;
 
         card.addEventListener('click', () => {
@@ -1384,27 +1135,6 @@
         });
 
         stationListEl.appendChild(card);
-      });
-    }
-
-    function renderSequencerBar() {
-      // Keep title
-      const titleEl = sequencerBarEl.querySelector('.sequencer-title');
-      sequencerBarEl.innerHTML = '';
-      sequencerBarEl.appendChild(titleEl);
-
-      stations.forEach(s => {
-        const node = document.createElement('div');
-        node.className = `seq-node ${s.is_terminal ? 'is-terminal' : ''} ${s.is_hub ? 'is-hub' : ''} ${selectedStationCode === s.code ? 'active' : ''}`;
-        node.id = `seq-${s.code}`;
-        node.textContent = s.code.replace('S', '');
-        node.title = `${s.code}: Ga ${s.name} (${s.chainage_text})`;
-
-        node.addEventListener('click', () => {
-          selectStation(s.code, true);
-        });
-
-        sequencerBarEl.appendChild(node);
       });
     }
 
@@ -1422,19 +1152,18 @@
         activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
 
-      // Update Sequencer nodes
-      document.querySelectorAll('.seq-node').forEach(n => n.classList.remove('active'));
-      const activeNode = document.getElementById(`seq-${code}`);
-      if (activeNode) {
-        activeNode.classList.add('active');
-        activeNode.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      // Update Legend items
+      document.querySelectorAll('.legend-item').forEach(l => l.classList.remove('selected'));
+      const activeLegend = document.getElementById(`legend-item-${code}`);
+      if (activeLegend) {
+        activeLegend.classList.add('selected');
       }
 
-      // Update Pins
-      document.querySelectorAll('.station-marker-pin').forEach(p => p.classList.remove('active'));
-      const activePin = document.getElementById(`pin-${code}`);
-      if (activePin) {
-        activePin.classList.add('active');
+      // Update Dot on Map
+      document.querySelectorAll('.station-marker-dot').forEach(d => d.classList.remove('active'));
+      const activeDot = document.getElementById(`dot-${code}`);
+      if (activeDot) {
+        activeDot.classList.add('active');
       }
 
       // Fly and Open Popup
@@ -1460,22 +1189,10 @@
     /* =========================================================
        CONTROLS & EVENT LISTENERS
        ========================================================= */
-    // Fit Bounds To Entire Metro Line
+    // Fit Bounds Button (inside sidebar)
     document.getElementById('btn-fit-bounds').addEventListener('click', () => {
       map.flyToBounds(trackCasing.getBounds(), { padding: [50, 50], duration: 0.8 });
     });
-
-    // Layer Menu Dropdown Toggle
-    const btnToggleLayer = document.getElementById('btn-toggle-layer-menu');
-    const layerDropdown = document.getElementById('layer-menu-dropdown');
-    btnToggleLayer.addEventListener('click', (e) => {
-      e.stopPropagation();
-      layerDropdown.classList.toggle('show');
-    });
-    document.addEventListener('click', () => {
-      layerDropdown.classList.remove('show');
-    });
-    layerDropdown.addEventListener('click', (e) => e.stopPropagation());
 
     // Layer checkboxes
     document.getElementById('chk-stations').addEventListener('change', (e) => {
@@ -1484,7 +1201,7 @@
     });
 
     document.getElementById('chk-station-labels').addEventListener('change', (e) => {
-      const labels = document.querySelectorAll('.station-permanent-label');
+      const labels = document.querySelectorAll('.station-compact-label');
       labels.forEach(l => l.style.display = e.target.checked ? 'block' : 'none');
     });
 
@@ -1496,11 +1213,6 @@
     document.getElementById('chk-catchment-500m').addEventListener('change', (e) => {
       if (e.target.checked) map.addLayer(catchmentLayerGroup);
       else map.removeLayer(catchmentLayerGroup);
-    });
-
-    document.getElementById('chk-corridor-tube').addEventListener('change', (e) => {
-      if (e.target.checked) map.addLayer(corridorLayerGroup);
-      else map.removeLayer(corridorLayerGroup);
     });
 
     // District Filter Tabs
@@ -1518,13 +1230,7 @@
       renderStationList();
     });
 
-    // Reverse order
-    document.getElementById('btn-reverse-order').addEventListener('click', () => {
-      isReversedOrder = !isReversedOrder;
-      renderStationList();
-    });
-
-    // Sidebar Collapse / Expand
+    // Sidebar Collapse / Expand (Nút 3 gạch)
     const sidebarEl = document.getElementById('sidebar');
     const btnCollapse = document.getElementById('btn-collapse');
     const btnExpand = document.getElementById('btn-expand-sidebar');
@@ -1547,9 +1253,9 @@
       }
     });
 
-    // Initial render
+    // Initial renders
     renderStationList();
-    renderSequencerBar();
+    renderLegendList();
 
     // Fit bounds initially
     setTimeout(() => {
